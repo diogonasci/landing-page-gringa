@@ -36,7 +36,7 @@ export const CenteredMenu = (props: {
           {props.logo}
         </Link>
 
-        <div className="flex items-center gap-1 lg:hidden [&_button:hover]:opacity-100 [&_button]:opacity-60">
+        <div className="flex items-center gap-1 lg:hidden opacity-60 hover:opacity-100">
           <LocaleSwitcher />
           <ToggleMenuButton onClick={handleToggleMenu} />
         </div>
@@ -55,7 +55,7 @@ export const CenteredMenu = (props: {
         )}
       >
         <ul className="flex flex-row items-center gap-x-4 text-lg font-medium [&_li[data-fade]:hover]:opacity-100 [&_li[data-fade]]:opacity-60">
-          <div className="hidden lg:block">
+          <div className="hidden lg:block opacity-60 hover:opacity-100">
             <LocaleSwitcher />
           </div>
           {props.rightMenu}
