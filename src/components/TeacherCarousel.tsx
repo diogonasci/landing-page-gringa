@@ -20,23 +20,36 @@ const TeacherCarousel = () => {
   const cardWidth = 288;
 
   const touchStartX = useRef(0);
-  const touchEndX = useRef(0);
+
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragOffset, setDragOffset] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setIsDragging(true);
     touchStartX.current = e.touches[0].clientX;
+    setDragOffset(0);
   };
 
   const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    touchEndX.current = e.touches[0].clientX;
+    if (!isDragging) return;
+    
+    const currentTouch = e.touches[0].clientX;
+    const difference = currentTouch - touchStartX.current;
+    setDragOffset(difference);
   };
 
   const handleTouchEnd = () => {
-    if (touchStartX.current - touchEndX.current > 50) {
-      nextSlide(); // Swipe para a esquerda
+    setIsDragging(false);
+    const swipeThreshold = 50;
+    
+    if (dragOffset < -swipeThreshold) {
+      nextSlide();
+    } else if (dragOffset > swipeThreshold) {
+      prevSlide();
     }
-    if (touchStartX.current - touchEndX.current < -50) {
-      prevSlide(); // Swipe para a direita
-    }
+    
+    setDragOffset(0);
   };
 
   const nextSlide = () => {
@@ -68,14 +81,21 @@ const TeacherCarousel = () => {
         </button>
 
         <div
+          ref={containerRef}
           className="relative w-[896px] overflow-hidden"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
           <div
-            className="flex gap-6 transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * cardWidth}px)` }}
+            className={`flex gap-6 ${
+              isDragging ? "" : "transition-transform duration-500"
+            } ease-in-out`}
+            style={{
+              transform: `translateX(${
+                -currentIndex * cardWidth + dragOffset
+              }px)`,
+            }}
           >
             {teachers.map((teacher) => (
               <div
