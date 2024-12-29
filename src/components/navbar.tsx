@@ -3,7 +3,6 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { CenteredMenu } from "./CenteredMenu";
-import { LocaleSwitcher } from "./LocaleSwitcher";
 import { Logo } from "./Logo";
 
 const Header: React.FC = () => {
@@ -15,15 +14,13 @@ const Header: React.FC = () => {
         logo={<Logo />}
         rightMenu={
           <>
-            <li data-fade>
-              <LocaleSwitcher />
-            </li>
             <li className="ml-1 mr-2.5" data-fade>
               <Link to="/sign-in">{t("navigation.login")}</Link>
             </li>
             <li>
               <Link className={buttonVariants()} to="/sign-up">
-                {t("navigation.cta")}</Link>
+                {t("navigation.cta")}
+              </Link>
             </li>
           </>
         }

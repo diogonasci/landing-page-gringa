@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils.ts";
 import { Link } from "react-router-dom";
 import { ToggleMenuButton } from "../components/ToggleMenuButton";
 import { useRef } from "react";
+import { LocaleSwitcher } from "./LocaleSwitcher";
 
 export const CenteredMenu = (props: {
   logo: React.ReactNode;
@@ -34,7 +35,8 @@ export const CenteredMenu = (props: {
         {props.logo}
       </Link>
 
-      <div className="lg:hidden [&_button:hover]:opacity-100 [&_button]:opacity-60">
+      <div className="flex items-center gap-2 lg:hidden [&_button:hover]:opacity-100 [&_button]:opacity-60">
+        <LocaleSwitcher />
         <ToggleMenuButton onClick={handleToggleMenu} />
       </div>
 
@@ -51,6 +53,9 @@ export const CenteredMenu = (props: {
         )}
       >
         <ul className="flex flex-row items-center gap-x-4 text-lg font-medium [&_li[data-fade]:hover]:opacity-100 [&_li[data-fade]]:opacity-60">
+          <div className="hidden lg:block">
+            <LocaleSwitcher />
+          </div>
           {props.rightMenu}
         </ul>
       </div>
