@@ -5,13 +5,12 @@ import { Link } from "react-router-dom";
 import { CenteredMenu } from "./CenteredMenu";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { Logo } from "./Logo";
-import { Section } from "./Section";
 
 const Header: React.FC = () => {
   const { t } = useTranslation("content");
 
   return (
-    <Section className="px-3 py-6">
+    <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm px-3 py-4">
       <CenteredMenu
         logo={<Logo />}
         rightMenu={
@@ -24,8 +23,7 @@ const Header: React.FC = () => {
             </li>
             <li>
               <Link className={buttonVariants()} to="/sign-up">
-                {t("navigation.cta")}
-              </Link>
+                {t("navigation.cta")}</Link>
             </li>
           </>
         }
@@ -43,7 +41,7 @@ const Header: React.FC = () => {
           <Link to="/sign-up">{t("navigation.enem_exams")}</Link>
         </li>
       </CenteredMenu>
-    </Section>
+    </div>
   );
 };
 
