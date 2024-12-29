@@ -74,10 +74,10 @@ const TeacherCarousel = () => {
       <div className="flex items-center justify-center gap-4">
         <button
           onClick={prevSlide}
-          className="p-2 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors"
+          className="p-2 rounded-full text-gray-400 hover:text-gray-600 transition-colors"
           aria-label="Previous"
         >
-          <ChevronLeft className="w-6 h-6" />
+          <ChevronLeft className="w-8 h-8" />
         </button>
 
         <div
@@ -123,10 +123,10 @@ const TeacherCarousel = () => {
 
         <button
           onClick={nextSlide}
-          className="p-2 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors"
+          className="p-2 rounded-full text-gray-400 hover:text-gray-600 transition-colors"
           aria-label="Next"
         >
-          <ChevronRight className="w-6 h-6" />
+          <ChevronRight className="w-8 h-8" />
         </button>
       </div>
 
