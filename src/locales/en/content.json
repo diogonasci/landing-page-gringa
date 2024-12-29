@@ -82,8 +82,9 @@
     ]
   },
   "testimonials": {
-    "title": "What our students say",
-    "subtitle": "See the experience of those who have been part of our community",
+    "title": "Testimonials",
+    "subtitle": "What Our Students Say",
+    "description": "See the experience of those who have been part of our community",
     "cta": "Prepare for exams here →",
     "info": "Be the next success story",
     "disclaimer": "Join over 200 students who transformed their study methods and pass exams with confidence",
@@ -149,5 +150,26 @@
     "title": "Ready to master CSANL exams?",
     "subtitle": "Study with those who know and say goodbye to low grades!",
     "button": "Improve your grades now →"
+  },
+  "footer": {
+    "company_name": "Aula 360 Team",
+    "legal": {
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy"
+    },
+    "links": {
+      "private_class": "Private Class",
+      "group_classes": "Group Classes",
+      "past_exams": "CSANL Past Exams",
+      "enem_exams": "ENEM Exams"
+    }
+  },
+  "brand": {
+    "name": "profcerto"
+  },
+  "whatsapp": {
+    "tooltip": "Got questions? Contact us!",
+    "default_message": "Hi! I would like to know more about the classes.",
+    "aria_label": "Contact via WhatsApp"
   }
 }

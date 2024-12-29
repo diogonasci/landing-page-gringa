@@ -82,8 +82,9 @@
     ]
   },
   "testimonials": {
-    "title": "O que nossos alunos dizem",
-    "subtitle": "Veja a experiência de quem já fez parte da nossa comunidade",
+    "title": "Depoimentos",
+    "subtitle": "O que nossos alunos dizem",
+    "description": "Veja a experiência de quem já fez parte da nossa comunidade",
     "cta": "Prepare-se para as provas aqui →",
     "info": "Seja o próximo caso de sucesso",
     "disclaimer": "Junte-se aos mais de 200 alunos que transformaram sua forma de estudar e passe nas provas com tranquilidade",
@@ -149,5 +150,26 @@
     "title": "Pronto para dominar as provas do CSANL?",
     "subtitle": "Estude com quem conhece e diga adeus a notas baixas!",
     "button": "Melhore suas notas agora →"
+  },
+  "footer": {
+    "company_name": "Equipe Aula 360",
+    "legal": {
+      "terms": "Termos de Serviço",
+      "privacy": "Política de Privacidade"
+    },
+    "links": {
+      "private_class": "Aula Particular",
+      "group_classes": "Aulões",
+      "past_exams": "Provas Antigas CSANL",
+      "enem_exams": "Provas ENEM"
+    }
+  },
+  "brand": {
+    "name": "profcerto"
+  },
+  "whatsapp": {
+    "tooltip": "Ficou dúvida? Entre em contato!",
+    "default_message": "Olá! Gostaria de saber mais sobre as aulas.",
+    "aria_label": "Contato via WhatsApp"
   }
 }

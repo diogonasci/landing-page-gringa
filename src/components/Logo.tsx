@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
 import "../styles/fonts.css";
 
 export const Logo = () => {
+  const { t } = useTranslation('content');
+
   return (
     <div className="flex items-center font-semibold">
       <svg className="mr-1 h-12 w-auto" viewBox="0 0 500 100">
@@ -16,7 +19,7 @@ export const Logo = () => {
             fontWeight: 400,
           }}
         >
-          profcerto
+          {t('brand.name')}
         </text>
       </svg>
     </div>

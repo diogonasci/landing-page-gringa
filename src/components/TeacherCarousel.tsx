@@ -2,46 +2,19 @@ import professorDiogo from "@/assets/teachers/prof-diogo.webp";
 import { Section } from "@/components/Section";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { buttonVariants } from "./ui/buttonVariants";
 
+interface Teacher {
+  id: string;
+  name: string;
+  subject: string;
+  description: string;
+}
+
 const TeacherCarousel = () => {
-  const teachers = [
-    {
-      id: 1,
-      name: "Prof. Diogo",
-      subject: "Matemática",
-      image: professorDiogo,
-      description: "Especialista em Álgebra e Geometria",
-    },
-    {
-      id: 2,
-      name: "Prof. Diogo",
-      subject: "Física",
-      image: professorDiogo,
-      description: "Doutor em Física Quântica",
-    },
-    {
-      id: 3,
-      name: "Prof. Diogo",
-      subject: "Química",
-      image: professorDiogo,
-      description: "Mestre em Química Orgânica",
-    },
-    {
-      id: 4,
-      name: "Prof. Diogo",
-      subject: "Biologia",
-      image: professorDiogo,
-      description: "Especialista em Genética",
-    },
-    {
-      id: 5,
-      name: "Prof. Diogo",
-      subject: "História",
-      image: professorDiogo,
-      description: "Doutora em História do Brasil",
-    },
-  ];
+  const { t } = useTranslation("content");
+  const teachers = t("teachers.staff", { returnObjects: true }) as Teacher[];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const cardWidth = 288;
@@ -80,9 +53,9 @@ const TeacherCarousel = () => {
 
   return (
     <Section
-      subtitle="Corpo Docente"
-      title="Conheça Nossos Professores"
-      description="Nossa equipe de professores altamente qualificados está pronta para guiar você em sua jornada de aprendizado."
+      subtitle={t("teachers.title")}
+      title={t("teachers.subtitle")}
+      description={t("teachers.description")}
       className="py-16"
     >
       <div className="flex items-center justify-center gap-4">
@@ -111,7 +84,7 @@ const TeacherCarousel = () => {
               >
                 <div className="w-32 h-32 mb-4 overflow-hidden rounded-full">
                   <img
-                    src={teacher.image}
+                    src={professorDiogo}
                     alt={teacher.name}
                     className="w-full h-full object-cover"
                   />
@@ -140,12 +113,8 @@ const TeacherCarousel = () => {
       {/* CTA Section */}
       <div className="mt-16 flex flex-col items-center space-y-4">
         <div className="text-center mb-6">
-          <p className="text-lg text-gray-700">
-            Aprenda com professores especialistas em cada área
-          </p>
-          <p className="text-sm text-gray-600">
-            Média de aprovação superior a 85% entre nossos alunos
-          </p>
+          <p className="text-lg text-gray-700">{t("teachers.info")}</p>
+          <p className="text-sm text-gray-600">{t("teachers.disclaimer")}</p>
         </div>
 
         <a
@@ -154,7 +123,7 @@ const TeacherCarousel = () => {
             size: "lg",
           })} bg-[#4A90E2] hover:bg-[#357ABD] transition-colors duration-200 group`}
         >
-          Agende uma aula com nosso time →
+          {t("teachers.cta")}
         </a>
       </div>
     </Section>

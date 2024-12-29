@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import { CenteredMenu } from "./CenteredMenu";
 import { Logo } from "./Logo";
 import { Section } from "./Section";
+import { useTranslation } from 'react-i18next';
 
 const Header: React.FC = () => {
+  const { t } = useTranslation('content');
+
   return (
     <Section className="px-3 py-6">
       <CenteredMenu
@@ -13,27 +16,27 @@ const Header: React.FC = () => {
         rightMenu={
           <>
             <li className="ml-1 mr-2.5" data-fade>
-              <Link to="/sign-in">Entrar</Link>
+              <Link to="/sign-in">{t('navigation.login')}</Link>
             </li>
             <li>
               <Link className={buttonVariants()} to="/sign-up">
-                Criar Conta
+                {t('navigation.cta')}
               </Link>
             </li>
           </>
         }
       >
         <li>
-          <Link to="/sign-up">Aula Particular</Link>
+          <Link to="/sign-up">{t('navigation.private_class')}</Link>
         </li>
         <li>
-          <Link to="/sign-up">Aulões</Link>
+          <Link to="/sign-up">{t('navigation.group_classes')}</Link>
         </li>
         <li>
-          <Link to="/sign-up">Provas Antigas CSANL</Link>
+          <Link to="/sign-up">{t('navigation.past_exams')}</Link>
         </li>
         <li>
-          <Link to="/sign-up">Provas ENEM</Link>
+          <Link to="/sign-up">{t('navigation.enem_exams')}</Link>
         </li>
       </CenteredMenu>
     </Section>

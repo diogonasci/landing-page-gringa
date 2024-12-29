@@ -1,14 +1,17 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { CenteredFooter } from "./CenteredFooter";
 import Logo from "./Logo";
 import { Section } from "./Section";
 
 export const Footer = () => {
+  const { t } = useTranslation('content');
+
   return (
     <Section className="pb-16 pt-0">
       <CenteredFooter
         logo={<Logo />}
-        name="Equipe Aula 360"
+        name={t('footer.company_name')}
         iconList={
           <>
             <li>
@@ -38,28 +41,28 @@ export const Footer = () => {
         legalLinks={
           <>
             <li>
-              <Link to="/sign-up">Terms Of Service</Link>
+              <Link to="/sign-up">{t('footer.legal.terms')}</Link>
             </li>
             <li>
-              <Link to="/sign-up">Privacy Policy</Link>
+              <Link to="/sign-up">{t('footer.legal.privacy')}</Link>
             </li>
           </>
         }
       >
         <li>
-          <Link to="/sign-up">Aula Particular</Link>
+          <Link to="/sign-up">{t('footer.links.private_class')}</Link>
         </li>
 
         <li>
-          <Link to="/sign-up">Aulões</Link>
+          <Link to="/sign-up">{t('footer.links.group_classes')}</Link>
         </li>
 
         <li>
-          <Link to="/sign-up">Provas Antigas CSANL</Link>
+          <Link to="/sign-up">{t('footer.links.past_exams')}</Link>
         </li>
 
         <li>
-          <Link to="/sign-up">Provas ENEM</Link>
+          <Link to="/sign-up">{t('footer.links.enem_exams')}</Link>
         </li>
       </CenteredFooter>
     </Section>

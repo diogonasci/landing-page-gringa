@@ -1,14 +1,16 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { FeatureCard } from "./FeatureCard";
 import { Section } from "./Section";
 import { buttonVariants } from "./ui/buttonVariants";
 
 const Features: React.FC = () => {
+  const { t } = useTranslation('content');
+
   const features = [
     {
-      title: "Aula particular",
-      description:
-        "Aulas individuais, presenciais ou online, personalizadas para focar nas suas necessidades, com atenção exclusiva.",
+      title: t('services.options.private.title'),
+      description: t('services.options.private.description'),
       icon: (
         <svg
           className="stroke-primary-foreground stroke-2"
@@ -24,9 +26,8 @@ const Features: React.FC = () => {
       ),
     },
     {
-      title: "Aulão temático",
-      description:
-        "Aulões online temáticos focados em testes, provas e recuperação, com conteúdo direcionado para melhorar seu desempenho.",
+      title: t('services.options.thematic.title'),
+      description: t('services.options.thematic.description'),
       icon: (
         <svg
           className="stroke-primary-foreground stroke-2"
@@ -43,9 +44,8 @@ const Features: React.FC = () => {
       ),
     },
     {
-      title: "Aulão personalizado",
-      description:
-        "Aulões online sugeridos pelos alunos, com temas escolhidos por eles e lecionados por nosso time de professores especializados.",
+      title: t('services.options.custom.title'),
+      description: t('services.options.custom.description'),
       icon: (
         <svg
           className="stroke-primary-foreground stroke-2"
@@ -69,9 +69,9 @@ const Features: React.FC = () => {
   return (
     <div className="w-full bg-secondary">
       <Section
-        subtitle="Nossos Serviços"
-        title="Escolha o Formato Ideal para Sua Preparação"
-        description="Acompanhamento educacional focado no seu objetivo, com profissionais que dominam as particularidades do CSANL"
+        subtitle={t('services.title')}
+        title={t('services.subtitle')}
+        description={t('services.description')}
       >
         <div className="grid grid-cols-1 gap-x-3 gap-y-8 md:grid-cols-3">
           {features.map((feature, index) => (
@@ -89,10 +89,10 @@ const Features: React.FC = () => {
               size: "lg",
             })} bg-[#4A90E2] hover:bg-[#357ABD] transition-colors duration-200`}
           >
-            Escolha seu formato de estudo →
+            {t('services.options.cta')}
           </a>
           <p className="text-sm text-gray-600">
-            Escolha o melhor formato para suas necessidades
+            {t('services.options.info')}
           </p>
         </div>
       </Section>
