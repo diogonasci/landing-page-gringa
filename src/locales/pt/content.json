@@ -1,0 +1,77 @@
+{
+  "header": {
+    "nav": {
+      "aulaParticular": "Aula Particular",
+      "auloes": "Aulões",
+      "provasAntigas": "Provas Antigas CSANL",
+      "provasENEM": "Provas ENEM",
+      "entrar": "Entrar",
+      "cta": "Criar Conta"
+    }
+  },
+  "hero": {
+    "tag": "Siga @profcerto no Instagram",
+    "title": {
+      "prefix": "Seu ",
+      "highlight": "sucesso nas provas",
+      "suffix": " começa aqui:"
+    },
+    "subtitle": "preparação feita por quem entende!",
+    "description": "Com profunda experiência e domínio da metodologia da CSANL, nossa equipe é referência em preparar você para brilhar nas provas!",
+    "cta": "COMECE SEUS ESTUDOS AGORA →",
+    "disclaimer": "Primeira aula grátis | +1000 alunos aprovados"
+  },
+  "formats": {
+    "title": "Escolha o Formato Ideal para Sua Preparação",
+    "subtitle": "Acompanhamento educacional focado no seu objetivo, com profissionais que dominam as particularidades do CSANL",
+    "options": {
+      "particular": {
+        "title": "Aula particular",
+        "description": "Aulas individuais, presenciais ou online, personalizadas para focar nas suas necessidades, com atenção exclusiva."
+      },
+      "tematica": {
+        "title": "Aulão temático",
+        "description": "Aulas online temáticas focadas em teoria, provas e resoluções, com conteúdo estruturado para melhorar sua estratégia"
+      },
+      "personalizada": {
+        "title": "Aulão personalizado",
+        "description": "Aulões online sugeridos pelos alunos, com temas escolhidos por eles e lecionados por nosso time de professores especializados."
+      },
+      "cta": "Escolha seu formato de estudo →",
+      "info": "Escolha o melhor formato para suas necessidades"
+    }
+  },
+  "professors": {
+    "title": "Conheça Nossos Professores",
+    "subtitle": "Nossa equipe de professores altamente qualificados está pronta para ajudar você em sua jornada",
+    "cta": "Agende uma aula com nosso time →",
+    "info": "Aprenda com professores especialistas em cada área",
+    "disclaimer": "Todos os nossos mestres passam a 45% dos nossos alunos"
+  },
+  "testimonials": {
+    "title": "O que nossos alunos dizem",
+    "subtitle": "Veja a experiência de quem já fez parte da nossa comunidade"
+  },
+  "footer": {
+    "cta": {
+      "title": "Seja o próximo caso de sucesso",
+      "subtitle": "Entre os top 10% de uma disciplina em menos de 3 meses de estudo e aprove nas provas com tranquilidade",
+      "button": "Prepare-se para as provas hoje →"
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "items": [
+        "Como faço para brilhar na Provas Antigas CSANL?",
+        "Como funcionam as aulas particulares?",
+        "Como funcionam as aulas temáticas?",
+        "Como funcionam as aulas personalizadas?",
+        "Posso cancelar uma aula ou aulas agendadas?"
+      ]
+    },
+    "final_cta": {
+      "title": "Pronto para dominar as provas do CSANL?",
+      "subtitle": "Estude com quem conhece e faça cheque e xeque breve!",
+      "button": "Matricule-se neste agora →"
+    }
+  }
+}

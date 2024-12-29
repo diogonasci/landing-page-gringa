@@ -1,60 +1,43 @@
-import { Avatar } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { buttonVariants } from "@/components/ui/buttonVariants";
 import React from "react";
 import { Link } from "react-router-dom";
+import { CenteredMenu } from "./CenteredMenu";
+import { Logo } from "./Logo";
+import { Section } from "./Section";
 
-const Navbar: React.FC = () => {
+const Header: React.FC = () => {
   return (
-    <nav className="bg-gray-900 text-white p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Logo ou nome da aplicação */}
-        <Link to="/" className="text-xl font-semibold">
-          ProfHub
-        </Link>
-
-        {/* Links de navegação */}
-        <div className="flex items-center space-x-4">
-          <Link to="/" className="text-white hover:text-gray-400">
-            Home
-          </Link>
-          <Link to="/about" className="text-white hover:text-gray-400">
-            About
-          </Link>
-          <Link to="/contact" className="text-white hover:text-gray-400">
-            Contact
-          </Link>
-
-          {/* Dropdown de perfil */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="outline"
-                size="sm"
-                className="flex items-center space-x-2"
-              >
-                <Avatar className="w-6 h-6">
-                  {/* Imagem do avatar */}
-                  <img src="/images/avatar.jpg" alt="User Avatar" />
-                </Avatar>
-                <span>Perfil</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuItem>
-              <Link to="/profile">Meu Perfil</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link to="/logout">Sair</Link>
-            </DropdownMenuItem>
-          </DropdownMenu>
-        </div>
-      </div>
-    </nav>
+    <Section className="px-3 py-6">
+      <CenteredMenu
+        logo={<Logo />}
+        rightMenu={
+          <>
+            <li className="ml-1 mr-2.5" data-fade>
+              <Link to="/sign-in">Entrar</Link>
+            </li>
+            <li>
+              <Link className={buttonVariants()} to="/sign-up">
+                Criar Conta
+              </Link>
+            </li>
+          </>
+        }
+      >
+        <li>
+          <Link to="/sign-up">Aula Particular</Link>
+        </li>
+        <li>
+          <Link to="/sign-up">Aulões</Link>
+        </li>
+        <li>
+          <Link to="/sign-up">Provas Antigas CSANL</Link>
+        </li>
+        <li>
+          <Link to="/sign-up">Provas ENEM</Link>
+        </li>
+      </CenteredMenu>
+    </Section>
   );
 };
 
-export default Navbar;
+export default Header;

@@ -1,7 +1,7 @@
 import { FAQ } from "@/components/FAQ";
-import Features from "@/components/features";
+import Features from "@/components/Features";
 import FinalCTA from "@/components/FinalCTA";
-import Hero from "@/components/hero";
+import Hero from "@/components/Hero";
 import TeacherCarousel from "@/components/TeacherCarousel";
 import Testimonials from "@/components/Testimonials";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
