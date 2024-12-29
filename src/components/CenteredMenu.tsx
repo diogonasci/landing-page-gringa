@@ -30,14 +30,16 @@ export const CenteredMenu = (props: {
   );
 
   return (
-    <div ref={menuRef} className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between gap-x-8">
-      <Link to="/" className="flex-shrink-0">
-        {props.logo}
-      </Link>
+    <div ref={menuRef} className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between gap-x-4">
+      <div className="flex items-center justify-between flex-1 lg:flex-initial">
+        <Link to="/" className="flex-shrink-0">
+          {props.logo}
+        </Link>
 
-      <div className="flex items-center gap-2 lg:hidden [&_button:hover]:opacity-100 [&_button]:opacity-60">
-        <LocaleSwitcher />
-        <ToggleMenuButton onClick={handleToggleMenu} />
+        <div className="flex items-center gap-1 lg:hidden [&_button:hover]:opacity-100 [&_button]:opacity-60">
+          <LocaleSwitcher />
+          <ToggleMenuButton onClick={handleToggleMenu} />
+        </div>
       </div>
 
       <nav className={cn("flex-grow rounded-t max-lg:mt-2", navClass)}>

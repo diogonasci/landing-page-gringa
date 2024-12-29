@@ -14,7 +14,7 @@ export const LocaleSwitcher = () => {
   return (
     <Button
       onClick={handleToggleLanguage}
-      className="flex items-center gap-2 p-2 focus-visible:ring-offset-0"
+      className="flex items-center gap-2 p-2 focus-visible:ring-offset-0 min-w-[72px] justify-center"
       variant="ghost"
       size="sm"
     >
