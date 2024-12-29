@@ -1,0 +1,153 @@
+{
+  "sticky_banner": {
+    "title": {
+      "prefix": "Support from those who know your school -",
+      "highlight": "Teachers specialized in CSANL"
+    }
+  },
+  "navigation": {
+    "private_class": "Private Class",
+    "group_classes": "Group Classes",
+    "past_exams": "CSANL Past Exams",
+    "enem_exams": "ENEM Exams",
+    "login": "Login",
+    "cta": "Sign Up"
+  },
+  "hero": {
+    "tag": "Follow @profcerto on Instagram",
+    "title": {
+      "prefix": "Your ",
+      "highlight": "exam success",
+      "suffix": " starts here:"
+    },
+    "subtitle": "preparation by those who understand!",
+    "description": "With deep experience and mastery of CSANL methodology, our team is a reference in preparing you to shine in exams!",
+    "cta": "START YOUR STUDIES NOW →",
+    "disclaimer": "First class free | +1000 approved students"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Choose the Ideal Format for Your Preparation",
+    "description": "Educational support focused on your goal, with professionals who master CSANL particularities",
+    "options": {
+      "private": {
+        "title": "Private Class",
+        "description": "Individual classes, in-person or online, customized to focus on your needs, with exclusive attention."
+      },
+      "thematic": {
+        "title": "Thematic Group Class",
+        "description": "Online thematic classes focused on theory, exams, and solutions, with structured content to improve your strategy"
+      },
+      "custom": {
+        "title": "Custom Group Class",
+        "description": "Online group classes suggested by students, with topics chosen by them and taught by our team of specialized teachers."
+      },
+      "cta": "Choose your study format →",
+      "info": "Choose the best format for your needs"
+    }
+  },
+  "teachers": {
+    "title": "Faculty",
+    "subtitle": "Meet Our Teachers",
+    "description": "Our team of highly qualified teachers is ready to guide you on your learning journey.",
+    "cta": "Schedule a class with our team →",
+    "info": "Learn with expert teachers in each area",
+    "disclaimer": "Approval rate above 85% among our students",
+    "staff": [
+      {
+        "name": "Prof. Diogo",
+        "subject": "Mathematics",
+        "description": "Specialist in Algebra and Geometry"
+      },
+      {
+        "name": "Prof. Diogo",
+        "subject": "Physics",
+        "description": "PhD in Quantum Physics"
+      },
+      {
+        "name": "Prof. Diogo",
+        "subject": "Chemistry",
+        "description": "Master in Organic Chemistry"
+      },
+      {
+        "name": "Prof. Diogo",
+        "subject": "Biology",
+        "description": "Specialist in Genetics"
+      },
+      {
+        "name": "Prof. Diogo",
+        "subject": "History",
+        "description": "PhD in Brazilian History"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What our students say",
+    "subtitle": "See the experience of those who have been part of our community",
+    "cta": "Prepare for exams here →",
+    "info": "Be the next success story",
+    "disclaimer": "Join over 200 students who transformed their study methods and pass exams with confidence",
+    "items": [
+      {
+        "name": "Maria Silva",
+        "testimonial": "The teachers are amazing! The teaching method is practical and engaging. My son is loving it!",
+        "date": "01/14/2024"
+      },
+      {
+        "name": "João Santos",
+        "testimonial": "My daughter's progress was remarkable. The teachers' dedication is truly admirable. Highly recommend!",
+        "date": "01/31/2024"
+      },
+      {
+        "name": "Pedro Oliveira",
+        "testimonial": "The teaching material is excellent, and the attention we receive from teachers makes all the difference. Fantastic!",
+        "date": "02/14/2024"
+      },
+      {
+        "name": "Ana Clara Mendes",
+        "testimonial": "The environment is very welcoming and the teachers are super dedicated. My son finally enjoys studying!",
+        "date": "01/19/2024"
+      },
+      {
+        "name": "Carlos Ferreira",
+        "testimonial": "I'm very satisfied with the result! My son improved a lot in grades and is more confident at school.",
+        "date": "02/04/2024"
+      },
+      {
+        "name": "Fernanda Costa",
+        "testimonial": "The teachers have incredible patience and explain in a way that children easily understand. Wonderful!",
+        "date": "01/24/2024"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How do I download CSANL Past Exams?",
+        "answer": "CSANL past exams are available in the downloads section of the website and can be downloaded for free. To access them, you need to be logged into your account."
+      },
+      {
+        "question": "How do private classes work?",
+        "answer": "Private classes can be conducted online or in-person, depending on your location. Scheduling is done through Aula 360 Team's WhatsApp or directly through the platform, where you can choose the time that best fits your routine. All content is personalized according to your needs."
+      },
+      {
+        "question": "How do thematic group classes work?",
+        "answer": "Thematic group classes are conducted online and last two hours. They focus on targeted reviews for exams and tests, usually occurring on the eve or very close to the exam date. During the class, the teacher simulates the exam/test content and conducts specific preparation so that the student arrives more prepared and confident on exam day."
+      },
+      {
+        "question": "How do custom group classes work?",
+        "answer": "Custom group classes are suggested by students, who choose the desired topic and invite other participants. These classes are visible to other students in the same grade on the platform, allowing them to enroll as well. Once the minimum of 5 students is reached, the class is confirmed and scheduled. The student who created the class doesn't pay if the minimum number of participants is reached."
+      },
+      {
+        "question": "Can I cancel a scheduled class or group class?",
+        "answer": "Yes, cancellation can be made up to 24 hours before the scheduled time. Otherwise, a cancellation fee may apply. To cancel, contact support directly through the platform."
+      }
+    ]
+  },
+  "final_cta": {
+    "title": "Ready to master CSANL exams?",
+    "subtitle": "Study with those who know and say goodbye to low grades!",
+    "button": "Improve your grades now →"
+  }
+}
