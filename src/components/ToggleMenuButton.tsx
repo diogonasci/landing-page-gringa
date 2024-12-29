@@ -15,13 +15,13 @@ const ToggleMenuButtonInternal = (
   ref?: ForwardedRef<HTMLButtonElement>
 ) => (
   <Button
-    className="p-2 focus-visible:ring-offset-0"
+    className="p-4 focus-visible:ring-offset-0"
     variant="ghost"
     ref={ref}
     {...props}
   >
     <svg
-      className="size-6 stroke-current"
+      className="size-8 stroke-current"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       strokeWidth="1.5"
