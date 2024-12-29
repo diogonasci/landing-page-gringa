@@ -1,9 +1,11 @@
 "use client";
 
 import { useMenu } from "@/hooks/useMenu";
+import { useClickOutside } from "@/hooks/useClickOutside";
 import { cn } from "@/lib/utils.ts";
 import { Link } from "react-router-dom";
 import { ToggleMenuButton } from "../components/ToggleMenuButton";
+import { useRef } from "react";
 
 export const CenteredMenu = (props: {
   logo: React.ReactNode;
@@ -11,6 +13,13 @@ export const CenteredMenu = (props: {
   rightMenu: React.ReactNode;
 }) => {
   const { showMenu, handleToggleMenu } = useMenu();
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useClickOutside(menuRef, () => {
+    if (showMenu) {
+      handleToggleMenu();
+    }
+  });
 
   const navClass = cn(
     "max-lg:w-full max-lg:bg-secondary max-lg:p-5",
@@ -20,7 +29,7 @@ export const CenteredMenu = (props: {
   );
 
   return (
-    <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between gap-x-8">
+    <div ref={menuRef} className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between gap-x-8">
       <Link to="/" className="flex-shrink-0">
         {props.logo}
       </Link>
