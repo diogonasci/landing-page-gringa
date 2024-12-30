@@ -125,7 +125,7 @@
     "title": "Perguntas Frequentes",
     "items": [
       {
-        "question": "Como faço para baixar as Provas Antigas CSANL??",
+        "question": "Como faço para baixar as Provas Antigas CSANL?",
         "answer": "As provas antigas do CSANL estão disponíveis na seção de downloads do site e podem ser baixadas gratuitamente. Para acessá-las, você precisa estar logado em sua conta."
       },
       {
@@ -152,7 +152,7 @@
     "button": "Melhore suas notas agora →"
   },
   "footer": {
-    "company_name": "Equipe Aula 360",
+    "company_name": "profcerto",
     "legal": {
       "terms": "Termos de Serviço",
       "privacy": "Política de Privacidade"
