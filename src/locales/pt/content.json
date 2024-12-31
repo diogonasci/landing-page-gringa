@@ -22,8 +22,8 @@
     },
     "subtitle": "A ponte entre o Brasil e os EUA na matemática!",
     "description": "Professores brasileiros com experiência no sistema educacional americano, oferecendo aulas de matemática que respeitam seu processo de adaptação e facilitam sua jornada acadêmica nos EUA.",
-    "cta": "AGENDE SUA PRIMEIRA AULA GRÁTIS →",
-    "disclaimer": "Primeira aula experimental sem custo | Atendemos alunos em todos os estados dos EUA"
+    "cta": "COMECE SUA JORNADA DE SUCESSO AGORA →",
+    "disclaimer": "Atendimento online em todo território americano"
   },
   "services": {
     "title": "Nossos Serviços",
@@ -96,6 +96,32 @@
       }
     ]
   },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Contato",
+    "description": "Estamos aqui para ajudar. Envie-nos uma mensagem e retornaremos o mais breve possível.",
+    "form": {
+      "first_name": "Nome",
+      "last_name": "Sobrenome",
+      "email": "Email",
+      "message": "Mensagem",
+      "submit": "Enviar mensagem"
+    },
+    "info": {
+      "phone": {
+        "label": "Telefone",
+        "value": "(00) 1234-5678"
+      },
+      "email": {
+        "label": "Email",
+        "value": "info@brmath.com"
+      },
+      "hours": {
+        "label": "Horário de Atendimento",
+        "value": "Segunda - Sexta: 8h às 20h"
+      }
+    }
+  },
   "faq": {
     "title": "Perguntas Frequentes",
     "items": [
@@ -129,10 +155,11 @@
       "privacy": "Política de Privacidade"
     },
     "links": {
-      "private_class": "Aulas Particulares",
-      "sat_prep": "Preparação SAT",
-      "about_us": "Nossa Experiência",
-      "testimonials": "Depoimentos"
+      "services": "Nossos Serviços",
+      "team": "Nossa Equipe",
+      "testimonials": "Depoimentos",
+      "contact": "Contato",
+      "faq": "Perguntas Frequentes"
     }
   },
   "brand": {

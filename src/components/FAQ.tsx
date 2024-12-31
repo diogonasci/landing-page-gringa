@@ -13,7 +13,7 @@ export const FAQ = () => {
 
   return (
     <div id="faq">
-      <Section>
+      <Section variant="alternate">
         <h2 className="mb-8 text-center text-3xl font-bold">
           {t('faq.title')}
         </h2>

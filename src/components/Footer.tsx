@@ -50,19 +50,22 @@ export const Footer = () => {
         }
       >
         <li>
-          <Link to="/sign-up">{t("footer.links.private_class")}</Link>
+          <Link to="/sign-up">{t("footer.links.services")}</Link>
         </li>
 
         <li>
-          <Link to="/sign-up">{t("footer.links.sat_prep")}</Link>
-        </li>
-
-        <li>
-          <Link to="/sign-up">{t("footer.links.about_us")}</Link>
+          <Link to="/sign-up">{t("footer.links.team")}</Link>
         </li>
 
         <li>
           <Link to="/sign-up">{t("footer.links.testimonials")}</Link>
+        </li>
+
+        <li>
+          <Link to="/sign-up">{t("footer.links.contact")}</Link>
+        </li>
+        <li>
+          <Link to="/sign-up">{t("footer.links.faq")}</Link>
         </li>
       </CenteredFooter>
     </Section>

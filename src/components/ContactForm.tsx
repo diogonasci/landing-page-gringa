@@ -4,9 +4,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Clock, Mail, Phone } from "lucide-react";
+import { useTranslation } from "react-i18next"; // Changed from next-intl
 import React from "react";
 
 const ContactForm = () => {
+  const { t } = useTranslation(); // Changed from useTranslations
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Add your form submission logic here
@@ -15,37 +18,33 @@ const ContactForm = () => {
   return (
     <div id="contact">
       <Section
-        subtitle="Contato"
-        title="Entre em Contato"
-        description="Estamos aqui para ajudar. Envie-nos uma mensagem e retornaremos o mais breve possível."
+        subtitle={t("contact.subtitle")}
+        title={t("contact.title")}
+        description={t("contact.description")}
       >
         <div className="grid gap-8 md:grid-cols-2">
           <Card className="flex h-full flex-col justify-center space-y-6 border-none bg-card/50 p-6">
             <div className="flex items-start space-x-3">
               <Phone className="h-5 w-5 shrink-0 text-primary" />
               <div>
-                <p className="font-medium">Telefone</p>
-                <p className="text-sm text-muted-foreground">(00) 1234-5678</p>
+                <p className="font-medium">{t("contact.info.phone.label")}</p>
+                <p className="text-sm text-muted-foreground">{t("contact.info.phone.value")}</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-3">
               <Mail className="h-5 w-5 shrink-0 text-primary" />
               <div>
-                <p className="font-medium">Email</p>
-                <p className="text-sm text-muted-foreground">
-                  contato@example.com
-                </p>
+                <p className="font-medium">{t("contact.info.email.label")}</p>
+                <p className="text-sm text-muted-foreground">{t("contact.info.email.value")}</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-3">
               <Clock className="h-5 w-5 shrink-0 text-primary" />
               <div>
-                <p className="font-medium">Horário de Atendimento</p>
-                <p className="text-sm text-muted-foreground">
-                  Segunda - Sexta: 8h às 18h
-                </p>
+                <p className="font-medium">{t("contact.info.hours.label")}</p>
+                <p className="text-sm text-muted-foreground">{t("contact.info.hours.value")}</p>
               </div>
             </div>
           </Card>
@@ -55,27 +54,27 @@ const ContactForm = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="space-y-2">
-                    <Input placeholder="Nome" className="bg-background" />
+                    <Input placeholder={t("contact.form.first_name")} className="bg-background" />
                   </div>
                   <div className="space-y-2">
-                    <Input placeholder="Sobrenome" className="bg-background" />
+                    <Input placeholder={t("contact.form.last_name")} className="bg-background" />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <Input
                     type="email"
-                    placeholder="Email"
+                    placeholder={t("contact.form.email")}
                     className="bg-background"
                   />
                 </div>
                 <div className="space-y-2">
                   <Textarea
-                    placeholder="Mensagem"
+                    placeholder={t("contact.form.message")}
                     className="min-h-[120px] bg-background"
                   />
                 </div>
                 <Button type="submit" className="w-full">
-                  Enviar mensagem
+                  {t("contact.form.submit")}
                 </Button>
               </form>
             </CardContent>

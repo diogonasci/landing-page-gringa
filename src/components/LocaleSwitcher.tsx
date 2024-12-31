@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import "../i18n.js"; // Atualizado para .js
 
 export const LocaleSwitcher = () => {
   const { i18n } = useTranslation();
