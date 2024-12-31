@@ -41,7 +41,7 @@ const Header: React.FC = () => {
         <li>
           <button
             onClick={() => scrollToSection("services")}
-            className="hover:text-primary transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-colors"
           >
             {t("navigation.services")}
           </button>
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
         <li>
           <button
             onClick={() => scrollToSection("team")}
-            className="hover:text-primary transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-colors"
           >
             {t("navigation.team")}
           </button>
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
         <li>
           <button
             onClick={() => scrollToSection("testimonials")}
-            className="hover:text-primary transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-colors"
           >
             {t("navigation.testimonials")}
           </button>
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
         <li>
           <button
             onClick={() => scrollToSection("contact")}
-            className="hover:text-primary transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-colors"
           >
             {t("navigation.contact")}
           </button>
@@ -73,7 +73,7 @@ const Header: React.FC = () => {
         <li>
           <button
             onClick={() => scrollToSection("faq")}
-            className="hover:text-primary transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-colors"
           >
             {t("navigation.faq")}
           </button>
