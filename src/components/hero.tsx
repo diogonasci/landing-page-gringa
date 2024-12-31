@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { CenteredHero } from "./CenteredHero";
 import { Section } from "./Section";
 import { buttonVariants } from "./ui/buttonVariants";
+import { CALENDLY_URL } from "@/constants/urls";
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
@@ -14,7 +15,7 @@ const Hero: React.FC = () => {
         banner={
           <a
             className={badgeVariants()}
-            href="https://wa.me/5521985043074?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas."
+            href={CALENDLY_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -37,7 +38,9 @@ const Hero: React.FC = () => {
               className={`${buttonVariants({
                 size: "lg",
               })} bg-[#4A90E2] hover:bg-[#357ABD] transition-colors duration-200 px-8 py-4 text-lg font-semibold`}
-              href="https://wa.me/5521985043074?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas."
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {t("hero.cta")}
             </a>

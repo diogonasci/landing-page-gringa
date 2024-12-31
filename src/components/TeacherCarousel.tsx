@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { buttonVariants } from "./ui/buttonVariants";
+import { CALENDLY_URL } from "@/constants/urls";
 
 interface Teacher {
   id: string;
@@ -139,7 +140,9 @@ const TeacherCarousel = () => {
           </div>
 
           <a
-            href="https://wa.me/5521985043074?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas."
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`${buttonVariants({
               size: "lg",
             })} bg-[#4A90E2] hover:bg-[#357ABD] transition-colors duration-200 group`}

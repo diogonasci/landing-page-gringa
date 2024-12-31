@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Section } from "./Section";
 import { buttonVariants } from "./ui/buttonVariants";
+import { CALENDLY_URL } from "@/constants/urls";
 
 export default function FinalCTA() {
   const { t } = useTranslation("content");
@@ -19,7 +20,9 @@ export default function FinalCTA() {
         <div className="mt-6">
           <a
             className={buttonVariants({ variant: "outline", size: "lg" })}
-            href="https://wa.me/5521985043074?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas."
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {t("final_cta.button")}
           </a>

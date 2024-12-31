@@ -1,4 +1,5 @@
 import { buttonVariants } from "@/components/ui/buttonVariants";
+import { CALENDLY_URL } from "@/constants/urls";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { CenteredMenu } from "./CenteredMenu";
@@ -28,12 +29,14 @@ const Header: React.FC = () => {
         rightMenu={
           <>
             <li>
-              <button
-                onClick={() => scrollToSection("contact")}
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={buttonVariants()}
               >
                 {t("navigation.cta")}
-              </button>
+              </a>
             </li>
           </>
         }
