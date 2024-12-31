@@ -7,6 +7,20 @@ import { Section } from "./Section";
 export const Footer = () => {
   const { t } = useTranslation("content");
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <Section className="pb-16 pt-0">
       <CenteredFooter
@@ -50,22 +64,47 @@ export const Footer = () => {
         }
       >
         <li>
-          <Link to="/sign-up">{t("footer.links.services")}</Link>
+          <button
+            onClick={() => scrollToSection("services")}
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {t("footer.links.services")}
+          </button>
         </li>
 
         <li>
-          <Link to="/sign-up">{t("footer.links.team")}</Link>
+          <button
+            onClick={() => scrollToSection("team")}
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {t("footer.links.team")}
+          </button>
         </li>
 
         <li>
-          <Link to="/sign-up">{t("footer.links.testimonials")}</Link>
+          <button
+            onClick={() => scrollToSection("testimonials")}
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {t("footer.links.testimonials")}
+          </button>
         </li>
 
         <li>
-          <Link to="/sign-up">{t("footer.links.contact")}</Link>
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {t("footer.links.contact")}
+          </button>
         </li>
         <li>
-          <Link to="/sign-up">{t("footer.links.faq")}</Link>
+          <button
+            onClick={() => scrollToSection("faq")}
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {t("footer.links.faq")}
+          </button>
         </li>
       </CenteredFooter>
     </Section>
