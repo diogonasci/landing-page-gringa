@@ -1,3 +1,4 @@
+import ContactForm from "@/components/ContactForm";
 import { FAQ } from "@/components/FAQ";
 import Features from "@/components/Features";
 import FinalCTA from "@/components/FinalCTA";
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Features />
       <TeacherCarousel />
       <Testimonials />
+      <ContactForm />
       <FAQ />
       <FinalCTA />
       <WhatsAppButton phoneNumber="5521985043074" />
