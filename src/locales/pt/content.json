@@ -1,123 +1,98 @@
 {
   "sticky_banner": {
     "title": {
-      "prefix": "Apoio de quem conhece sua escola -",
-      "highlight": "Professores especializados no CSANL"
+      "prefix": "Matemática em Português e Inglês -",
+      "highlight": "Professores que Entendem sua Realidade"
     }
   },
   "navigation": {
-    "private_class": "Aula Particular",
-    "group_classes": "Aulões",
-    "past_exams": "Provas Antigas CSANL",
-    "enem_exams": "Provas ENEM",
-    "login": "Entrar",
-    "cta": "Criar Conta"
+    "services": "Nossos Serviços",
+    "team": "Nossa Equipe",
+    "testimonials": "Depoimentos",
+    "faq": "Perguntas Frequentes",
+    "contact": "Contato",
+    "cta": "Agende Online"
   },
   "hero": {
-    "tag": "Siga @profcerto no Instagram",
+    "tag": "Siga @brmath no Instagram",
     "title": {
       "prefix": "Seu ",
-      "highlight": "sucesso nas provas",
-      "suffix": " começa aqui:"
+      "highlight": "sucesso matemático",
+      "suffix": " nos dois idiomas:"
     },
-    "subtitle": "preparação feita por quem entende!",
-    "description": "Com profunda experiência e domínio da metodologia da CSANL, nossa equipe é referência em preparar você para brilhar nas provas!",
-    "cta": "COMECE SEUS ESTUDOS AGORA →",
-    "disclaimer": "Primeira aula grátis | +1000 alunos aprovados"
+    "subtitle": "A ponte entre o Brasil e os EUA na matemática!",
+    "description": "Professores brasileiros com experiência no sistema educacional americano, oferecendo aulas de matemática que respeitam seu processo de adaptação e facilitam sua jornada acadêmica nos EUA.",
+    "cta": "AGENDE SUA PRIMEIRA AULA GRÁTIS →",
+    "disclaimer": "Primeira aula experimental sem custo | Atendemos alunos em todos os estados dos EUA"
   },
   "services": {
     "title": "Nossos Serviços",
-    "subtitle": "Escolha o Formato Ideal para Sua Preparação",
-    "description": "Acompanhamento educacional focado no seu objetivo, com profissionais que dominam as particularidades do CSANL",
+    "subtitle": "Apoio Personalizado para Cada Necessidade",
+    "description": "Acompanhamento educacional que considera sua base matemática do Brasil e os desafios do currículo americano",
     "options": {
       "private": {
-        "title": "Aula particular",
-        "description": "Aulas individuais, presenciais ou online, personalizadas para focar nas suas necessidades, com atenção exclusiva."
+        "title": "Aulas particulares online",
+        "description": "Aulas individuais focadas nas suas necessidades específicas, com explicações em português e inglês para garantir total compreensão."
       },
-      "thematic": {
-        "title": "Aulão temático",
-        "description": "Aulas online temáticas focadas em teoria, provas e resoluções, com conteúdo estruturado para melhorar sua estratégia"
+      "sat_prep": {
+        "title": "Preparação para SAT",
+        "description": "Estratégias específicas para a seção de matemática do SAT, com foco nas diferenças entre o conteúdo brasileiro e americano."
       },
-      "custom": {
-        "title": "Aulão personalizado",
-        "description": "Aulões online sugeridos pelos alunos, com temas escolhidos por eles e lecionados por nosso time de professores especializados."
+      "homework": {
+        "title": "Auxílio com homework",
+        "description": "Suporte para tarefas escolares e projetos, ajudando você a se adaptar ao estilo de ensino americano sem perder sua base matemática."
       },
-      "cta": "Escolha seu formato de estudo →",
-      "info": "Escolha o melhor formato para suas necessidades"
+      "cta": "Conheça nossos planos de aula →",
+      "info": "Flexibilidade de horários considerando diferentes fusos"
     }
   },
   "teachers": {
-    "title": "Corpo Docente",
-    "subtitle": "Conheça Nossos Professores",
-    "description": "Nossa equipe de professores altamente qualificados está pronta para guiar você em sua jornada de aprendizado.",
-    "cta": "Agende uma aula com nosso time →",
-    "info": "Aprenda com professores especialistas em cada área",
-    "disclaimer": "Média de aprovação superior a 85% entre nossos alunos",
+    "title": "Nossa Equipe",
+    "subtitle": "Professores Bilíngues Especializados",
+    "description": "Time de educadores com formação no Brasil e experiência no sistema educacional americano.",
+    "cta": "Converse com nossos professores →",
+    "info": "Profissionais que entendem sua jornada",
+    "disclaimer": "Professores certificados nos EUA e com experiência em ESL",
     "staff": [
       {
-        "name": "Prof. Diogo",
-        "subject": "Matemática",
-        "description": "Especialista em Álgebra e Geometria"
+        "name": "Prof. Ricardo",
+        "subject": "Matemática Regular",
+        "description": "10 anos de experiência com alunos brasileiros nos EUA"
       },
       {
-        "name": "Prof. Diogo",
-        "subject": "Física",
-        "description": "Doutor em Física Quântica"
+        "name": "Profa. Amanda",
+        "subject": "SAT Math",
+        "description": "Especialista em preparação para testes padronizados"
       },
       {
-        "name": "Prof. Diogo",
-        "subject": "Química",
-        "description": "Mestre em Química Orgânica"
-      },
-      {
-        "name": "Prof. Diogo",
-        "subject": "Biologia",
-        "description": "Especialista em Genética"
-      },
-      {
-        "name": "Prof. Diogo",
-        "subject": "História",
-        "description": "Doutor em História do Brasil"
+        "name": "Prof. Daniel",
+        "subject": "Cálculo e Álgebra",
+        "description": "PhD em Matemática com experiência em universidades americanas"
       }
     ]
   },
   "testimonials": {
     "title": "Depoimentos",
-    "subtitle": "O que nossos alunos dizem",
-    "description": "Veja a experiência de quem já fez parte da nossa comunidade",
-    "cta": "Prepare-se para as provas aqui →",
-    "info": "Seja o próximo caso de sucesso",
-    "disclaimer": "Junte-se aos mais de 200 alunos que transformaram sua forma de estudar e passe nas provas com tranquilidade",
+    "subtitle": "A experiência de nossos alunos",
+    "description": "Histórias de sucesso de brasileiros que conquistaram seus objetivos matemáticos nos EUA",
+    "cta": "Seja o próximo caso de sucesso →",
+    "info": "Alunos em diferentes estados americanos",
+    "disclaimer": "Mais de 2600 alunos brasileiros apoiados em sua jornada acadêmica nos EUA",
     "items": [
       {
-        "name": "Maria Silva",
-        "testimonial": "Os professores são incríveis! O método de ensino é prático e envolvente. Meu filho está adorando!",
+        "name": "Lucas Oliveira",
+        "testimonial": "As aulas bilíngues fizeram toda diferença na minha adaptação. Consegui manter minhas notas em matemática mesmo com o desafio do inglês.",
         "date": "14/01/2024"
       },
       {
-        "name": "João Santos",
-        "testimonial": "O progresso da minha filha foi notável. A dedicação dos professores é realmente admirável. Recomendo muito!",
+        "name": "Julia Santos",
+        "testimonial": "Graças ao suporte da equipe, consegui uma pontuação excelente na parte de matemática do SAT, mesmo tendo chegado há pouco tempo nos EUA.",
         "date": "31/01/2024"
       },
       {
-        "name": "Pedro Oliveira",
-        "testimonial": "O material didático é excelente, e a atenção que recebemos dos professores faz toda a diferença. Fantástico!",
+        "name": "Gabriel Costa",
+        "testimonial": "Os professores entendem exatamente as dificuldades de quem está se adaptando ao sistema americano. As explicações nos dois idiomas são fundamentais.",
         "date": "14/02/2024"
-      },
-      {
-        "name": "Ana Clara Mendes",
-        "testimonial": "O ambiente é muito acolhedor e os professores são super dedicados. Meu filho finalmente está gostando de estudar!",
-        "date": "19/01/2024"
-      },
-      {
-        "name": "Carlos Ferreira",
-        "testimonial": "Estou muito satisfeito com o resultado! Meu filho melhorou muito nas notas e está mais confiante na escola.",
-        "date": "04/02/2024"
-      },
-      {
-        "name": "Fernanda Costa",
-        "testimonial": "Os professores têm uma paciência incrível e explicam de um jeito que as crianças entendem facilmente. Maravilhoso!",
-        "date": "24/01/2024"
       }
     ]
   },
@@ -125,51 +100,46 @@
     "title": "Perguntas Frequentes",
     "items": [
       {
-        "question": "Como faço para baixar as Provas Antigas CSANL?",
-        "answer": "As provas antigas do CSANL estão disponíveis na seção de downloads do site e podem ser baixadas gratuitamente. Para acessá-las, você precisa estar logado em sua conta."
+        "question": "Como funcionam as aulas online?",
+        "answer": "As aulas são realizadas por videoconferência, com recursos interativos que permitem resolução de exercícios em tempo real. Utilizamos uma plataforma intuitiva que permite compartilhamento de tela e quadro virtual."
       },
       {
-        "question": "Como funcionam as aulas particulares?",
-        "answer": "As aulas particulares podem ser realizadas online ou presencialmente, dependendo da sua localização. O agendamento é feito através do WhatsApp da Equipe Aula 360 ou diretamente pela plataforma, onde você pode escolher o horário que melhor se encaixa na sua rotina. Todo o conteúdo é personalizado de acordo com as suas necessidades."
+        "question": "Em qual idioma são as aulas?",
+        "answer": "As aulas são bilíngues (português e inglês), adaptadas ao seu nível de proficiência. Começamos com mais explicações em português e gradualmente aumentamos o uso do inglês conforme sua adaptação."
       },
       {
-        "question": "Como funcionam os aulões temáticos?",
-        "answer": "Os aulões temáticos são realizados online e têm duração de duas horas. Eles são focados em revisões direcionadas para provas e testes, ocorrendo geralmente na véspera ou muito próximos à data da prova. Durante o aulão, o professor simula o conteúdo da prova/teste e realiza uma preparação específica para que o aluno chegue no dia da prova mais preparado e confiante."
+        "question": "Como é a preparação para o SAT?",
+        "answer": "Nossa preparação para o SAT foca na seção de matemática, com estratégias específicas para resolver questões no formato americano. Trabalhamos com simulados e material oficial do College Board."
       },
       {
-        "question": "Como funcionam os aulões personalizados?",
-        "answer": "Os aulões personalizados são sugeridos pelos alunos, que escolhem o tema desejado e convidam outros participantes. Esses aulões ficam visíveis para outros alunos da mesma série na plataforma, permitindo que eles também se inscrevam. Assim que o mínimo de 5 alunos é alcançado, o aulão é confirmado e agendado. O aluno que criou o aulão não paga caso o número mínimo de participantes seja atingido."
-      },
-      {
-        "question": "Posso cancelar uma aula ou aulão agendado?",
-        "answer": "Sim, o cancelamento pode ser feito até 24 horas antes do horário agendado. Caso contrário, poderá haver cobrança de uma taxa de cancelamento. Para cancelar, entre em contato diretamente pelo suporte na plataforma."
+        "question": "Vocês ajudam com a matemática da escola?",
+        "answer": "Sim! Auxiliamos com o conteúdo regular da escola, tarefas e preparação para testes, sempre considerando as diferenças entre os métodos brasileiros e americanos."
       }
     ]
   },
   "final_cta": {
-    "title": "Pronto para dominar as provas do CSANL?",
-    "subtitle": "Estude com quem conhece e diga adeus a notas baixas!",
-    "button": "Melhore suas notas agora →"
+    "title": "Pronto para dominar a matemática nos EUA?",
+    "subtitle": "Estude com quem entende sua jornada!",
+    "button": "Agende sua aula experimental →"
   },
   "footer": {
-    "company_name": "profcerto",
+    "company_name": "brmath",
     "legal": {
       "terms": "Termos de Serviço",
       "privacy": "Política de Privacidade"
     },
     "links": {
-      "private_class": "Aula Particular",
-      "group_classes": "Aulões",
-      "past_exams": "Provas Antigas CSANL",
-      "enem_exams": "Provas ENEM"
+      "private_class": "Aulas Particulares",
+      "sat_prep": "Preparação SAT",
+      "about_us": "Nossa Experiência",
+      "testimonials": "Depoimentos"
     }
   },
   "brand": {
-    "name": "profcerto"
+    "name": "brmath"
   },
-  "whatsapp": {
-    "tooltip": "Ficou dúvida? Entre em contato!",
-    "default_message": "Olá! Gostaria de saber mais sobre as aulas.",
-    "aria_label": "Contato via WhatsApp"
+  "message_button": {
+    "tooltip": "Dúvidas? Envie uma mensagem!",
+    "default_message": "Olá! Gostaria de saber mais sobre as aulas de matemática."
   }
 }

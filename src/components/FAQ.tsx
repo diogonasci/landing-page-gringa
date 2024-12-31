@@ -12,18 +12,20 @@ export const FAQ = () => {
   const faqItems = t('faq.items', { returnObjects: true }) as Array<{ question: string; answer: string }>;
 
   return (
-    <Section>
-      <h2 className="mb-8 text-center text-3xl font-bold">
-        {t('faq.title')}
-      </h2>
-      <Accordion type="multiple" className="w-full">
-        {faqItems.map((item, index) => (
-          <AccordionItem key={`item-${index + 1}`} value={`item-${index + 1}`}>
-            <AccordionTrigger>{item.question}</AccordionTrigger>
-            <AccordionContent>{item.answer}</AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </Section>
+    <div id="faq">
+      <Section>
+        <h2 className="mb-8 text-center text-3xl font-bold">
+          {t('faq.title')}
+        </h2>
+        <Accordion type="multiple" className="w-full">
+          {faqItems.map((item, index) => (
+            <AccordionItem key={`item-${index + 1}`} value={`item-${index + 1}`}>
+              <AccordionTrigger>{item.question}</AccordionTrigger>
+              <AccordionContent>{item.answer}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </Section>
+    </div>
   );
 };

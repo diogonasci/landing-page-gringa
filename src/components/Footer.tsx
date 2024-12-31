@@ -5,13 +5,13 @@ import Logo from "./Logo";
 import { Section } from "./Section";
 
 export const Footer = () => {
-  const { t } = useTranslation('content');
+  const { t } = useTranslation("content");
 
   return (
     <Section className="pb-16 pt-0">
       <CenteredFooter
         logo={<Logo />}
-        name={t('footer.company_name')}
+        name={t("footer.company_name")}
         iconList={
           <>
             <li>
@@ -41,28 +41,28 @@ export const Footer = () => {
         legalLinks={
           <>
             <li>
-              <Link to="/sign-up">{t('footer.legal.terms')}</Link>
+              <Link to="/sign-up">{t("footer.legal.terms")}</Link>
             </li>
             <li>
-              <Link to="/sign-up">{t('footer.legal.privacy')}</Link>
+              <Link to="/sign-up">{t("footer.legal.privacy")}</Link>
             </li>
           </>
         }
       >
         <li>
-          <Link to="/sign-up">{t('footer.links.private_class')}</Link>
+          <Link to="/sign-up">{t("footer.links.private_class")}</Link>
         </li>
 
         <li>
-          <Link to="/sign-up">{t('footer.links.group_classes')}</Link>
+          <Link to="/sign-up">{t("footer.links.sat_prep")}</Link>
         </li>
 
         <li>
-          <Link to="/sign-up">{t('footer.links.past_exams')}</Link>
+          <Link to="/sign-up">{t("footer.links.about_us")}</Link>
         </li>
 
         <li>
-          <Link to="/sign-up">{t('footer.links.enem_exams')}</Link>
+          <Link to="/sign-up">{t("footer.links.testimonials")}</Link>
         </li>
       </CenteredFooter>
     </Section>

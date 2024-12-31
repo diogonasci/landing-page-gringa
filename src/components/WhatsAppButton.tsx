@@ -12,7 +12,7 @@ export const WhatsAppButton = ({
 }: WhatsAppButtonProps) => {
   const { t } = useTranslation("content");
   const formattedPhone = phoneNumber.replace(/\D/g, "");
-  const defaultMessage = t("whatsapp.default_message");
+  const defaultMessage = t("message_button.default_message");
   const whatsappUrl = `https://wa.me/${formattedPhone}?text=${encodeURIComponent(
     message || defaultMessage
   )}`;
@@ -21,7 +21,7 @@ export const WhatsAppButton = ({
     <div className="fixed bottom-6 right-6 z-50 group">
       <div className="absolute bottom-[calc(100%+0.5rem)] right-0 hidden group-hover:block">
         <div className="bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg text-sm whitespace-nowrap">
-          {t("whatsapp.tooltip")}
+          {t("message_button.tooltip")}
           <div className="absolute -bottom-1 right-6 w-2 h-2 bg-white transform rotate-45" />
         </div>
       </div>

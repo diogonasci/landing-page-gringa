@@ -5,12 +5,12 @@ import { Section } from "./Section";
 import { buttonVariants } from "./ui/buttonVariants";
 
 const Features: React.FC = () => {
-  const { t } = useTranslation('content');
+  const { t } = useTranslation("content");
 
   const features = [
     {
-      title: t('services.options.private.title'),
-      description: t('services.options.private.description'),
+      title: t("services.options.private.title"),
+      description: t("services.options.private.description"),
       icon: (
         <svg
           className="stroke-primary-foreground stroke-2"
@@ -26,8 +26,8 @@ const Features: React.FC = () => {
       ),
     },
     {
-      title: t('services.options.thematic.title'),
-      description: t('services.options.thematic.description'),
+      title: t("services.options.sat_prep.title"),
+      description: t("services.options.sat_prep.description"),
       icon: (
         <svg
           className="stroke-primary-foreground stroke-2"
@@ -44,8 +44,8 @@ const Features: React.FC = () => {
       ),
     },
     {
-      title: t('services.options.custom.title'),
-      description: t('services.options.custom.description'),
+      title: t("services.options.homework.title"),
+      description: t("services.options.homework.description"),
       icon: (
         <svg
           className="stroke-primary-foreground stroke-2"
@@ -67,36 +67,34 @@ const Features: React.FC = () => {
   ];
 
   return (
-    <div className="w-full bg-secondary">
-      <Section
-        subtitle={t('services.title')}
-        title={t('services.subtitle')}
-        description={t('services.description')}
-      >
-        <div className="grid grid-cols-1 gap-x-3 gap-y-8 md:grid-cols-3">
-          {features.map((feature, index) => (
-            <FeatureCard key={index} icon={feature.icon} title={feature.title}>
-              {feature.description}
-            </FeatureCard>
-          ))}
-        </div>
+    <Section
+      id="services"
+      subtitle={t("services.title")}
+      title={t("services.subtitle")}
+      description={t("services.description")}
+      className="bg-secondary"
+    >
+      <div className="grid grid-cols-1 gap-x-3 gap-y-8 md:grid-cols-3">
+        {features.map((feature, index) => (
+          <FeatureCard key={index} icon={feature.icon} title={feature.title}>
+            {feature.description}
+          </FeatureCard>
+        ))}
+      </div>
 
-        {/* CTA Section */}
-        <div className="mt-12 flex flex-col items-center space-y-4">
-          <a
-            href="https://wa.me/5521985043074?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas."
-            className={`${buttonVariants({
-              size: "lg",
-            })} bg-[#4A90E2] hover:bg-[#357ABD] transition-colors duration-200`}
-          >
-            {t('services.options.cta')}
-          </a>
-          <p className="text-sm text-gray-600">
-            {t('services.options.info')}
-          </p>
-        </div>
-      </Section>
-    </div>
+      {/* CTA Section */}
+      <div className="mt-12 flex flex-col items-center space-y-4">
+        <a
+          href="https://wa.me/5521985043074?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas."
+          className={`${buttonVariants({
+            size: "lg",
+          })} bg-[#4A90E2] hover:bg-[#357ABD] transition-colors duration-200`}
+        >
+          {t("services.options.cta")}
+        </a>
+        <p className="text-sm text-gray-600">{t("services.options.info")}</p>
+      </div>
+    </Section>
   );
 };
 

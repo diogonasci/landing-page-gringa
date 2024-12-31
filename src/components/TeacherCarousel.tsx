@@ -65,88 +65,90 @@ const TeacherCarousel = () => {
   };
 
   return (
-    <Section
-      subtitle={t("teachers.title")}
-      title={t("teachers.subtitle")}
-      description={t("teachers.description")}
-      className="py-16"
-    >
-      <div className="flex items-center justify-center gap-4">
-        <button
-          onClick={prevSlide}
-          className="p-2 rounded-full text-gray-400 hover:text-gray-600 transition-colors"
-          aria-label="Previous"
-        >
-          <ChevronLeft className="w-8 h-8" />
-        </button>
-
-        <div
-          ref={containerRef}
-          className="relative w-[896px] overflow-hidden"
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          <div
-            className={`flex gap-6 ${
-              isDragging ? "" : "transition-transform duration-500"
-            } ease-in-out`}
-            style={{
-              transform: `translateX(${
-                -currentIndex * cardWidth + dragOffset
-              }px)`,
-            }}
+    <div id="team">
+      <Section
+        subtitle={t("teachers.title")}
+        title={t("teachers.subtitle")}
+        description={t("teachers.description")}
+        className="py-16"
+      >
+        <div className="flex items-center justify-center gap-4">
+          <button
+            onClick={prevSlide}
+            className="p-2 rounded-full text-gray-400 hover:text-gray-600 transition-colors"
+            aria-label="Previous"
           >
-            {teachers.map((teacher) => (
-              <div
-                key={teacher.id}
-                className="flex-shrink-0 flex flex-col items-center w-64 p-6 bg-white rounded-lg shadow-md transition-transform hover:scale-105"
-              >
-                <div className="w-32 h-32 mb-4 overflow-hidden rounded-full">
-                  <img
-                    src={professorDiogo}
-                    alt={teacher.name}
-                    className="w-full h-full object-cover"
-                  />
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+
+          <div
+            ref={containerRef}
+            className="relative w-[896px] overflow-hidden"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div
+              className={`flex gap-6 ${
+                isDragging ? "" : "transition-transform duration-500"
+              } ease-in-out`}
+              style={{
+                transform: `translateX(${
+                  -currentIndex * cardWidth + dragOffset
+                }px)`,
+              }}
+            >
+              {teachers.map((teacher) => (
+                <div
+                  key={teacher.id}
+                  className="flex-shrink-0 flex flex-col items-center w-64 p-6 bg-white rounded-lg shadow-md transition-transform hover:scale-105"
+                >
+                  <div className="w-32 h-32 mb-4 overflow-hidden rounded-full">
+                    <img
+                      src={professorDiogo}
+                      alt={teacher.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    {teacher.name}
+                  </h3>
+                  <p className="text-blue-600 font-medium">{teacher.subject}</p>
+                  <p className="text-gray-600 text-center mt-2">
+                    {teacher.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800">
-                  {teacher.name}
-                </h3>
-                <p className="text-blue-600 font-medium">{teacher.subject}</p>
-                <p className="text-gray-600 text-center mt-2">
-                  {teacher.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
+          <button
+            onClick={nextSlide}
+            className="p-2 rounded-full text-gray-400 hover:text-gray-600 transition-colors"
+            aria-label="Next"
+          >
+            <ChevronRight className="w-8 h-8" />
+          </button>
         </div>
 
-        <button
-          onClick={nextSlide}
-          className="p-2 rounded-full text-gray-400 hover:text-gray-600 transition-colors"
-          aria-label="Next"
-        >
-          <ChevronRight className="w-8 h-8" />
-        </button>
-      </div>
+        {/* CTA Section */}
+        <div className="mt-16 flex flex-col items-center space-y-4">
+          <div className="text-center mb-6">
+            <p className="text-lg text-gray-700">{t("teachers.info")}</p>
+            <p className="text-sm text-gray-600">{t("teachers.disclaimer")}</p>
+          </div>
 
-      {/* CTA Section */}
-      <div className="mt-16 flex flex-col items-center space-y-4">
-        <div className="text-center mb-6">
-          <p className="text-lg text-gray-700">{t("teachers.info")}</p>
-          <p className="text-sm text-gray-600">{t("teachers.disclaimer")}</p>
+          <a
+            href="https://wa.me/5521985043074?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas."
+            className={`${buttonVariants({
+              size: "lg",
+            })} bg-[#4A90E2] hover:bg-[#357ABD] transition-colors duration-200 group`}
+          >
+            {t("teachers.cta")}
+          </a>
         </div>
-
-        <a
-          href="https://wa.me/5521985043074?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas."
-          className={`${buttonVariants({
-            size: "lg",
-          })} bg-[#4A90E2] hover:bg-[#357ABD] transition-colors duration-200 group`}
-        >
-          {t("teachers.cta")}
-        </a>
-      </div>
-    </Section>
+      </Section>
+    </div>
   );
 };
 
