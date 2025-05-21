@@ -1,54 +1,49 @@
-import { badgeVariants } from "@/components/ui/badgeVariants";
-import { InstagramLogoIcon } from "@radix-ui/react-icons";
-import { useTranslation } from "react-i18next";
-import { CenteredHero } from "./CenteredHero";
-import { Section } from "./Section";
-import { buttonVariants } from "./ui/buttonVariants";
-import { CALENDLY_URL } from "@/constants/urls";
+import { COMPANY_DESCRIPTION, FORM_URL } from "@/constants/urls";
+import React from "react";
 
-const Hero: React.FC = () => {
-  const { t } = useTranslation();
-
+const Hero = () => {
   return (
-    <Section className="py-36">
-      <CenteredHero
-        banner={
-          <a
-            className={badgeVariants()}
-            href={CALENDLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InstagramLogoIcon className="mr-1 size-5" /> {t("hero.tag")}
-          </a>
-        }
-        title={
-          <>
-            {t("hero.title.prefix")}{" "}
-            <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              {t("hero.title.highlight")}
-            </span>{" "}
-            {t("hero.title.suffix")} {t("hero.subtitle")}
-          </>
-        }
-        description={t("hero.description")}
-        buttons={
-          <div className="flex flex-col items-center space-y-4">
-            <a
-              className={`${buttonVariants({
-                size: "lg",
-              })} bg-[#4A90E2] hover:bg-[#357ABD] transition-colors duration-200 px-8 py-4 text-lg font-semibold`}
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t("hero.cta")}
-            </a>
-            <p className="text-sm text-gray-600">{t("hero.disclaimer")}</p>
+    <section className="bg-solarrio-dark py-10 md:py-16">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+          <h1 className="text-white text-2xl md:text-4xl font-bold mb-2">
+            Pare de dar dinheiro pra <br className="hidden sm:block" />
+            concessionária.
+          </h1>
+          <h2 className="text-solarrio-orange text-xl md:text-3xl font-bold mb-4">
+            Reduza sua conta de luz em até 95%
+            <br className="hidden sm:block" />
+            com energia solar!
+          </h2>
+
+          <p className="text-white mb-8 text-base md:text-lg">
+            {COMPANY_DESCRIPTION}
+          </p>
+
+          {/* Video Player */}
+          <div className="w-full max-w-2xl mb-8">
+            <div className="relative pt-[56.25%]">
+              {" "}
+              {/* 16:9 Aspect Ratio */}
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-md"
+                src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+                title="Como funciona energia solar?"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
-        }
-      />
-    </Section>
+
+          <a
+            href={FORM_URL}
+            className="bg-solarrio-orange text-white py-3 px-8 rounded-md text-lg font-medium hover:brightness-110 transition-all"
+          >
+            Quero receber minha conta de luz $0
+          </a>
+        </div>
+      </div>
+    </section>
   );
 };
 

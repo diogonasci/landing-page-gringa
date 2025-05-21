@@ -1,89 +1,102 @@
-import { buttonVariants } from "@/components/ui/buttonVariants";
-import { CALENDLY_URL } from "@/constants/urls";
-import React from "react";
-import { useTranslation } from "react-i18next";
-import { CenteredMenu } from "./CenteredMenu";
-import { Logo } from "./Logo";
+import { FORM_URL } from "@/constants/urls";
+import { Menu, X } from "lucide-react";
+import React, { useState } from "react";
+import Logo from "./Logo";
 
-const Header: React.FC = () => {
-  const { t } = useTranslation("content");
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerOffset = 100;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm px-3 py-4">
-      <CenteredMenu
-        logo={<Logo />}
-        rightMenu={
-          <>
-            <li>
+    <nav className="bg-solarrio-darker py-4">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center">
+          <Logo />
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            <a
+              href="#como-funciona"
+              className="text-white hover:text-solarrio-orange transition-colors"
+            >
+              Como Funciona
+            </a>
+            <a
+              href="#depoimentos"
+              className="text-white hover:text-solarrio-orange transition-colors"
+            >
+              Depoimentos
+            </a>
+            <a
+              href="#por-que-escolher"
+              className="text-white hover:text-solarrio-orange transition-colors"
+            >
+              Por que Escolher
+            </a>
+            <a
+              href="#contato"
+              className="bg-solarrio-orange text-white px-6 py-2 rounded-md font-medium hover:brightness-110 transition-all"
+            >
+              Análise Gratuita
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-white focus:outline-none"
+            >
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden mt-4 pb-4">
+            <div className="flex flex-col space-y-4">
               <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={buttonVariants()}
+                href="#como-funciona"
+                className="text-white hover:text-solarrio-orange transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
-                {t("navigation.cta")}
+                Como Funciona
               </a>
-            </li>
-          </>
-        }
-      >
-        <li>
-          <button
-            onClick={() => scrollToSection("services")}
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            {t("navigation.services")}
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => scrollToSection("team")}
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            {t("navigation.team")}
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => scrollToSection("testimonials")}
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            {t("navigation.testimonials")}
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => scrollToSection("contact")}
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            {t("navigation.contact")}
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => scrollToSection("faq")}
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            {t("navigation.faq")}
-          </button>
-        </li>
-      </CenteredMenu>
-    </div>
+              <a
+                href="#depoimentos"
+                className="text-white hover:text-solarrio-orange transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Depoimentos
+              </a>
+              <a
+                href="#por-que-escolher"
+                className="text-white hover:text-solarrio-orange transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Por que Escolher
+              </a>
+              <a
+                href={FORM_URL}
+                className="bg-solarrio-orange text-white px-6 py-2 rounded-md font-medium inline-block text-center hover:brightness-110 transition-all"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Análise Gratuita
+              </a>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
   );
 };
 
-export default Header;
+export default Navbar;

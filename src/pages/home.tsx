@@ -1,25 +1,42 @@
 import ContactForm from "@/components/ContactForm";
-import { FAQ } from "@/components/FAQ";
-import Features from "@/components/Features";
-import FinalCTA from "@/components/FinalCTA";
-import Hero from "@/components/Hero";
-import { MessageButton } from "@/components/MessageButton";
-import TeacherCarousel from "@/components/TeacherCarousel";
+import Footer from "@/components/Footer";
+import Hero from "@/components/hero";
+import HowItWorks from "@/components/HowItWorks";
+import Navbar from "@/components/navbar";
+import SpecialOffer from "@/components/SpecialOffer";
+import StickyBanner from "@/components/StickyBanner";
 import Testimonials from "@/components/Testimonials";
-import MainLayout from "@/layouts/main-layout";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import { CONTACT_WHATSAPP } from "@/constants/urls";
+import { MessageCircle } from "lucide-react";
+import React from "react";
 
 const HomePage = () => {
   return (
-    <MainLayout>
-      <Hero />
-      <Features />
-      <TeacherCarousel />
-      <Testimonials />
-      <ContactForm />
-      <FAQ />
-      <FinalCTA />
-      <MessageButton phoneNumber="5521985043074" />
-    </MainLayout>
+    <div className="flex flex-col min-h-screen">
+      <StickyBanner />
+      <Navbar />
+      <main className="flex-grow">
+        <Hero />
+        <Testimonials />
+        <HowItWorks />
+        <WhyChooseUs />
+        <SpecialOffer />
+        <ContactForm />
+      </main>
+      <Footer />
+
+      {/* Botão de WhatsApp flutuante */}
+      <a
+        href={CONTACT_WHATSAPP}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-5 right-5 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors"
+        aria-label="Fale pelo WhatsApp"
+      >
+        <MessageCircle className="w-7 h-7 text-white" />
+      </a>
+    </div>
   );
 };
 

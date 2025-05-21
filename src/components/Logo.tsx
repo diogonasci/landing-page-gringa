@@ -1,27 +1,17 @@
-import { useTranslation } from "react-i18next";
-import "../styles/fonts.css";
+import { Sun } from "lucide-react";
 
 export const Logo = () => {
-  const { t } = useTranslation('content');
-
   return (
     <div className="flex items-center font-semibold">
-      <svg className="mr-1 h-12 w-auto" viewBox="0 0 500 100">
-        <text
-          x="50%"
-          y="50%"
-          dominantBaseline="middle"
-          textAnchor="middle"
-          style={{
-            fontFamily: "Peralta, sans-serif",
-            fontSize: "48px",
-            fill: "hsl(210, 73%, 59%)",
-            fontWeight: 400,
-          }}
-        >
-          {t('brand.name')}
-        </text>
-      </svg>
+      <div className="relative mr-2">
+        <Sun className="h-10 w-10 text-solarrio-orange" />
+        <div className="absolute -inset-1 rounded-full bg-solarrio-orange opacity-30 blur-sm animate-pulse-solar"></div>
+      </div>
+      <div className="text-2xl font-bold">
+        <span className="text-white">
+          Solar<span className="text-solarrio-orange">Rio</span>
+        </span>
+      </div>
     </div>
   );
 };

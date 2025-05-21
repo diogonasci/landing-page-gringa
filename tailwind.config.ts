@@ -39,6 +39,15 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Cores exatas do SolarRio conforme PDF
+        solarrio: {
+          dark: "#1d1f24", // Fundo escuro
+          darker: "#20232a", // Fundo mais escuro para contraste
+          orange: "#ff7c40", // Laranja principal
+          white: "#ffffff", // Branco
+          grayDark: "#333333", // Cinza escuro para textos secundários
+          grayLight: "#cccccc", // Cinza claro para bordas
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -54,10 +63,20 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "pulse-solar": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.7" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-solar": "pulse-solar 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      },
+      backgroundImage: {
+        "solarrio-gradient": "linear-gradient(to bottom, #ff7c40, #ff6028)",
+        "solarrio-dark-gradient":
+          "linear-gradient(to bottom, #20232a, #1d1f24)",
       },
     },
   },

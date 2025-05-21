@@ -5,69 +5,110 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 7% 13%; /* #1d1f24 */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 7% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 7% 13%;
 
-    --primary: 210 73% 59%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 15 100% 62%; /* #ff7c40 - Laranja SolarRio */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 222 8% 15%; /* #20232a - Fundo mais escuro SolarRio */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 7% 13%;
+    --muted-foreground: 0 0% 80%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 15 100% 62%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 3% 20%;
+    --input: 220 3% 20%;
+    --ring: 15 100% 55%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 7% 13%; /* #1d1f24 */
+    --foreground: 0 0% 100%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 222 8% 15%; /* #20232a */
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 7% 13%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 15 100% 62%; /* #ff7c40 */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 222 8% 15%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 7% 23%;
+    --muted-foreground: 0 0% 80%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 15 100% 62%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 215 5% 25%;
+    --input: 215 5% 25%;
+    --ring: 15 100% 55%;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .solarrio-shadow {
+    box-shadow: 0 0 15px rgba(255, 124, 64, 0.3);
+  }
+
+  .solarrio-text {
+    @apply text-solarrio-orange font-bold;
+  }
+
+  .solarrio-card {
+    @apply bg-white rounded-lg border border-solarrio-grayLight shadow-md hover:shadow-lg transition-all duration-300 p-6;
+  }
+
+  .solarrio-button {
+    @apply bg-solarrio-orange text-white font-medium rounded-md px-6 py-3 hover:brightness-110 transition-all duration-300;
+  }
+
+  .solarrio-button-outline {
+    @apply border-2 border-solarrio-orange text-solarrio-orange font-medium rounded-md px-6 py-3 hover:bg-solarrio-orange/10 transition-all duration-300;
+  }
+
+  .solarrio-section-dark {
+    @apply bg-solarrio-dark text-white py-16;
+  }
+
+  .solarrio-section-darker {
+    @apply bg-solarrio-darker text-white py-16;
+  }
+
+  .solarrio-section-light {
+    @apply bg-white text-solarrio-dark py-16;
+  }
+
+  .solarrio-section-orange {
+    @apply bg-solarrio-orange text-white py-16;
   }
 }

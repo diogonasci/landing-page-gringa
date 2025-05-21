@@ -1,5 +1,20 @@
-export const StickyBanner = (props: { children: React.ReactNode }) => (
-  <div className="z-50 bg-primary p-4 text-center text-lg font-semibold text-primary-foreground [&_a:hover]:text-yellow-400 [&_a]:text-yellow-300">
-    {props.children}
-  </div>
-);
+import { COMPANY_TAGLINE } from "@/constants/urls";
+
+export const StickyBanner = () => {
+  return (
+    <div className="bg-solarrio-dark text-white py-3 text-center">
+      <div className="container mx-auto px-4">
+        <p className="text-lg font-medium">
+          Pare de dar dinheiro pra concessionária.
+          <br className="sm:hidden" />
+          <span className="text-solarrio-orange font-bold">
+            {" "}
+            {COMPANY_TAGLINE}
+          </span>
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default StickyBanner;

@@ -1,4 +1,24 @@
-const currentDate = new Date();
-const currentMonth = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}`;
+// URLs importantes
+export const CONTACT_WHATSAPP =
+  "https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20energia%20solar";
+export const INSTAGRAM_URL = "https://instagram.com/solarrio";
+export const FACEBOOK_URL = "https://facebook.com/solarrio";
 
-export const CALENDLY_URL = `https://calendly.com/diogonascii/aula-de-matematica-online-1-hora?back=1&month=${currentMonth}`;
+// Informações de contato
+export const CONTACT_EMAIL = "contato@solarrio.com.br";
+export const CONTACT_PHONE = "(21) 99999-9999";
+export const CONTACT_ADDRESS = "Rio de Janeiro, RJ";
+
+// Valores para calculadora
+export const LIGHT_TARIFF = 0.85; // Tarifa média de energia em R$/kWh
+export const SOLAR_EFFICIENCY = 0.92; // Eficiência média dos painéis
+
+// URLs de ação (CTA)
+export const FORM_URL = "/analise-gratuita";
+
+// Outros
+export const COMPANY_NAME = "SolarRio";
+export const COMPANY_TAGLINE =
+  "Reduza sua conta de luz em até 95% com energia solar!";
+export const COMPANY_DESCRIPTION =
+  "Moradores do RJ já estão economizando centenas por mês com a SolarRio Energia Solar!";

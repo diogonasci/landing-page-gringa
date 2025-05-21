@@ -1,87 +1,86 @@
-import { Section } from "@/components/Section";
 import { Star } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { buttonVariants } from "./ui/buttonVariants";
-import { CALENDLY_URL } from "@/constants/urls";
+import React from "react";
 
+// Tipo para os dados de depoimentos
 type Testimonial = {
+  id: number;
   name: string;
-  testimonial: string;
-  rating: number;
-  date: string;
+  location: string;
+  text: string;
+  savings: string;
 };
 
-const TestimonialsSection = () => {
-  const { t } = useTranslation("content");
-  const testimonials = t("testimonials.items", {
-    returnObjects: true,
-  }) as Testimonial[];
+const testimonials: Testimonial[] = [
+  {
+    id: 1,
+    name: "Cecília Santos",
+    location: "Copacabana, Rio de Janeiro - RJ",
+    text: "Instalei as placas de energia solar e a redução na minha conta foi incrível! Em apenas 2 meses já vi a diferença no meu bolso.",
+    savings: "Economia mensal de R$ 387,50",
+  },
+  {
+    id: 2,
+    name: "Ricardo Oliveira",
+    location: "Barra da Tijuca, Rio de Janeiro - RJ",
+    text: "Nunca imaginei que poderia economizar significativamente e o financiamento é o que mais me surpreendeu. As parcelas são menores que o valor que eu pagava de luz!",
+    savings: "Economia mensal de R$ 1.250,00",
+  },
+  {
+    id: 3,
+    name: "Fernanda Lima",
+    location: "Niterói, Rio de Janeiro - RJ",
+    text: "Fiquei impressionada com a rapidez da instalação e com o profissionalismo da equipe. O processo foi muito mais simples do que eu imaginava.",
+    savings: "Economia mensal de R$ 653,00",
+  },
+];
 
+const Testimonials = () => {
   return (
-    <div id="testimonials">
-      <Section
-        subtitle={t("testimonials.title")}
-        title={t("testimonials.subtitle")}
-        description={t("testimonials.description")}
-        className="bg-gray-50"
-      >
-        <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-          {testimonials.map((testimonial, index) => (
+    <section id="depoimentos" className="bg-white py-12 md:py-16">
+      <div className="container mx-auto px-4">
+        <h2 className="text-center text-2xl md:text-3xl font-bold mb-3 text-solarrio-dark">
+          O que dizem nossos{" "}
+          <span className="text-solarrio-orange">clientes</span>
+        </h2>
+        <p className="text-center text-solarrio-dark mb-10 max-w-2xl mx-auto">
+          Veja como a energia solar está transformando a vida de moradores do
+          Rio de Janeiro
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          {testimonials.map((testimonial) => (
             <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              key={testimonial.id}
+              className="border border-gray-200 rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="flex items-center mb-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                    {testimonial.name.charAt(0)}
-                  </div>
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {testimonial.name}
-                  </h3>
-                  <div className="flex items-center">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                      />
-                    ))}
-                  </div>
-                </div>
+              <div className="flex mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-5 h-5 text-solarrio-orange fill-solarrio-orange"
+                  />
+                ))}
               </div>
-              <p className="text-gray-600 mb-4">{testimonial.testimonial}</p>
-              <time className="text-sm text-gray-500">{testimonial.date}</time>
+
+              <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
+
+              <div className="border-t border-gray-200 pt-4 mt-4">
+                <p className="font-semibold text-solarrio-dark">
+                  {testimonial.name}
+                </p>
+                <p className="text-sm text-gray-600 mb-2">
+                  {testimonial.location}
+                </p>
+                <p className="text-solarrio-orange font-semibold">
+                  {testimonial.savings}
+                </p>
+              </div>
             </div>
           ))}
         </div>
-
-        {/* CTA Section */}
-        <div className="mt-16 flex flex-col items-center space-y-6">
-          <div className="text-center mb-2">
-            <p className="text-2xl font-semibold text-gray-800 mb-2">
-              {t("testimonials.info")}
-            </p>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              {t("testimonials.disclaimer")}
-            </p>
-          </div>
-
-          <a
-            href={CALENDLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${buttonVariants({
-              size: "lg",
-            })} bg-[#4A90E2] hover:bg-[#357ABD] transition-colors duration-200 px-8`}
-          >
-            {t("testimonials.cta")}
-          </a>
-        </div>
-      </Section>
-    </div>
+      </div>
+    </section>
   );
 };
 
-export default TestimonialsSection;
+export default Testimonials;
