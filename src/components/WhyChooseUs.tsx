@@ -1,5 +1,4 @@
 import { CheckCircle, Shield, Timer } from "lucide-react";
-import React from "react";
 
 const WhyChooseUs = () => {
   return (

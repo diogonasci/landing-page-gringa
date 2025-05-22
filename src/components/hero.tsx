@@ -1,5 +1,4 @@
 import { COMPANY_DESCRIPTION, FORM_URL } from "@/constants/urls";
-import React from "react";
 
 const Hero = () => {
   return (

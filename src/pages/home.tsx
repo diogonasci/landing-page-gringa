@@ -9,7 +9,6 @@ import Testimonials from "@/components/Testimonials";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import { CONTACT_WHATSAPP } from "@/constants/urls";
 import { MessageCircle } from "lucide-react";
-import React from "react";
 
 const HomePage = () => {
   return (

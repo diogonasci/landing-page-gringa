@@ -1,6 +1,5 @@
 import { FORM_URL } from "@/constants/urls";
 import { CheckCircle } from "lucide-react";
-import React from "react";
 
 const SpecialOffer = () => {
   return (

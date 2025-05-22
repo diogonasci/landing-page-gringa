@@ -1,5 +1,4 @@
 import { Star } from "lucide-react";
-import React from "react";
 import person1 from "../assets/person1.png";
 import person2 from "../assets/person2.png";
 import person3 from "../assets/person3.png";
