@@ -13,10 +13,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 7% 13%;
 
-    --primary: 15 100% 62%; /* #ff7c40 - Laranja SolarRio */
+    --primary: 15 100% 62%; /* #ff7c40 - Laranja Radial */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 222 8% 15%; /* #20232a - Fundo mais escuro SolarRio */
+    --secondary: 222 8% 15%; /* #20232a - Fundo mais escuro Radial */
     --secondary-foreground: 0 0% 100%;
 
     --muted: 220 7% 13%;
@@ -76,39 +76,39 @@
 }
 
 @layer components {
-  .solarrio-shadow {
+  .radial-shadow {
     box-shadow: 0 0 15px rgba(255, 124, 64, 0.3);
   }
 
-  .solarrio-text {
-    @apply text-solarrio-orange font-bold;
+  .radial-text {
+    @apply text-radial-orange font-bold;
   }
 
-  .solarrio-card {
-    @apply bg-white rounded-lg border border-solarrio-grayLight shadow-md hover:shadow-lg transition-all duration-300 p-6;
+  .radial-card {
+    @apply bg-white rounded-lg border border-radial-grayLight shadow-md hover:shadow-lg transition-all duration-300 p-6;
   }
 
-  .solarrio-button {
-    @apply bg-solarrio-orange text-white font-medium rounded-md px-6 py-3 hover:brightness-110 transition-all duration-300;
+  .radial-button {
+    @apply bg-radial-orange text-white font-medium rounded-md px-6 py-3 hover:brightness-110 transition-all duration-300;
   }
 
-  .solarrio-button-outline {
-    @apply border-2 border-solarrio-orange text-solarrio-orange font-medium rounded-md px-6 py-3 hover:bg-solarrio-orange/10 transition-all duration-300;
+  .radial-button-outline {
+    @apply border-2 border-radial-orange text-radial-orange font-medium rounded-md px-6 py-3 hover:bg-radial-orange/10 transition-all duration-300;
   }
 
-  .solarrio-section-dark {
-    @apply bg-solarrio-dark text-white py-16;
+  .radial-section-dark {
+    @apply bg-radial-dark text-white py-16;
   }
 
-  .solarrio-section-darker {
-    @apply bg-solarrio-darker text-white py-16;
+  .radial-section-darker {
+    @apply bg-radial-darker text-white py-16;
   }
 
-  .solarrio-section-light {
-    @apply bg-white text-solarrio-dark py-16;
+  .radial-section-light {
+    @apply bg-white text-radial-dark py-16;
   }
 
-  .solarrio-section-orange {
-    @apply bg-solarrio-orange text-white py-16;
+  .radial-section-orange {
+    @apply bg-radial-orange text-white py-16;
   }
 }

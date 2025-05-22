@@ -38,11 +38,11 @@ const Testimonials = () => {
   return (
     <section id="depoimentos" className="bg-white py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-2xl md:text-3xl font-bold mb-3 text-solarrio-dark">
+        <h2 className="text-center text-2xl md:text-3xl font-bold mb-3 text-radial-dark">
           O que dizem nossos{" "}
-          <span className="text-solarrio-orange">clientes</span>
+          <span className="text-radial-orange">clientes</span>
         </h2>
-        <p className="text-center text-solarrio-dark mb-10 max-w-2xl mx-auto">
+        <p className="text-center text-radial-dark mb-10 max-w-2xl mx-auto">
           Veja como a energia solar está transformando a vida de moradores do
           Rio de Janeiro
         </p>
@@ -57,7 +57,7 @@ const Testimonials = () => {
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className="w-5 h-5 text-solarrio-orange fill-solarrio-orange"
+                    className="w-5 h-5 text-radial-orange fill-radial-orange"
                   />
                 ))}
               </div>
@@ -65,13 +65,13 @@ const Testimonials = () => {
               <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
 
               <div className="border-t border-gray-200 pt-4 mt-4">
-                <p className="font-semibold text-solarrio-dark">
+                <p className="font-semibold text-radial-dark">
                   {testimonial.name}
                 </p>
                 <p className="text-sm text-gray-600 mb-2">
                   {testimonial.location}
                 </p>
-                <p className="text-solarrio-orange font-semibold">
+                <p className="text-radial-orange font-semibold">
                   {testimonial.savings}
                 </p>
               </div>

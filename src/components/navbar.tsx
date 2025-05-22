@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-solarrio-darker py-4">
+    <nav className="bg-radial-darker py-4">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Logo />
@@ -20,25 +20,25 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#como-funciona"
-              className="text-white hover:text-solarrio-orange transition-colors"
+              className="text-white hover:text-radial-orange transition-colors"
             >
               Como Funciona
             </a>
             <a
               href="#depoimentos"
-              className="text-white hover:text-solarrio-orange transition-colors"
+              className="text-white hover:text-radial-orange transition-colors"
             >
               Depoimentos
             </a>
             <a
               href="#por-que-escolher"
-              className="text-white hover:text-solarrio-orange transition-colors"
+              className="text-white hover:text-radial-orange transition-colors"
             >
               Por que Escolher
             </a>
             <a
               href="#contato"
-              className="bg-solarrio-orange text-white px-6 py-2 rounded-md font-medium hover:brightness-110 transition-all"
+              className="bg-radial-orange text-white px-6 py-2 rounded-md font-medium hover:brightness-110 transition-all"
             >
               Análise Gratuita
             </a>
@@ -65,28 +65,28 @@ const Navbar = () => {
             <div className="flex flex-col space-y-4">
               <a
                 href="#como-funciona"
-                className="text-white hover:text-solarrio-orange transition-colors"
+                className="text-white hover:text-radial-orange transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Como Funciona
               </a>
               <a
                 href="#depoimentos"
-                className="text-white hover:text-solarrio-orange transition-colors"
+                className="text-white hover:text-radial-orange transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Depoimentos
               </a>
               <a
                 href="#por-que-escolher"
-                className="text-white hover:text-solarrio-orange transition-colors"
+                className="text-white hover:text-radial-orange transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Por que Escolher
               </a>
               <a
                 href={FORM_URL}
-                className="bg-solarrio-orange text-white px-6 py-2 rounded-md font-medium inline-block text-center hover:brightness-110 transition-all"
+                className="bg-radial-orange text-white px-6 py-2 rounded-md font-medium inline-block text-center hover:brightness-110 transition-all"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Análise Gratuita

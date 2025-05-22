@@ -9,7 +9,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-solarrio-dark text-white">
+    <footer className="bg-radial-dark text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Coluna de informações da empresa */}
@@ -18,7 +18,7 @@ const Footer = () => {
 
             <div className="space-y-4">
               <div className="flex items-start">
-                <Phone className="w-5 h-5 text-solarrio-orange mr-3 mt-0.5" />
+                <Phone className="w-5 h-5 text-radial-orange mr-3 mt-0.5" />
                 <div>
                   <p className="font-medium">Telefone:</p>
                   <p>{CONTACT_PHONE}</p>
@@ -26,7 +26,7 @@ const Footer = () => {
               </div>
 
               <div className="flex items-start">
-                <Mail className="w-5 h-5 text-solarrio-orange mr-3 mt-0.5" />
+                <Mail className="w-5 h-5 text-radial-orange mr-3 mt-0.5" />
                 <div>
                   <p className="font-medium">E-mail:</p>
                   <p>{CONTACT_EMAIL}</p>
@@ -34,7 +34,7 @@ const Footer = () => {
               </div>
 
               <div className="flex items-start">
-                <MapPin className="w-5 h-5 text-solarrio-orange mr-3 mt-0.5" />
+                <MapPin className="w-5 h-5 text-radial-orange mr-3 mt-0.5" />
                 <div>
                   <p className="font-medium">Endereço:</p>
                   <p>
@@ -50,18 +50,18 @@ const Footer = () => {
               <h3 className="text-xl font-bold mb-4">Redes Sociais</h3>
               <div className="flex space-x-4">
                 <a
-                  href="https://instagram.com/solarrio"
+                  href="https://instagram.com/radial"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-solarrio-orange/20 rounded-full flex items-center justify-center hover:bg-solarrio-orange/30 transition-colors"
+                  className="w-10 h-10 bg-radial-orange/20 rounded-full flex items-center justify-center hover:bg-radial-orange/30 transition-colors"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://facebook.com/solarrio"
+                  href="https://facebook.com/radial"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-solarrio-orange/20 rounded-full flex items-center justify-center hover:bg-solarrio-orange/30 transition-colors"
+                  className="w-10 h-10 bg-radial-orange/20 rounded-full flex items-center justify-center hover:bg-radial-orange/30 transition-colors"
                 >
                   <Facebook className="w-5 h-5" />
                 </a>

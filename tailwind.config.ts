@@ -39,8 +39,8 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Cores exatas do SolarRio conforme PDF
-        solarrio: {
+        // Cores exatas da Radial conforme PDF
+        radial: {
           dark: "#1d1f24", // Fundo escuro
           darker: "#20232a", // Fundo mais escuro para contraste
           orange: "#ff7c40", // Laranja principal
@@ -74,9 +74,8 @@ const config = {
         "pulse-solar": "pulse-solar 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
       backgroundImage: {
-        "solarrio-gradient": "linear-gradient(to bottom, #ff7c40, #ff6028)",
-        "solarrio-dark-gradient":
-          "linear-gradient(to bottom, #20232a, #1d1f24)",
+        "radial-gradient": "linear-gradient(to bottom, #ff7c40, #ff6028)",
+        "radial-dark-gradient": "linear-gradient(to bottom, #20232a, #1d1f24)",
       },
     },
   },

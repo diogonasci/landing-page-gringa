@@ -39,10 +39,10 @@ const ContactForm = () => {
     <section id="contato" className="bg-white py-12">
       <div className="container mx-auto px-4 max-w-md">
         <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-          <div className="bg-solarrio-dark p-6">
+          <div className="bg-radial-dark p-6">
             <h2 className="text-2xl font-bold text-center text-white">
               Solicite sua{" "}
-              <span className="text-solarrio-orange">análise gratuita</span>
+              <span className="text-radial-orange">análise gratuita</span>
             </h2>
             <p className="text-center text-white mt-2">
               Preencha os campos abaixo e saiba quanto pode economizar na sua
@@ -64,7 +64,7 @@ const ContactForm = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-solarrio-orange focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-radial-orange focus:border-transparent"
                 placeholder="Digite seu nome"
                 required
               />
@@ -83,7 +83,7 @@ const ContactForm = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-solarrio-orange focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-radial-orange focus:border-transparent"
                 placeholder="(DDD) 99999-9999"
                 required
               />
@@ -102,7 +102,7 @@ const ContactForm = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-solarrio-orange focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-radial-orange focus:border-transparent"
                 placeholder="seu@email.com"
                 required
               />
@@ -121,7 +121,7 @@ const ContactForm = () => {
                 name="billValue"
                 value={formData.billValue}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-solarrio-orange focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-radial-orange focus:border-transparent"
                 placeholder="R$ 000,00"
                 required
               />
@@ -139,7 +139,7 @@ const ContactForm = () => {
                 name="city"
                 value={formData.city}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-solarrio-orange focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-radial-orange focus:border-transparent"
                 required
               >
                 <option value="" disabled>
@@ -156,7 +156,7 @@ const ContactForm = () => {
 
             <button
               type="submit"
-              className="w-full bg-solarrio-orange text-white py-3 rounded-md font-medium hover:brightness-110 transition-all"
+              className="w-full bg-radial-orange text-white py-3 rounded-md font-medium hover:brightness-110 transition-all"
             >
               Quero solicitar análise gratuita
             </button>
