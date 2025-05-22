@@ -1,5 +1,8 @@
 import { Star } from "lucide-react";
 import React from "react";
+import person1 from "../assets/person1.png";
+import person2 from "../assets/person2.png";
+import person3 from "../assets/person3.png";
 
 // Tipo para os dados de depoimentos
 type Testimonial = {
@@ -8,29 +11,33 @@ type Testimonial = {
   location: string;
   text: string;
   savings: string;
+  photo: string;
 };
 
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Cecília Santos",
-    location: "Copacabana, Rio de Janeiro - RJ",
-    text: "Instalei as placas de energia solar e a redução na minha conta foi incrível! Em apenas 2 meses já vi a diferença no meu bolso.",
+    name: "Clerton Pereira",
+    location: "Turiaçu, Rio de Janeiro - RJ",
+    text: "A equipe foi responsável e atenciosa. Me passaram confiança! Fizeram um serviço de primeira e tô satisfeito pra caramba. Fui bem atendido e o trabalho foi bem rápido. Foi a melhor coisa que fiz. Indico com certeza!",
     savings: "Economia mensal de R$ 387,50",
+    photo: person1,
   },
   {
     id: 2,
-    name: "Ricardo Oliveira",
-    location: "Barra da Tijuca, Rio de Janeiro - RJ",
-    text: "Nunca imaginei que poderia economizar significativamente e o financiamento é o que mais me surpreendeu. As parcelas são menores que o valor que eu pagava de luz!",
+    name: "Célia Condé",
+    location: "Taquara, Rio de Janeiro - RJ",
+    text: "Hoje eu tenho uma economia muito grande de energia, e não tenho mais preocupação. A conta de luz era muito cara. Agora eu pago somente o mínimo e já tenho mais de 4.000KwH acumulados na rede.",
     savings: "Economia mensal de R$ 1.250,00",
+    photo: person2,
   },
   {
     id: 3,
-    name: "Fernanda Lima",
-    location: "Niterói, Rio de Janeiro - RJ",
-    text: "Fiquei impressionada com a rapidez da instalação e com o profissionalismo da equipe. O processo foi muito mais simples do que eu imaginava.",
+    name: "André Pires",
+    location: "Miguel Pereira, Rio de Janeiro - RJ",
+    text: "Chegamos na parcela final. Tudo certinho! Conforme o combinado. Parabéns pelo trabalho e profissionalismo. Deu tudo certo! Está produzindo bastante energia lá.",
     savings: "Economia mensal de R$ 653,00",
+    photo: person3,
   },
 ];
 
@@ -65,12 +72,23 @@ const Testimonials = () => {
               <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
 
               <div className="border-t border-gray-200 pt-4 mt-4">
-                <p className="font-semibold text-radial-dark">
-                  {testimonial.name}
-                </p>
-                <p className="text-sm text-gray-600 mb-2">
-                  {testimonial.location}
-                </p>
+                <div className="flex items-center space-x-3 mb-2">
+                  <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                    <img
+                      src={testimonial.photo}
+                      alt={testimonial.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-radial-dark">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      {testimonial.location}
+                    </p>
+                  </div>
+                </div>
                 <p className="text-radial-orange font-semibold">
                   {testimonial.savings}
                 </p>
