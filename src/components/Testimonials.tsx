@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
     id: 3,
     name: "André Pires",
     location: "Miguel Pereira, Rio de Janeiro - RJ",
-    text: "Chegamos na parcela final. Tudo certinho! Conforme o combinado. Parabéns pelo trabalho e profissionalismo. Deu tudo certo! Está produzindo bastante energia lá.",
+    text: "Chegamos na parcela final. Tudo certinho, conforme o combinado. Parabéns pelo excelente trabalho e profissionalismo. Deu tudo certo! O sistema está gerando muita energia.",
     savings: "Economia mensal de R$ 653,00",
     photo: person3,
   },
