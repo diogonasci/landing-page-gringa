@@ -1,4 +1,3 @@
-import { COMPANY_TAGLINE } from "@/constants/urls";
 import { ReactNode } from "react";
 
 interface StickyBannerProps {
@@ -7,18 +6,11 @@ interface StickyBannerProps {
 
 export const StickyBanner = ({ children }: StickyBannerProps) => {
   return (
-    <div className="bg-radial-dark text-white py-3 text-center">
+    <div className="bg-radial-orange text-white py-3 text-center">
       <div className="container mx-auto px-4">
-        <p className="text-lg font-medium">
+        <p className="text-center text-white font-bold text-sm md:text-base">
           {children || (
-            <>
-              Pare de dar dinheiro pra concessionária.
-              <br className="sm:hidden" />
-              <span className="text-radial-orange font-bold">
-                {" "}
-                {COMPANY_TAGLINE}
-              </span>
-            </>
+            <>GERE SUA PRÓPRIA ENERGIA. LIVRE-SE DAS CONTAS DE LUZ</>
           )}
         </p>
       </div>

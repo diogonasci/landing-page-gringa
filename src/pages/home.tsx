@@ -2,7 +2,6 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Hero from "@/components/hero";
 import HowItWorks from "@/components/HowItWorks";
-import Navbar from "@/components/Navbar";
 import SpecialOffer from "@/components/SpecialOffer";
 import StickyBanner from "@/components/StickyBanner";
 import Testimonials from "@/components/Testimonials";
@@ -14,7 +13,6 @@ const HomePage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <StickyBanner />
-      <Navbar />
       <main className="flex-grow">
         <Hero />
         <Testimonials />

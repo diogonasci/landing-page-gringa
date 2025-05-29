@@ -41,7 +41,7 @@ const config = {
         },
         // Cores exatas da Radial conforme PDF
         radial: {
-          dark: "#1d1f24", // Fundo escuro
+          dark: "#282031", // Fundo escuro
           darker: "#20232a", // Fundo mais escuro para contraste
           orange: "#ff7c40", // Laranja principal
           white: "#ffffff", // Branco
