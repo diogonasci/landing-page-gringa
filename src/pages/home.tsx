@@ -2,7 +2,7 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Hero from "@/components/hero";
 import HowItWorks from "@/components/HowItWorks";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 import SpecialOffer from "@/components/SpecialOffer";
 import StickyBanner from "@/components/StickyBanner";
 import Testimonials from "@/components/Testimonials";

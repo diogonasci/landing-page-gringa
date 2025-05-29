@@ -22,3 +22,6 @@ export const COMPANY_TAGLINE =
   "Reduza sua conta de luz em até 95% com energia solar!";
 export const COMPANY_DESCRIPTION =
   "Moradores do RJ já estão economizando centenas por mês com a Radial Energia Solar!";
+
+// URL do Calendly
+export const CALENDLY_URL = "https://calendly.com/seu-usuario";
