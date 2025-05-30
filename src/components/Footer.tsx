@@ -3,8 +3,9 @@ import {
   CONTACT_ADDRESS,
   CONTACT_EMAIL,
   CONTACT_PHONE,
+  CONTACT_WHATSAPP,
 } from "@/constants/urls";
-import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Mail, MapPin, MessageSquare, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -49,7 +50,7 @@ const Footer = () => {
               <h3 className="text-xl font-bold mb-4">Redes Sociais</h3>
               <div className="flex space-x-4">
                 <a
-                  href="https://instagram.com/radial"
+                  href="https://instagram.com/sejaradial"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-radial-orange/20 rounded-full flex items-center justify-center hover:bg-radial-orange/30 transition-colors"
@@ -57,12 +58,12 @@ const Footer = () => {
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://facebook.com/radial"
+                  href={CONTACT_WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-radial-orange/20 rounded-full flex items-center justify-center hover:bg-radial-orange/30 transition-colors"
                 >
-                  <Facebook className="w-5 h-5" />
+                  <MessageSquare className="w-5 h-5" />
                 </a>
               </div>
             </div>

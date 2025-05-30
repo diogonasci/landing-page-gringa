@@ -1,8 +1,7 @@
 // URLs importantes
 export const CONTACT_WHATSAPP =
-  "https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20energia%20solar";
-export const INSTAGRAM_URL = "https://instagram.com/radial";
-export const FACEBOOK_URL = "https://facebook.com/radial";
+  "https://wa.me/5521981558217?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20energia%20solar";
+export const INSTAGRAM_URL = "https://instagram.com/sejaradial";
 
 // Informações de contato
 export const CONTACT_EMAIL = "contato@radial.com.br";
