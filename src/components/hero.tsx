@@ -1,5 +1,5 @@
 import telaPC from "@/assets/tela-pc.png"; // Importe a imagem da tela do PC
-import { COMPANY_DESCRIPTION, FORM_URL } from "@/constants/urls";
+import { FORM_URL } from "@/constants/urls";
 
 const Hero = () => {
   return (
@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Coluna da Esquerda - Texto */}
           <div className="text-left">
-            <h1 className="text-white text-3xl md:text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-white text-4xl md:text-6xl font-bold mb-4 leading-tight">
               Pare de
               <br />
               gastar com
@@ -16,8 +16,17 @@ const Hero = () => {
               contas de luz!
             </h1>
 
-            <p className="text-white mb-8 text-base md:text-lg opacity-90">
-              {COMPANY_DESCRIPTION}
+            <h2 className="text-radial-orange text-2xl md:text-3xl font-bold mb-6 leading-tight">
+              Aprenda agora a
+              <br />
+              como guardar esse
+              <br />
+              dinheiro no seu bolso
+            </h2>
+
+            <p className="text-white mb-8 text-lg md:text-xl opacity-90 font-medium">
+              Moradores do RJ já estão economizando centenas por mês com a
+              Radial Energia Solar.
             </p>
           </div>
 
