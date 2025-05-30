@@ -50,7 +50,6 @@ const Testimonials = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const autoPlayRef = useRef<NodeJS.Timeout>();
 
@@ -74,20 +73,37 @@ const Testimonials = () => {
     setIsDragging(true);
     setIsAutoPlaying(false);
     setStartX(clientX);
-    if (containerRef.current) {
-      setScrollLeft(containerRef.current.scrollLeft);
-    }
   };
 
-  const handleMove = (clientX: number) => {
-    if (!isDragging || !containerRef.current) return;
-    
-    const walk = (clientX - startX) * 2;
-    containerRef.current.scrollLeft = scrollLeft - walk;
+  const handleMove = () => {
+    if (!isDragging) return;
+    // Apenas previne o comportamento padrão, não move manualmente
+    // Deixa o CSS transition fazer o trabalho
   };
 
-  const handleEnd = () => {
+  const handleEnd = (clientX: number) => {
+    if (!isDragging) return;
+
     setIsDragging(false);
+
+    // Calcula a diferença do movimento
+    const diff = startX - clientX;
+    const threshold = 50; // Mínimo de pixels para considerar um swipe
+
+    // Se o movimento foi significativo, navega
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        // Swipe para esquerda = próximo
+        setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+      } else {
+        // Swipe para direita = anterior
+        setCurrentIndex(
+          (prev) => (prev - 1 + testimonials.length) % testimonials.length
+        );
+      }
+    }
+
+    // Retoma auto-play após 3 segundos
     setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
@@ -98,11 +114,22 @@ const Testimonials = () => {
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    handleMove(e.clientX);
+    if (isDragging) {
+      e.preventDefault();
+      handleMove();
+    }
   };
 
-  const handleMouseUp = () => {
-    handleEnd();
+  const handleMouseUp = (e: React.MouseEvent) => {
+    if (isDragging) {
+      handleEnd(e.clientX);
+    }
+  };
+
+  const handleMouseLeave = (e: React.MouseEvent) => {
+    if (isDragging) {
+      handleEnd(e.clientX);
+    }
   };
 
   // Touch events
@@ -111,16 +138,23 @@ const Testimonials = () => {
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    handleMove(e.touches[0].clientX);
+    if (isDragging) {
+      e.preventDefault();
+      handleMove();
+    }
   };
 
-  const handleTouchEnd = () => {
-    handleEnd();
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (isDragging && e.changedTouches[0]) {
+      handleEnd(e.changedTouches[0].clientX);
+    }
   };
 
   // Navigation functions
   const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 3000);
   };
@@ -184,26 +218,31 @@ const Testimonials = () => {
           {/* Carousel Container */}
           <div
             ref={containerRef}
-            className="overflow-hidden"
+            className="overflow-hidden touch-pan-y"
             onMouseDown={handleMouseDown}
-            onMouseMove={isDragging ? handleMouseMove : undefined}
+            onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseUp}
+            onMouseLeave={handleMouseLeave}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
-            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+            style={{
+              cursor: isDragging ? "grabbing" : "grab",
+              userSelect: "none",
+              WebkitUserSelect: "none",
+            }}
           >
             <div
               className="flex transition-transform duration-500 ease-out"
               style={{
                 transform: `translateX(-${currentIndex * 100}%)`,
+                willChange: isDragging ? "auto" : "transform",
               }}
             >
               {testimonials.map((testimonial, index) => (
                 <div
                   key={`${testimonial.id}-${index}`}
-                  className="flex-none w-full px-4"
+                  className="flex-none w-full px-4 select-none"
                 >
                   <TestimonialCard testimonial={testimonial} />
                 </div>
@@ -219,8 +258,8 @@ const Testimonials = () => {
                 onClick={() => goToSlide(index)}
                 className={`w-2 h-2 rounded-full transition-colors ${
                   index === currentIndex
-                    ? 'bg-radial-orange'
-                    : 'bg-gray-300 hover:bg-gray-400'
+                    ? "bg-radial-orange"
+                    : "bg-gray-300 hover:bg-gray-400"
                 }`}
                 aria-label={`Ir para depoimento ${index + 1}`}
               />
@@ -324,10 +363,12 @@ const DesktopCarousel = ({ testimonials }: { testimonials: Testimonial[] }) => {
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentIndex
-                ? 'bg-radial-orange scale-125'
-                : 'bg-gray-300 hover:bg-gray-400 hover:scale-110'
+                ? "bg-radial-orange scale-125"
+                : "bg-gray-300 hover:bg-gray-400 hover:scale-110"
             }`}
-            aria-label={`Ver depoimentos ${index * slidesPerView + 1}-${Math.min((index + 1) * slidesPerView, testimonials.length)}`}
+            aria-label={`Ver depoimentos ${
+              index * slidesPerView + 1
+            }-${Math.min((index + 1) * slidesPerView, testimonials.length)}`}
           />
         ))}
       </div>
@@ -380,12 +421,8 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
             />
           </div>
           <div>
-            <p className="font-semibold text-radial-dark">
-              {testimonial.name}
-            </p>
-            <p className="text-sm text-gray-600">
-              {testimonial.location}
-            </p>
+            <p className="font-semibold text-radial-dark">{testimonial.name}</p>
+            <p className="text-sm text-gray-600">{testimonial.location}</p>
           </div>
         </div>
         <p className="text-radial-orange font-semibold">
