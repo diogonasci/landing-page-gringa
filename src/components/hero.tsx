@@ -75,9 +75,13 @@ const Hero = () => {
           <div className="w-full max-w-2xl">
             <a
               href={FORM_URL}
-              className="block w-full bg-radial-orange text-white py-8 px-12 rounded-2xl text-center font-bold text-2xl md:text-3xl hover:bg-orange-500 transform hover:scale-105 transition-all duration-300 shadow-2xl border-4 border-orange-400 animate-pulse hover:animate-none"
+              className="block w-full bg-white text-radial-dark py-6 px-12 rounded-full text-center font-bold text-xl md:text-2xl hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 relative"
+              style={{
+                boxShadow:
+                  "0 8px 0 #ff7c40, 0 12px 20px rgba(255, 124, 64, 0.3)",
+              }}
             >
-              🚀 QUERO REDUZIR MINHA CONTA DE LUZ AGORA!
+              Quero reduzir minha conta de luz
             </a>
 
             {/* Benefícios abaixo do botão */}
