@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import painelSolar from "../assets/painel-solar.png";
 import person1 from "../assets/person1.png";
 import person2 from "../assets/person2.png";
 import person3 from "../assets/person3.png";
@@ -57,40 +58,50 @@ const Testimonials = () => {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="border border-gray-200 rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition-shadow"
+              className="border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow overflow-hidden"
             >
-              <div className="flex mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 text-radial-orange fill-radial-orange"
-                  />
-                ))}
-              </div>
+              <img
+                src={painelSolar}
+                alt="Painel Solar"
+                className="w-full object-cover"
+              />
 
-              <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
-
-              <div className="border-t border-gray-200 pt-4 mt-4">
-                <div className="flex items-center space-x-3 mb-2">
-                  <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                    <img
-                      src={testimonial.photo}
-                      alt={testimonial.name}
-                      className="w-full h-full object-cover"
+              <div className="p-6">
+                <div className="flex mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-radial-orange fill-radial-orange"
                     />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-radial-dark">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      {testimonial.location}
-                    </p>
-                  </div>
+                  ))}
                 </div>
-                <p className="text-radial-orange font-semibold">
-                  {testimonial.savings}
+
+                <p className="text-gray-700 mb-4 italic">
+                  "{testimonial.text}"
                 </p>
+
+                <div className="border-t border-gray-200 pt-4 mt-4">
+                  <div className="flex items-center space-x-3 mb-2">
+                    <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                      <img
+                        src={testimonial.photo}
+                        alt={testimonial.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-radial-dark">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        {testimonial.location}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-radial-orange font-semibold">
+                    {testimonial.savings}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
