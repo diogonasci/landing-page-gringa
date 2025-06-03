@@ -67,11 +67,16 @@ const config = {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.7" },
         },
+        marquee: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "pulse-solar": "pulse-solar 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        marquee: "marquee 20s linear infinite",
       },
       backgroundImage: {
         "radial-gradient": "linear-gradient(to bottom, #ff7c40, #ff6028)",
