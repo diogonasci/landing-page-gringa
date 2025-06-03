@@ -6,13 +6,13 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         {/* Título principal centralizado */}
         <div className="text-center mb-12">
-          <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
             Pare de gastar com
             <br />
             <span className="text-radial-orange">contas de luz!</span>
           </h1>
 
-          <h2 className="text-radial-orange text-2xl md:text-3xl lg:text-4xl font-bold mb-8">
+          <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-8">
             Aprenda agora a como guardar esse dinheiro no seu bolso
           </h2>
         </div>
