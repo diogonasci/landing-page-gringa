@@ -43,7 +43,7 @@ const config = {
         radial: {
           dark: "#282031", // Fundo escuro
           darker: "#20232a", // Fundo mais escuro para contraste
-          orange: "#ff7c40", // Laranja principal
+          orange: "#ff5d26", // Laranja principal
           white: "#ffffff", // Branco
           grayDark: "#333333", // Cinza escuro para textos secundários
           grayLight: "#cccccc", // Cinza claro para bordas

@@ -47,9 +47,22 @@ const HowItWorks = () => {
   return (
     <section id="como-funciona" className="bg-radial-dark py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-2xl md:text-3xl font-bold mb-10 text-white">
-          Como <span className="text-radial-orange">funciona</span>?
-        </h2>
+        {/* Título e Imagem introdutória */}
+        <div className="flex justify-center mb-10">
+          <div className="relative">
+            {/* Fundo branco com borda fina preta */}
+            <div className="bg-white rounded-3xl px-6 py-4 md:px-8 md:py-6 border-2 border-black relative z-10">
+              <h2 className="text-radial-orange text-3xl md:text-4xl font-bold text-center tracking-wide">
+                COMO
+                <br />
+                FUNCIONA?
+              </h2>
+            </div>
+
+            {/* Sombra/borda grossa preta só na direita e embaixo */}
+            <div className="absolute top-1.5 left-1.5 w-full h-full bg-black rounded-3xl -z-10"></div>
+          </div>
+        </div>
 
         <div className="max-w-2xl mx-auto relative">
           {/* Linha vertical contínua de fundo */}
