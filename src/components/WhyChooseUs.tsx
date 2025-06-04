@@ -12,24 +12,24 @@ const WhyChooseUs = () => {
           qualidade e satisfação total
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto">
           {/* Feature 1: Garantia */}
-          <div className="relative p-1">
+          <div className="relative p-0.5">
             {/* Sombra/borda inferior e direita */}
-            <div className="absolute top-1 left-1 w-full h-full bg-radial-dark rounded-xl"></div>
+            <div className="absolute top-0.5 left-0.5 w-full h-full bg-radial-dark rounded-2xl"></div>
             {/* Fundo branco com borda laranja no topo */}
-            <div className="relative bg-white rounded-xl border-t-4 border-radial-orange p-6 md:p-8 text-center h-full flex flex-col justify-between z-10">
+            <div className="relative bg-white rounded-2xl border-t-4 border-radial-orange px-6 py-10 md:px-8 md:py-12 text-center h-full flex flex-col justify-between z-10">
               <div>
                 {/* Icone */}
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center mb-6 md:mb-8">
                   <Shield className="w-10 h-10 text-radial-orange" />
                 </div>
                 {/* Titulo */}
-                <h3 className="text-xl font-bold mb-3 text-radial-dark">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark">
                   Garantia de 25 anos
                 </h3>
                 {/* Descrição */}
-                <p className="text-gray-700 text-base">
+                <p className="text-gray-700 text-base leading-relaxed">
                   Nossos equipamentos possuem garantia estendida e
                   acompanhamento técnico contínuo para sua tranquilidade.
                 </p>
@@ -38,22 +38,22 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Feature 2: Instalações */}
-          <div className="relative p-1">
+          <div className="relative p-0.5">
             {/* Sombra/borda inferior e direita */}
-            <div className="absolute top-1 left-1 w-full h-full bg-radial-dark rounded-xl"></div>
+            <div className="absolute top-0.5 left-0.5 w-full h-full bg-radial-dark rounded-2xl"></div>
             {/* Fundo branco com borda laranja no topo */}
-            <div className="relative bg-white rounded-xl border-t-4 border-radial-orange p-6 md:p-8 text-center h-full flex flex-col justify-between z-10">
+            <div className="relative bg-white rounded-2xl border-t-4 border-radial-orange px-6 py-10 md:px-8 md:py-12 text-center h-full flex flex-col justify-between z-10">
               <div>
                 {/* Icone */}
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center mb-6 md:mb-8">
                   <Timer className="w-10 h-10 text-radial-orange" />
                 </div>
                 {/* Titulo */}
-                <h3 className="text-xl font-bold mb-3 text-radial-dark">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark">
                   Mais de 200 instalações
                 </h3>
                 {/* Descrição */}
-                <p className="text-gray-700 text-base">
+                <p className="text-gray-700 text-base leading-relaxed">
                   Experiência comprovada com centenas de sistemas instalados em
                   todo o estado do Rio de Janeiro.
                 </p>
@@ -62,22 +62,22 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Feature 3: Regularizada */}
-          <div className="relative p-1">
+          <div className="relative p-0.5">
             {/* Sombra/borda inferior e direita */}
-            <div className="absolute top-1 left-1 w-full h-full bg-radial-dark rounded-xl"></div>
+            <div className="absolute top-0.5 left-0.5 w-full h-full bg-radial-dark rounded-2xl"></div>
             {/* Fundo branco com borda laranja no topo */}
-            <div className="relative bg-white rounded-xl border-t-4 border-radial-orange p-6 md:p-8 text-center h-full flex flex-col justify-between z-10">
+            <div className="relative bg-white rounded-2xl border-t-4 border-radial-orange px-6 py-10 md:px-8 md:py-12 text-center h-full flex flex-col justify-between z-10">
               <div>
                 {/* Icone */}
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center mb-6 md:mb-8">
                   <CheckCircle className="w-10 h-10 text-radial-orange" />
                 </div>
                 {/* Titulo */}
-                <h3 className="text-xl font-bold mb-3 text-radial-dark">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark">
                   100% regularizada
                 </h3>
                 {/* Descrição */}
-                <p className="text-gray-700 text-base">
+                <p className="text-gray-700 text-base leading-relaxed">
                   Empresa certificada com engenheiros credenciados e todos os
                   processos em conformidade com normas técnicas.
                 </p>
@@ -86,13 +86,13 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        {/* Quote */}
-        <div className="mt-16 bg-gray-50 p-8 rounded-lg border border-gray-200 max-w-3xl mx-auto text-center">
-          <p className="italic text-gray-700 mb-6">
-            "Nossa compromisso é com o seu satisfação e economia a longo prazo."
+        {/* Novo texto de citação */}
+        <div className="mt-16 text-center max-w-4xl mx-auto">
+          <p className="text-white text-2xl md:text-3xl font-bold mb-4 leading-relaxed">
+            "Nosso compromisso é com a sua satisfação e economia a longo prazo."
           </p>
-          <p className="font-bold text-radial-dark">
-            Eng. Roberto Carvalho - Diretor Técnico da Radial
+          <p className="text-gray-400 text-lg">
+            Pedro Nascimento e Remisson Ventura, diretores da Radial.
           </p>
         </div>
       </div>
