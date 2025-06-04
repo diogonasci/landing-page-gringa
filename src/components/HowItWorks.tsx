@@ -48,7 +48,18 @@ const HowItWorks = () => {
     <section id="como-funciona" className="bg-radial-dark py-12 md:py-16">
       <div className="container mx-auto px-4">
         {/* Título e Imagem introdutória */}
-        <div className="flex justify-center mb-10">
+        <div className="flex flex-col md:flex-row items-center justify-center mb-10 max-w-lg mx-auto">
+          {/* Imagem */}
+          <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
+            <img
+              src="/mulher-como-funciona.png"
+              alt="Mulher pensando"
+              className="w-32 md:w-48 lg:w-64"
+            />{" "}
+            {/* Ajuste o tamanho conforme necessário */}
+          </div>
+
+          {/* Título POSSIBILIDADES */}
           <div className="relative">
             {/* Fundo branco com borda fina preta */}
             <div className="bg-white rounded-3xl px-6 py-4 md:px-8 md:py-6 border-2 border-black relative z-10">
