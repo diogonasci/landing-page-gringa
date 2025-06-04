@@ -60,7 +60,7 @@ const HowItWorks = () => {
           </div>
 
           {/* Título POSSIBILIDADES */}
-          <div className="relative">
+          <div className="relative md:-ml-16">
             {/* Fundo branco com borda fina preta */}
             <div className="bg-white rounded-3xl px-6 py-4 md:px-8 md:py-6 border-2 border-black relative z-10">
               <h2 className="text-radial-orange text-3xl md:text-4xl font-bold text-center tracking-wide">
