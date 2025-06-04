@@ -4,13 +4,29 @@ const WhyChooseUs = () => {
   return (
     <section id="por-que-escolher" className="bg-radial-dark py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-2xl md:text-3xl font-bold mb-3 text-white">
-          Por que escolher a <span className="text-radial-orange">Radial</span>?
-        </h2>
-        <p className="text-center text-gray-300 mb-10 max-w-2xl mx-auto">
-          Somos especialistas em energia solar no Rio de Janeiro, com foco em
-          qualidade e satisfação total
-        </p>
+        {/* Bloco da imagem e texto introdutório */}
+        <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left mb-10 max-w-4xl mx-auto">
+          {/* Imagem */}
+          <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
+            <img
+              src="/src/assets/mulher-certo-errado.png"
+              alt="Mulher pensando entre certo e errado"
+              className="w-48 md:w-64"
+            />
+          </div>
+
+          {/* Texto introdutório */}
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white">
+              Por que escolher a{" "}
+              <span className="text-radial-orange">Radial</span>?
+            </h2>
+            <p className="text-lg md:text-xl text-gray-300 max-w-2xl">
+              Somos especialistas em energia solar no Rio de Janeiro, com foco
+              em qualidade e satisfação total
+            </p>
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto">
           {/* Feature 1: Garantia */}
