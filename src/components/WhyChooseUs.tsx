@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
               <div>
                 {/* Icone */}
                 <div className="flex justify-center mb-6 md:mb-8">
-                  <Shield className="w-10 h-10 text-radial-orange" />
+                  <Shield className="w-14 h-14 text-radial-orange" />
                 </div>
                 {/* Titulo */}
                 <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark">
@@ -62,7 +62,7 @@ const WhyChooseUs = () => {
               <div>
                 {/* Icone */}
                 <div className="flex justify-center mb-6 md:mb-8">
-                  <Timer className="w-10 h-10 text-radial-orange" />
+                  <Timer className="w-14 h-14 text-radial-orange" />
                 </div>
                 {/* Titulo */}
                 <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark">
@@ -86,7 +86,7 @@ const WhyChooseUs = () => {
               <div>
                 {/* Icone */}
                 <div className="flex justify-center mb-6 md:mb-8">
-                  <CheckCircle className="w-10 h-10 text-radial-orange" />
+                  <CheckCircle className="w-14 h-14 text-radial-orange" />
                 </div>
                 {/* Titulo */}
                 <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark">
