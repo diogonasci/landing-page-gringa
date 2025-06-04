@@ -1,5 +1,3 @@
-import React from "react";
-
 const Possibilities = () => {
   return (
     <section className="bg-gradient-to-r from-[#ff3231] to-[#ff8c4b] py-16 md:py-24">
@@ -7,9 +5,9 @@ const Possibilities = () => {
         {/* Ilustração */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-start md:-mr-16">
           <img
-            src="/src/assets/mulher-ideias.png"
+            src="/mulher-ideias.png"
             alt="Ilustração de pessoa com ideias"
-            className="max-w-lg md:max-w-xl lg:max-w-2xl"
+            className="max-w-sm md:max-w-xl lg:max-w-2xl"
           />
         </div>
 

@@ -9,7 +9,7 @@ const WhyChooseUs = () => {
           {/* Imagem */}
           <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
             <img
-              src="/src/assets/mulher-certo-errado.png"
+              src="/mulher-certo-errado.png"
               alt="Mulher pensando entre certo e errado"
               className="w-48 md:w-64"
             />

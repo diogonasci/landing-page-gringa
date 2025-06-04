@@ -1,9 +1,5 @@
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import painelSolar from "../assets/painel-solar.png";
-import person1 from "../assets/person1.png";
-import person2 from "../assets/person2.png";
-import person3 from "../assets/person3.png";
 
 // Tipo para os dados de depoimentos
 type Testimonial = {
@@ -22,7 +18,7 @@ const testimonialsData: Testimonial[] = [
     location: "Turiaçu, Rio de Janeiro - RJ",
     text: "A equipe foi responsável e atenciosa. Me passaram confiança! Fizeram um serviço de primeira e tô satisfeito pra caramba. Fui bem atendido e o trabalho foi bem rápido. Foi a melhor coisa que fiz. Indico com certeza!",
     savings: "Economia mensal de R$ 387,50",
-    photo: person1,
+    photo: "/person1.png", // Caminho atualizado
   },
   {
     id: 2,
@@ -30,7 +26,7 @@ const testimonialsData: Testimonial[] = [
     location: "Taquara, Rio de Janeiro - RJ",
     text: "Hoje eu tenho uma economia muito grande de energia, e não tenho mais preocupação. A conta de luz era muito cara. Agora eu pago somente o mínimo e já tenho mais de 4.000KwH acumulados na rede.",
     savings: "Economia mensal de R$ 1.250,00",
-    photo: person2,
+    photo: "/person2.png", // Caminho atualizado
   },
   {
     id: 3,
@@ -38,7 +34,7 @@ const testimonialsData: Testimonial[] = [
     location: "Miguel Pereira, Rio de Janeiro - RJ",
     text: "Chegamos na parcela final. Tudo certinho, conforme o combinado. Parabéns pelo excelente trabalho e profissionalismo. Deu tudo certo! O sistema está gerando muita energia.",
     savings: "Economia mensal de R$ 653,00",
-    photo: person3,
+    photo: "/person3.png", // Caminho atualizado
   },
 ];
 
@@ -392,7 +388,7 @@ const DesktopCarousel = ({ testimonials }: { testimonials: Testimonial[] }) => {
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
   <div className="border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow overflow-hidden">
     <img
-      src={painelSolar}
+      src="/painel-solar.png"
       alt="Painel Solar"
       className="w-full h-48 object-cover"
     />
