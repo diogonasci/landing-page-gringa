@@ -2,6 +2,7 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Hero from "@/components/hero";
 import HowItWorks from "@/components/HowItWorks";
+import Possibilities from "@/components/Possibilities";
 import SpecialOffer from "@/components/SpecialOffer";
 import StickyBanner from "@/components/StickyBanner";
 import Testimonials from "@/components/Testimonials";
@@ -17,6 +18,7 @@ const HomePage = () => {
         <Hero />
         <Testimonials />
         <HowItWorks />
+        <Possibilities />
         <WhyChooseUs />
         <SpecialOffer />
         <ContactForm />
