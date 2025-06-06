@@ -14,14 +14,14 @@ const Possibilities = () => {
         {/* Conteúdo da direita: Título e Pontos da lista */}
         <div className="w-full md:w-1/2">
           {/* Título POSSIBILIDADES */}
-          <div className="flex justify-center md:justify-start mb-16">
+          <div className="flex justify-center md:justify-start mb-16 md:ml-8">
             <div className="relative">
               {/* Fundo branco com borda fina preta e sombra 3D */}
               <div
-                className="bg-white rounded-3xl px-6 py-4 md:px-8 md:py-6 border-2 border-black relative z-10"
-                style={{ boxShadow: "8px 4px 0 0 black" }}
+                className="bg-white rounded-3xl px-12 py-6 md:px-16 md:py-8 border-2 border-black relative z-10"
+                style={{ boxShadow: "10px 4px 0 0 black" }}
               >
-                <h2 className="text-radial-orange text-3xl md:text-4xl font-bold text-center tracking-wide">
+                <h2 className="text-radial-orange text-5xl md:text-6xl font-bold text-center tracking-wide">
                   POSSIBILIDADES
                 </h2>
               </div>
