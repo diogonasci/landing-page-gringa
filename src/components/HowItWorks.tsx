@@ -45,24 +45,24 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="como-funciona" className="bg-radial-dark py-16 md:py-24">
-      <div className="container mx-auto px-4">
+    <section id="como-funciona" className="bg-radial-dark py-20 md:py-32">
+      <div className="container mx-auto px-6">
         {/* Título e Imagem introdutória */}
-        <div className="flex flex-col md:flex-row items-center justify-center mb-16 max-w-2xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-center mb-20 max-w-3xl mx-auto">
           {/* Imagem */}
-          <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
+          <div className="flex-shrink-0 mb-8 md:mb-0 md:mr-10">
             <img
               src="/mulher-como-funciona.png"
               alt="Mulher pensando"
-              className="w-40 md:w-56 lg:w-72"
+              className="w-48 md:w-64 lg:w-80"
             />
           </div>
 
           {/* Título POSSIBILIDADES */}
-          <div className="relative md:-ml-20">
+          <div className="relative md:-ml-24">
             {/* Fundo branco com borda fina preta */}
-            <div className="bg-white rounded-3xl px-8 py-6 md:px-10 md:py-8 border-2 border-black relative z-10">
-              <h2 className="text-radial-orange text-4xl md:text-5xl font-bold text-center tracking-wide">
+            <div className="bg-white rounded-3xl px-10 py-8 md:px-12 md:py-10 border-2 border-black relative z-10">
+              <h2 className="text-radial-orange text-5xl md:text-6xl font-bold text-center tracking-wide">
                 COMO
                 <br />
                 FUNCIONA?
@@ -70,36 +70,36 @@ const HowItWorks = () => {
             </div>
 
             {/* Sombra/borda grossa preta só na direita e embaixo */}
-            <div className="absolute top-2 left-2 w-full h-full bg-black rounded-3xl -z-10"></div>
+            <div className="absolute top-3 left-3 w-full h-full bg-black rounded-3xl -z-10"></div>
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto relative">
+        <div className="max-w-5xl mx-auto relative">
           {/* Linha vertical contínua de fundo */}
-          <div className="absolute left-8 md:left-10 top-10 bottom-0 w-0.5 bg-gradient-to-b from-radial-orange/60 via-radial-orange/40 to-transparent"></div>
+          <div className="absolute left-10 md:left-12 top-12 bottom-0 w-0.5 bg-gradient-to-b from-radial-orange/60 via-radial-orange/40 to-transparent"></div>
 
           {steps.map((step, index) => (
             <div
               key={step.number}
               className={`flex items-start ${
-                index !== steps.length - 1 ? "mb-16" : ""
+                index !== steps.length - 1 ? "mb-20" : ""
               } relative`}
             >
               {/* Círculo com número */}
-              <div className="flex-shrink-0 mr-8 relative z-10">
-                <div className="w-16 h-16 md:w-20 md:h-20 bg-radial-orange rounded-full flex items-center justify-center shadow-lg border-4 border-radial-dark">
-                  <span className="text-white font-bold text-2xl md:text-3xl">
+              <div className="flex-shrink-0 mr-10 relative z-10">
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-radial-orange rounded-full flex items-center justify-center shadow-lg border-4 border-radial-dark">
+                  <span className="text-white font-bold text-3xl md:text-4xl">
                     {step.number}
                   </span>
                 </div>
               </div>
 
               {/* Conteúdo */}
-              <div className="flex-1 pt-3 md:pt-4">
-                <h3 className="text-white text-xl md:text-2xl font-bold mb-4 uppercase tracking-wide leading-tight">
+              <div className="flex-1 pt-4 md:pt-5">
+                <h3 className="text-white text-2xl md:text-3xl font-bold mb-5 uppercase tracking-wide leading-tight">
                   {step.title}
                 </h3>
-                <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
                   {step.description}
                 </p>
               </div>
