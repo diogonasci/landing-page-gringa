@@ -62,7 +62,7 @@ const HowItWorks = () => {
           <div className="relative md:-ml-24">
             {/* Fundo branco com borda fina preta */}
             <div
-              className="bg-white rounded-3xl px-8 py-6 md:px-12 md:py-8 border-2 border-black relative z-10"
+              className="bg-white rounded-3xl px-10 py-4 md:px-16 md:py-6 border-2 border-black relative z-10"
               style={{ boxShadow: "12px 5px 0 0 black" }}
             >
               <h2 className="text-radial-orange text-4xl md:text-5xl font-bold text-left tracking-wide">
