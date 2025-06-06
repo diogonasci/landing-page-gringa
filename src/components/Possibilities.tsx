@@ -3,11 +3,11 @@ const Possibilities = () => {
     <section className="bg-gradient-to-r from-[#ff3231] to-[#ff8c4b] py-20 md:py-32">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
         {/* Ilustração */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-start md:-mr-16">
+        <div className="w-full md:w-1/2 flex justify-center md:justify-start md:-mr-20">
           <img
             src="/mulher-ideias.png"
             alt="Ilustração de pessoa com ideias"
-            className="max-w-sm md:max-w-xl lg:max-w-2xl"
+            className="max-w-md md:max-w-2xl lg:max-w-3xl"
           />
         </div>
 
