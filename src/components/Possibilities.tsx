@@ -1,7 +1,7 @@
 const Possibilities = () => {
   return (
-    <section className="bg-gradient-to-r from-[#ff3231] to-[#ff8c4b] py-16 md:py-24">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-12">
+    <section className="bg-gradient-to-r from-[#ff3231] to-[#ff8c4b] py-20 md:py-32">
+      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
         {/* Ilustração */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-start md:-mr-16">
           <img
@@ -14,7 +14,7 @@ const Possibilities = () => {
         {/* Conteúdo da direita: Título e Pontos da lista */}
         <div className="w-full md:w-1/2">
           {/* Título POSSIBILIDADES */}
-          <div className="flex justify-center md:justify-start mb-10">
+          <div className="flex justify-center md:justify-start mb-16">
             <div className="relative">
               {/* Fundo branco com borda fina preta */}
               <div className="bg-white rounded-3xl px-6 py-4 md:px-8 md:py-6 border-2 border-black relative z-10">
@@ -28,19 +28,18 @@ const Possibilities = () => {
           </div>
 
           {/* Pontos da lista */}
-          <div className="space-y-8">
+          <div className="space-y-12">
             {/* Ponto 1: Compartilhamento de Energia */}
             <div className="flex items-start">
               {/* Placeholder para Icone 1 (Casa com painel) */}
-              <div className="flex-shrink-0 mr-4">
-                <div className="w-10 h-10 bg-gray-300 rounded-full"></div>{" "}
-                {/* Exemplo de placeholder */}
+              <div className="flex-shrink-0 mr-6">
+                <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
               </div>
               <div>
-                <h3 className="text-white text-xl font-bold mb-2">
+                <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
                   COMPARTILHAMENTO DE ENERGIA
                 </h3>
-                <p className="text-gray-300 text-base">
+                <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
                   Você pode dividir sua energia solar com outro endereço, sem
                   pagar nada a mais por isso
                 </p>
@@ -50,15 +49,14 @@ const Possibilities = () => {
             {/* Ponto 2: Créditos Acumulativos */}
             <div className="flex items-start">
               {/* Placeholder para Icone 2 (Sol com dinheiro) */}
-              <div className="flex-shrink-0 mr-4">
-                <div className="w-10 h-10 bg-gray-300 rounded-full"></div>{" "}
-                {/* Exemplo de placeholder */}
+              <div className="flex-shrink-0 mr-6">
+                <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
               </div>
               <div>
-                <h3 className="text-white text-xl font-bold mb-2">
+                <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
                   CRÉDITOS ACUMULATIVOS
                 </h3>
-                <p className="text-gray-300 text-base">
+                <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
                   Sua energia solar excedente pode ser acumulada e utilizada em
                   até 5 anos
                 </p>
@@ -68,15 +66,14 @@ const Possibilities = () => {
             {/* Ponto 3: Implante seu Sistema à Custo Zero */}
             <div className="flex items-start">
               {/* Placeholder para Icone 3 (Porquinho com dinheiro) */}
-              <div className="flex-shrink-0 mr-4">
-                <div className="w-10 h-10 bg-gray-300 rounded-full"></div>{" "}
-                {/* Exemplo de placeholder */}
+              <div className="flex-shrink-0 mr-6">
+                <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
               </div>
               <div>
-                <h3 className="text-white text-xl font-bold mb-2">
+                <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
                   IMPLANTE SEU SISTEMA À CUSTO ZERO
                 </h3>
-                <p className="text-gray-300 text-base">
+                <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
                   Trocamos a sua parcela da conta de luz pela parcela do
                   financiamento, mas ele acaba bem rapidinho
                 </p>
