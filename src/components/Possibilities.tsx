@@ -41,7 +41,8 @@ const Possibilities = () => {
                 </h3>
                 <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
                   Você pode dividir sua energia solar com outro endereço, sem
-                  pagar nada a mais por isso
+                  pagar nada a mais por isso. Aproveite para ajudar sua família
+                  ou amigos a economizar também.
                 </p>
               </div>
             </div>
@@ -58,7 +59,8 @@ const Possibilities = () => {
                 </h3>
                 <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
                   Sua energia solar excedente pode ser acumulada e utilizada em
-                  até 5 anos
+                  até 5 anos. Isso garante que você aproveite ao máximo sua
+                  produção, mesmo em períodos de menor consumo.
                 </p>
               </div>
             </div>
@@ -75,7 +77,8 @@ const Possibilities = () => {
                 </h3>
                 <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
                   Trocamos a sua parcela da conta de luz pela parcela do
-                  financiamento, mas ele acaba bem rapidinho
+                  financiamento, mas ele acaba bem rapidinho. Você economiza
+                  desde o primeiro mês e ainda fica com um sistema próprio.
                 </p>
               </div>
             </div>
