@@ -16,14 +16,16 @@ const Possibilities = () => {
           {/* Título POSSIBILIDADES */}
           <div className="flex justify-center md:justify-start mb-16">
             <div className="relative">
-              {/* Fundo branco com borda fina preta */}
-              <div className="bg-white rounded-3xl px-6 py-4 md:px-8 md:py-6 border-2 border-black relative z-10">
+              {/* Fundo branco com borda fina preta e sombra 3D */}
+              <div
+                className="bg-white rounded-3xl px-6 py-4 md:px-8 md:py-6 border-2 border-black relative z-10"
+                style={{ boxShadow: "4px 4px 0 0 black" }}
+              >
                 <h2 className="text-radial-orange text-3xl md:text-4xl font-bold text-center tracking-wide">
                   POSSIBILIDADES
                 </h2>
               </div>
-              {/* Sombra/borda grossa preta só na direita e embaixo */}
-              <div className="absolute top-1.5 left-1.5 w-full h-full bg-black rounded-3xl -z-10"></div>
+              {/* Removida a div da sombra separada */}
             </div>
           </div>
 
