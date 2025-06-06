@@ -66,8 +66,7 @@ const HowItWorks = () => {
               style={{ boxShadow: "12px 5px 0 0 black" }}
             >
               <h2 className="text-radial-orange text-4xl md:text-5xl font-bold text-left tracking-wide">
-                COMO
-                <br />
+                <span className="block mb-6">COMO</span>
                 FUNCIONA?
               </h2>
             </div>
