@@ -39,7 +39,7 @@ const Possibilities = () => {
                 <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
                   COMPARTILHAMENTO DE ENERGIA
                 </h3>
-                <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
+                <p className="text-white text-lg md:text-xl leading-relaxed">
                   Você pode dividir sua energia solar com outro endereço, sem
                   pagar nada a mais por isso. Aproveite para ajudar sua família
                   ou amigos a economizar também.
@@ -57,7 +57,7 @@ const Possibilities = () => {
                 <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
                   CRÉDITOS ACUMULATIVOS
                 </h3>
-                <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
+                <p className="text-white text-lg md:text-xl leading-relaxed">
                   Sua energia solar excedente pode ser acumulada e utilizada em
                   até 5 anos. Isso garante que você aproveite ao máximo sua
                   produção, mesmo em períodos de menor consumo.
@@ -75,7 +75,7 @@ const Possibilities = () => {
                 <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
                   IMPLANTE SEU SISTEMA À CUSTO ZERO
                 </h3>
-                <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
+                <p className="text-white text-lg md:text-xl leading-relaxed">
                   Trocamos a sua parcela da conta de luz pela parcela do
                   financiamento, mas ele acaba bem rapidinho. Você economiza
                   desde o primeiro mês e ainda fica com um sistema próprio.
