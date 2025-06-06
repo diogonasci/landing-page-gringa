@@ -61,16 +61,16 @@ const HowItWorks = () => {
           {/* Título POSSIBILIDADES */}
           <div className="relative md:-ml-24">
             {/* Fundo branco com borda fina preta */}
-            <div className="bg-white rounded-3xl px-10 py-8 md:px-12 md:py-10 border-2 border-black relative z-10">
-              <h2 className="text-radial-orange text-5xl md:text-6xl font-bold text-center tracking-wide">
+            <div
+              className="bg-white rounded-3xl px-6 py-8 md:px-10 md:py-10 border-2 border-black relative z-10"
+              style={{ boxShadow: "12px 5px 0 0 black" }}
+            >
+              <h2 className="text-radial-orange text-4xl md:text-5xl font-bold text-left tracking-wide">
                 COMO
                 <br />
                 FUNCIONA?
               </h2>
             </div>
-
-            {/* Sombra/borda grossa preta só na direita e embaixo */}
-            <div className="absolute top-3 left-3 w-full h-full bg-black rounded-3xl -z-10"></div>
           </div>
         </div>
 
