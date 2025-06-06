@@ -18,8 +18,8 @@ const Possibilities = () => {
             <div className="relative">
               {/* Fundo branco com borda fina preta e sombra 3D */}
               <div
-                className="bg-white rounded-3xl px-12 py-6 md:px-16 md:py-8 border-2 border-black relative z-10"
-                style={{ boxShadow: "10px 4px 0 0 black" }}
+                className="bg-white rounded-3xl px-8 py-6 md:px-12 md:py-8 border-2 border-black relative z-10"
+                style={{ boxShadow: "15px 6px 0 0 black" }}
               >
                 <h2 className="text-radial-orange text-5xl md:text-6xl font-bold text-center tracking-wide">
                   POSSIBILIDADES
