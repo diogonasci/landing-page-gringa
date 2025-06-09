@@ -1,5 +1,5 @@
 import { FORM_URL } from "@/constants/urls";
-import { CheckCircle } from "lucide-react";
+import { Check } from "lucide-react";
 
 const SpecialOffer = () => {
   return (
@@ -18,25 +18,24 @@ const SpecialOffer = () => {
           </h3>
 
           <p className="text-center text-gray-700 mb-6">
-            Descubra como pode economizar até 95% na sua conta de luz com um
-            projeto personalizado:
+            Aproveite esta oportunidade e garanta economia imediata!
           </p>
 
-          <div className="space-y-4 mb-8">
+          <div className="space-y-4 mb-8 max-w-md mx-auto">
             <div className="flex items-start">
-              <CheckCircle className="w-6 h-6 text-radial-orange flex-shrink-0 mr-2 mt-0.5" />
+              <Check className="w-6 h-6 text-black flex-shrink-0 mr-3 mt-0.5" />
               <p className="text-gray-700">
                 Estudo completo de viabilidade técnica
               </p>
             </div>
 
             <div className="flex items-start">
-              <CheckCircle className="w-6 h-6 text-radial-orange flex-shrink-0 mr-2 mt-0.5" />
+              <Check className="w-6 h-6 text-black flex-shrink-0 mr-3 mt-0.5" />
               <p className="text-gray-700">Simulação detalhada da economia</p>
             </div>
 
             <div className="flex items-start">
-              <CheckCircle className="w-6 h-6 text-radial-orange flex-shrink-0 mr-2 mt-0.5" />
+              <Check className="w-6 h-6 text-black flex-shrink-0 mr-3 mt-0.5" />
               <p className="text-gray-700">Projeto técnico personalizado</p>
             </div>
           </div>
