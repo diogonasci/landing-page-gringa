@@ -4,9 +4,8 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
-    billValue: "",
     city: "",
+    billValue: "",
   });
 
   const handleChange = (
@@ -27,9 +26,8 @@ const ContactForm = () => {
     setFormData({
       name: "",
       phone: "",
-      email: "",
-      billValue: "",
       city: "",
+      billValue: "",
     });
     // Feedback para o usuário
     alert("Obrigado! Entraremos em contato em breve.");
@@ -45,8 +43,8 @@ const ContactForm = () => {
               <span className="text-radial-orange">análise gratuita</span>
             </h2>
             <p className="text-center text-white mt-2">
-              Preencha os campos abaixo e saiba quanto pode economizar na sua
-              conta de luz
+              Preencha o formulário abaixo e descubra quanto você pode
+              economizar
             </p>
           </div>
 
@@ -91,19 +89,19 @@ const ContactForm = () => {
 
             <div>
               <label
-                htmlFor="email"
+                htmlFor="city"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                E-mail*
+                Cidade*
               </label>
               <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
+                type="text"
+                id="city"
+                name="city"
+                value={formData.city}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-radial-orange focus:border-transparent"
-                placeholder="seu@email.com"
+                placeholder="Digite sua cidade"
                 required
               />
             </div>
@@ -113,7 +111,7 @@ const ContactForm = () => {
                 htmlFor="billValue"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Valor da sua conta de luz mensal*
+                Valor da sua conta de luz mensal (opcional)
               </label>
               <input
                 type="text"
@@ -125,33 +123,6 @@ const ContactForm = () => {
                 placeholder="R$ 000,00"
                 required
               />
-            </div>
-
-            <div>
-              <label
-                htmlFor="city"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Cidade*
-              </label>
-              <select
-                id="city"
-                name="city"
-                value={formData.city}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-radial-orange focus:border-transparent"
-                required
-              >
-                <option value="" disabled>
-                  Selecione sua cidade
-                </option>
-                <option value="Rio de Janeiro">Rio de Janeiro</option>
-                <option value="Niterói">Niterói</option>
-                <option value="Nova Iguaçu">Nova Iguaçu</option>
-                <option value="Duque de Caxias">Duque de Caxias</option>
-                <option value="São Gonçalo">São Gonçalo</option>
-                <option value="Outro">Outro</option>
-              </select>
             </div>
 
             <button
