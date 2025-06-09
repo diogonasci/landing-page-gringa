@@ -11,7 +11,7 @@ const SpecialOffer = () => {
 
         <div className="max-w-3xl mx-auto bg-white rounded-[3rem] shadow-md border-2 border-black px-16 py-8">
           <div className="text-center mb-4">
-            <div className="bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-bold inline-block">
+            <div className="bg-orange-500 text-white px-6 py-2 rounded-lg text-sm font-bold inline-block">
               Desconto de 10% para os 15 primeiros
             </div>
           </div>
@@ -56,7 +56,7 @@ const SpecialOffer = () => {
           </a>
         </div>
         <div className="text-center mt-8">
-          <p className="text-white opacity-80 text-sm">
+          <p className="text-white opacity-80 text-base">
             * Oferta válida para os 15 primeiros cadastros da semana
           </p>
         </div>
