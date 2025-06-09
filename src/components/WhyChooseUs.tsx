@@ -1,4 +1,4 @@
-import { CheckCircle, Shield, Timer } from "lucide-react";
+import { Award, CheckCircle, Shield, Timer } from "lucide-react";
 
 const WhyChooseUs = () => {
   return (
@@ -34,14 +34,14 @@ const WhyChooseUs = () => {
             {/* Sombra/borda inferior e direita */}
             <div className="absolute top-0.5 left-0.5 w-full h-full bg-radial-dark rounded-2xl"></div>
             {/* Fundo branco com borda laranja no topo */}
-            <div className="relative bg-white rounded-2xl border-t-4 border-radial-orange px-6 py-10 md:px-8 md:py-12 text-center h-full flex flex-col justify-between z-10">
+            <div className="relative bg-white rounded-2xl border-t-4 border-radial-orange px-5 py-8 md:px-7 md:py-10 text-center h-full flex flex-col justify-between z-10">
               <div>
                 {/* Icone */}
                 <div className="flex justify-center mb-6 md:mb-8">
                   <Shield className="w-14 h-14 text-radial-orange" />
                 </div>
                 {/* Titulo */}
-                <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark max-w-[24ch] mx-auto">
                   Garantia de 25 anos
                 </h3>
                 {/* Descrição */}
@@ -58,14 +58,14 @@ const WhyChooseUs = () => {
             {/* Sombra/borda inferior e direita */}
             <div className="absolute top-0.5 left-0.5 w-full h-full bg-radial-dark rounded-2xl"></div>
             {/* Fundo branco com borda laranja no topo */}
-            <div className="relative bg-white rounded-2xl border-t-4 border-radial-orange px-6 py-10 md:px-8 md:py-12 text-center h-full flex flex-col justify-between z-10">
+            <div className="relative bg-white rounded-2xl border-t-4 border-radial-orange px-5 py-8 md:px-7 md:py-10 text-center h-full flex flex-col justify-between z-10">
               <div>
                 {/* Icone */}
                 <div className="flex justify-center mb-6 md:mb-8">
                   <CheckCircle className="w-14 h-14 text-radial-orange" />
                 </div>
                 {/* Titulo */}
-                <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark max-w-[24ch] mx-auto">
                   Mais de 200 instalações
                 </h3>
                 {/* Descrição */}
@@ -82,14 +82,14 @@ const WhyChooseUs = () => {
             {/* Sombra/borda inferior e direita */}
             <div className="absolute top-0.5 left-0.5 w-full h-full bg-radial-dark rounded-2xl"></div>
             {/* Fundo branco com borda laranja no topo */}
-            <div className="relative bg-white rounded-2xl border-t-4 border-radial-orange px-6 py-10 md:px-8 md:py-12 text-center h-full flex flex-col justify-between z-10">
+            <div className="relative bg-white rounded-2xl border-t-4 border-radial-orange px-5 py-8 md:px-7 md:py-10 text-center h-full flex flex-col justify-between z-10">
               <div>
                 {/* Icone */}
                 <div className="flex justify-center mb-6 md:mb-8">
-                  <Timer className="w-14 h-14 text-radial-orange" />
+                  <Award className="w-14 h-14 text-radial-orange" />
                 </div>
                 {/* Titulo */}
-                <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark max-w-[24ch] mx-auto">
                   100% regularizada
                 </h3>
                 {/* Descrição */}
