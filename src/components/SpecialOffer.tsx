@@ -19,6 +19,10 @@ const SpecialOffer = () => {
             Análise Gratuita + Projeto Personalizado
           </h3>
 
+          <p className="text-center text-gray-700 text-lg mb-6 mt-8">
+            Aproveite esta oportunidade e garanta economia imediata!
+          </p>
+
           <div className="space-y-4 mb-8 max-w-md mx-auto">
             <div className="flex items-start">
               <Check className="w-6 h-6 text-black flex-shrink-0 mr-3 mt-0.5" />
