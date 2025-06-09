@@ -9,7 +9,7 @@ const SpecialOffer = () => {
           Oferta Especial por Tempo Limitado!
         </h2>
 
-        <div className="max-w-2xl mx-auto bg-white rounded-[3rem] shadow-md border-2 border-black p-8">
+        <div className="max-w-3xl mx-auto bg-white rounded-[3rem] shadow-md border-2 border-black px-16 py-8">
           <div className="text-center mb-4">
             <div className="bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-bold inline-block">
               Desconto de 10% para os 15 primeiros
