@@ -28,9 +28,9 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto max-w-5xl">
           {/* Feature 1: Garantia */}
-          <div className="relative p-0.5">
+          <div className="relative p-0.5 max-w-sm mx-auto">
             {/* Sombra/borda inferior e direita */}
             <div className="absolute top-0.5 left-0.5 w-full h-full bg-radial-dark rounded-2xl"></div>
             {/* Fundo branco com borda laranja no topo */}
@@ -45,7 +45,7 @@ const WhyChooseUs = () => {
                   Garantia de 25 anos
                 </h3>
                 {/* Descrição */}
-                <p className="text-gray-700 text-base leading-relaxed">
+                <p className="text-gray-700 text-base leading-relaxed max-w-[24ch] mx-auto">
                   Nossos equipamentos possuem garantia estendida e
                   acompanhamento técnico contínuo para sua tranquilidade.
                 </p>
@@ -54,31 +54,7 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Feature 2: Instalações */}
-          <div className="relative p-0.5">
-            {/* Sombra/borda inferior e direita */}
-            <div className="absolute top-0.5 left-0.5 w-full h-full bg-radial-dark rounded-2xl"></div>
-            {/* Fundo branco com borda laranja no topo */}
-            <div className="relative bg-white rounded-2xl border-t-4 border-radial-orange px-6 py-10 md:px-8 md:py-12 text-center h-full flex flex-col justify-between z-10">
-              <div>
-                {/* Icone */}
-                <div className="flex justify-center mb-6 md:mb-8">
-                  <Timer className="w-14 h-14 text-radial-orange" />
-                </div>
-                {/* Titulo */}
-                <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark">
-                  Mais de 200 instalações
-                </h3>
-                {/* Descrição */}
-                <p className="text-gray-700 text-base leading-relaxed">
-                  Experiência comprovada com centenas de sistemas instalados em
-                  todo o estado do Rio de Janeiro.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Feature 3: Regularizada */}
-          <div className="relative p-0.5">
+          <div className="relative p-0.5 max-w-sm mx-auto">
             {/* Sombra/borda inferior e direita */}
             <div className="absolute top-0.5 left-0.5 w-full h-full bg-radial-dark rounded-2xl"></div>
             {/* Fundo branco com borda laranja no topo */}
@@ -90,10 +66,34 @@ const WhyChooseUs = () => {
                 </div>
                 {/* Titulo */}
                 <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark">
+                  Mais de 200 instalações
+                </h3>
+                {/* Descrição */}
+                <p className="text-gray-700 text-base leading-relaxed max-w-[24ch] mx-auto">
+                  Experiência comprovada com centenas de sistemas instalados em
+                  todo o estado do Rio de Janeiro.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Feature 3: Regularizada */}
+          <div className="relative p-0.5 max-w-sm mx-auto">
+            {/* Sombra/borda inferior e direita */}
+            <div className="absolute top-0.5 left-0.5 w-full h-full bg-radial-dark rounded-2xl"></div>
+            {/* Fundo branco com borda laranja no topo */}
+            <div className="relative bg-white rounded-2xl border-t-4 border-radial-orange px-6 py-10 md:px-8 md:py-12 text-center h-full flex flex-col justify-between z-10">
+              <div>
+                {/* Icone */}
+                <div className="flex justify-center mb-6 md:mb-8">
+                  <Timer className="w-14 h-14 text-radial-orange" />
+                </div>
+                {/* Titulo */}
+                <h3 className="text-xl md:text-2xl font-bold mb-3 text-radial-dark">
                   100% regularizada
                 </h3>
                 {/* Descrição */}
-                <p className="text-gray-700 text-base leading-relaxed">
+                <p className="text-gray-700 text-base leading-relaxed max-w-[24ch] mx-auto">
                   Empresa certificada com engenheiros credenciados e todos os
                   processos em conformidade com normas técnicas.
                 </p>
