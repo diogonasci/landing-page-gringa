@@ -10,13 +10,15 @@ const SpecialOffer = () => {
         </h2>
 
         <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-md border-2 border-black p-8">
-          <h3 className="text-xl md:text-2xl font-bold text-center mb-6 text-radial-dark">
+          <h3 className="text-xl md:text-2xl font-bold text-center mb-4 text-radial-dark">
             Análise Gratuita + Projeto Personalizado
           </h3>
 
-          <p className="text-center text-gray-700 mb-6 text-lg md:text-xl">
-            Aproveite esta oportunidade e garanta economia imediata!
-          </p>
+          <div className="text-center mb-4">
+            <div className="bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-bold inline-block">
+              Desconto de 10% para os 15 primeiros
+            </div>
+          </div>
 
           <div className="space-y-4 mb-8 max-w-md mx-auto">
             <div className="flex items-start">
@@ -41,7 +43,7 @@ const SpecialOffer = () => {
             </div>
           </div>
         </div>
-        <div className="text-center mt-8">
+        <div className="text-center mb-6">
           <a
             href={FORM_URL}
             className="inline-block text-white py-3 px-8 rounded-md text-lg font-medium hover:brightness-110 transition-all"
@@ -50,7 +52,6 @@ const SpecialOffer = () => {
             Quero minha análise gratuita
           </a>
         </div>
-
         <div className="text-center mt-8">
           <p className="text-white opacity-80 text-sm">
             * Oferta válida para os 15 primeiros cadastros da semana
