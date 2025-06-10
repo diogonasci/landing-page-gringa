@@ -1,6 +1,6 @@
 import { DemoBanner } from "@/components/DemoBanner";
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navbar";
 import React from "react";
 
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
