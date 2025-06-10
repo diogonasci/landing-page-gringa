@@ -62,23 +62,23 @@ const Footer = () => {
               Redes Sociais
             </h3>
 
-            <div className="flex space-x-3 mb-6">
+            <div className="flex space-x-4 mb-6">
               <a
                 href="https://instagram.com/sejaradial"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 bg-gray-700 rounded flex items-center justify-center hover:bg-radial-orange transition-colors"
+                className="flex items-center justify-center text-white hover:text-radial-orange transition-colors"
               >
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-6 h-6" />
               </a>
               <a
                 href="https://facebook.com/sejaradial"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 bg-gray-700 rounded flex items-center justify-center hover:bg-radial-orange transition-colors"
+                className="flex items-center justify-center text-white hover:text-radial-orange transition-colors"
               >
                 <svg
-                  className="w-4 h-4"
+                  className="w-6 h-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -89,9 +89,9 @@ const Footer = () => {
                 href={CONTACT_WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 bg-gray-700 rounded flex items-center justify-center hover:bg-radial-orange transition-colors"
+                className="flex items-center justify-center text-white hover:text-radial-orange transition-colors"
               >
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="w-6 h-6" />
               </a>
             </div>
 
