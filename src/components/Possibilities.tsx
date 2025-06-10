@@ -1,3 +1,5 @@
+import { Home, PiggyBank, Sun } from "lucide-react";
+
 const Possibilities = () => {
   return (
     <section className="bg-gradient-to-r from-[#ff3231] to-[#ff8c4b] py-20 md:py-32">
@@ -25,7 +27,6 @@ const Possibilities = () => {
                   POSSIBILIDADES
                 </h2>
               </div>
-              {/* Removida a div da sombra separada */}
             </div>
           </div>
 
@@ -33,9 +34,10 @@ const Possibilities = () => {
           <div className="space-y-12">
             {/* Ponto 1: Compartilhamento de Energia */}
             <div className="flex items-start">
-              {/* Placeholder para Icone 1 (Casa com painel) */}
               <div className="flex-shrink-0 mr-6">
-                <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                  <Home className="w-6 h-6 text-white" />
+                </div>
               </div>
               <div>
                 <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
@@ -51,9 +53,10 @@ const Possibilities = () => {
 
             {/* Ponto 2: Créditos Acumulativos */}
             <div className="flex items-start">
-              {/* Placeholder para Icone 2 (Sol com dinheiro) */}
               <div className="flex-shrink-0 mr-6">
-                <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                  <Sun className="w-6 h-6 text-white" />
+                </div>
               </div>
               <div>
                 <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
@@ -69,9 +72,10 @@ const Possibilities = () => {
 
             {/* Ponto 3: Implante seu Sistema à Custo Zero */}
             <div className="flex items-start">
-              {/* Placeholder para Icone 3 (Porquinho com dinheiro) */}
               <div className="flex-shrink-0 mr-6">
-                <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                  <PiggyBank className="w-6 h-6 text-white" />
+                </div>
               </div>
               <div>
                 <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
