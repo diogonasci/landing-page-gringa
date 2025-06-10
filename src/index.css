@@ -112,3 +112,10 @@
     @apply bg-radial-orange text-white py-16;
   }
 }
+
+/* Adicione aqui qualquer CSS global */
+
+html,
+body {
+  overflow-x: hidden;
+}
