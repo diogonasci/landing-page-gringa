@@ -7,6 +7,8 @@ const ContactForm = () => {
     city: "",
     billValue: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -18,19 +20,44 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui você pode adicionar a lógica para enviar o formulário
-    console.log("Formulário enviado:", formData);
-    // Reset do formulário após envio
-    setFormData({
-      name: "",
-      phone: "",
-      city: "",
-      billValue: "",
-    });
-    // Feedback para o usuário
-    alert("Obrigado! Entraremos em contato em breve.");
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!data.success) {
+        throw new Error("Erro ao enviar formulário");
+      }
+
+      // Reset do formulário após envio
+      setFormData({
+        name: "",
+        phone: "",
+        city: "",
+        billValue: "",
+      });
+
+      // Feedback para o usuário
+      alert("Obrigado! Entraremos em contato em breve.");
+    } catch (err) {
+      setError(
+        "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente."
+      );
+      console.error("Erro ao enviar formulário:", err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -51,6 +78,12 @@ const ContactForm = () => {
                 economizar
               </p>
             </div>
+
+            {error && (
+              <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
+                {error}
+              </div>
+            )}
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
@@ -130,9 +163,10 @@ const ContactForm = () => {
 
               <button
                 type="submit"
-                className="w-full bg-radial-orange text-white py-3 rounded-md font-medium hover:brightness-110 transition-all"
+                disabled={isLoading}
+                className="w-full bg-radial-orange text-white py-3 rounded-md font-medium hover:brightness-110 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Quero minha análise gratuita
+                {isLoading ? "Enviando..." : "Quero minha análise gratuita"}
               </button>
 
               <p className="text-xs text-gray-500 text-center mt-2">
