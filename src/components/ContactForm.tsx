@@ -34,10 +34,14 @@ const ContactForm = () => {
         body: JSON.stringify(formData),
       });
 
+      if (!response.ok) {
+        throw new Error(`Erro na requisição: ${response.status}`);
+      }
+
       const data = await response.json();
 
       if (!data.success) {
-        throw new Error("Erro ao enviar formulário");
+        throw new Error(data.error || "Erro ao enviar formulário");
       }
 
       // Reset do formulário após envio
@@ -52,7 +56,9 @@ const ContactForm = () => {
       alert("Obrigado! Entraremos em contato em breve.");
     } catch (err) {
       setError(
-        "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente."
+        err instanceof Error
+          ? err.message
+          : "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente."
       );
       console.error("Erro ao enviar formulário:", err);
     } finally {
