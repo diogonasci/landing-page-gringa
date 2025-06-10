@@ -13,9 +13,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {/* Coluna 1: Logo e Descrição */}
           <div className="space-y-4">
-            <div className="w-12 h-12 bg-radial-orange rounded-lg flex items-center justify-center mb-4">
-              <div className="w-6 h-6 bg-white rounded-sm"></div>
-            </div>
+            <img
+              src="/logo-fundo-escuro.png"
+              alt="Logo Radial"
+              className="w-24 h-auto mb-4"
+            />
 
             <p className="text-gray-300 text-sm leading-relaxed max-w-xs">
               Transformando a energia do sol em economia para os lares e
