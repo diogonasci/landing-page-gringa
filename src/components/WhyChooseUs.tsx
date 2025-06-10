@@ -1,4 +1,4 @@
-import { Award, CheckCircle, Shield, Timer } from "lucide-react";
+import { Award, CheckCircle, Shield } from "lucide-react";
 
 const WhyChooseUs = () => {
   return (
