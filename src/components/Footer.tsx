@@ -9,7 +9,7 @@ import { Instagram, Mail, MapPin, MessageSquare, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-radial-dark text-white">
+    <footer className="bg-slate-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Coluna de informações da empresa */}
