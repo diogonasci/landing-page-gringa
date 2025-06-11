@@ -32,18 +32,31 @@ const Possibilities = () => {
     >
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
         {/* Ilustração */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-start md:-mr-20">
+        <div className="w-full md:w-1/2 flex justify-center md:justify-start md:-mr-20 relative">
           <img
             src="/mulher-ideias.png"
             alt="Ilustração de pessoa com ideias"
             className="max-w-md md:max-w-2xl lg:max-w-3xl"
           />
+          {/* Título POSSIBILIDADES para mobile (sobrepondo a imagem) */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 transform w-auto md:hidden">
+            <div className="relative">
+              <div
+                className="bg-white rounded-3xl px-6 py-4 md:px-10 md:py-6 border-2 border-black relative z-10"
+                style={{ boxShadow: "12px 5px 0 0 black" }}
+              >
+                <h2 className="text-radial-orange text-4xl md:text-5xl font-bold text-center tracking-wide">
+                  POSSIBILIDADES
+                </h2>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Conteúdo da direita: Título e Pontos da lista */}
         <div className="w-full md:w-1/2">
-          {/* Título POSSIBILIDADES */}
-          <div className="flex justify-center md:justify-start mb-16 md:ml-8">
+          {/* Título POSSIBILIDADES para desktop (no fluxo normal) */}
+          <div className="hidden md:flex justify-center md:justify-start mb-16 md:ml-8">
             <div className="relative">
               {/* Fundo branco com borda fina preta e sombra 3D */}
               <div
