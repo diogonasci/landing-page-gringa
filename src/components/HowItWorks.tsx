@@ -79,26 +79,54 @@ const HowItWorks = () => {
       <div className="container mx-auto px-6">
         {/* Título e Imagem introdutória */}
         <div className="flex flex-col md:flex-row items-center justify-center mb-20 max-w-3xl mx-auto">
-          {/* Imagem */}
-          <div className="flex-shrink-0 mb-8 md:mb-0 md:mr-10">
-            <img
-              src="/mulher-como-funciona.png"
-              alt="Mulher pensando"
-              className="w-48 md:w-64 lg:w-80"
-            />
+          {/* Mobile Layout */}
+          <div className="md:hidden flex flex-col items-center w-full">
+            {/* Imagem para mobile, com z-index maior */}
+            <div className="relative z-20 translate-x-28">
+              <img
+                src="/mulher-como-funciona.png"
+                alt="Mulher pensando"
+                className="w-48"
+              />
+            </div>
+
+            {/* Título para mobile, com z-index menor e margem negativa para sobrepor */}
+            <div className="relative z-10 -mt-16">
+              <div
+                className="bg-white rounded-3xl px-10 py-4 border-2 border-black"
+                style={{ boxShadow: "12px 5px 0 0 black" }}
+              >
+                <h2 className="text-radial-orange text-4xl font-bold text-left tracking-wide">
+                  <span className="block mb-4">COMO</span>
+                  FUNCIONA?
+                </h2>
+              </div>
+            </div>
           </div>
 
-          {/* Título POSSIBILIDADES */}
-          <div className="relative md:-ml-24">
-            {/* Fundo branco com borda fina preta */}
-            <div
-              className="bg-white rounded-3xl px-10 py-4 md:px-16 md:py-6 border-2 border-black relative z-10"
-              style={{ boxShadow: "12px 5px 0 0 black" }}
-            >
-              <h2 className="text-radial-orange text-4xl md:text-5xl font-bold text-left tracking-wide">
-                <span className="block mb-4">COMO</span>
-                FUNCIONA?
-              </h2>
+          {/* Desktop Layout - Existing structure, hidden on mobile */}
+          <div className="hidden md:flex w-full items-center justify-center">
+            {/* Imagem */}
+            <div className="flex-shrink-0 mb-8 md:mb-0 md:mr-10">
+              <img
+                src="/mulher-como-funciona.png"
+                alt="Mulher pensando"
+                className="w-48 md:w-64 lg:w-80"
+              />
+            </div>
+
+            {/* Título COMO FUNCIONA? */}
+            <div className="relative md:-ml-24">
+              {/* Fundo branco com borda fina preta */}
+              <div
+                className="bg-white rounded-3xl px-10 py-4 md:px-16 md:py-6 border-2 border-black relative z-10"
+                style={{ boxShadow: "12px 5px 0 0 black" }}
+              >
+                <h2 className="text-radial-orange text-4xl md:text-5xl font-bold text-left tracking-wide">
+                  <span className="block mb-4">COMO</span>
+                  FUNCIONA?
+                </h2>
+              </div>
             </div>
           </div>
         </div>
