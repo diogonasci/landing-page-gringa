@@ -12,7 +12,7 @@
   "devCommand": "npm run dev",
   "regions": ["gru1"],
   "functions": {
-    "api/**/*.ts": {
+    "api/**/*.js": {
       "memory": 1024,
       "maxDuration": 10
     }
