@@ -1,8 +1,33 @@
 import { FORM_URL } from "@/constants/urls";
+import { useGTM } from "@/hooks/useGTM";
+import { useEffect, useRef } from "react";
 
 const Hero = () => {
+  const { trackButtonClick, trackVideoInteraction, trackSectionView } = useGTM();
+  const heroRef = useRef<HTMLElement>(null);
+
+  // Track quando a seção hero fica visível
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            trackSectionView('hero');
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (heroRef.current) {
+      observer.observe(heroRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [trackSectionView]);
+
   return (
-    <section className="bg-radial-dark py-16 md:py-24">
+    <section ref={heroRef} className="bg-radial-dark py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* Título principal centralizado */}
         <div className="text-center mb-12">
@@ -28,11 +53,12 @@ const Hero = () => {
                 <div className="bg-black rounded-xl overflow-hidden aspect-video shadow-lg">
                   <iframe
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/ekxYqw220rA?start=1&rel=0&modestbranding=1"
+                    src="https://www.youtube.com/embed/ekxYqw220rA?start=1&rel=0&modestbranding=1&enablejsapi=1"
                     title="Como funciona energia solar?"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
+                    onLoad={() => trackVideoInteraction('play')}
                   ></iframe>
                 </div>
               </div>
@@ -80,6 +106,7 @@ const Hero = () => {
                 boxShadow:
                   "0 8px 0 #ff7c40, 0 12px 20px rgba(255, 124, 64, 0.3)",
               }}
+              onClick={() => trackButtonClick('main_cta', 'hero_section')}
             >
               Quero reduzir minha conta de luz
             </a>

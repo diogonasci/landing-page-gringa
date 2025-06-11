@@ -1,3 +1,4 @@
+import { useGTM } from "@/hooks/useGTM";
 import React, { useState } from "react";
 
 const ContactForm = () => {
@@ -10,6 +11,8 @@ const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState("");
+  
+  const { trackFormSubmission, trackButtonClick } = useGTM();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -64,6 +67,9 @@ const ContactForm = () => {
         city: "",
         billValue: "",
       });
+
+      // Trackear envio do formulário no GTM
+      trackFormSubmission(formData);
 
       setIsSuccess(true);
 
@@ -129,6 +135,7 @@ const ContactForm = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 transition-all text-center"
+                  onClick={() => trackButtonClick('whatsapp_direct', 'success_page')}
                 >
                   Falar no WhatsApp agora
                 </a>

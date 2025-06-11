@@ -8,9 +8,16 @@ import StickyBanner from "@/components/StickyBanner";
 import Testimonials from "@/components/Testimonials";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import { CONTACT_WHATSAPP } from "@/constants/urls";
+import { useGTM } from "@/hooks/useGTM";
+import { usePageTracking } from "@/hooks/usePageTracking";
 import { MessageCircle } from "lucide-react";
 
 const HomePage = () => {
+  const { trackWhatsAppClick } = useGTM();
+
+  // Hook para tracking geral da página
+  usePageTracking();
+
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       <StickyBanner />
@@ -32,6 +39,7 @@ const HomePage = () => {
         rel="noopener noreferrer"
         className="fixed bottom-5 right-5 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors"
         aria-label="Fale pelo WhatsApp"
+        onClick={() => trackWhatsAppClick("floating_button")}
       >
         <MessageCircle className="w-7 h-7 text-white" />
       </a>

@@ -1,3 +1,4 @@
+import { useGTM } from "@/hooks/useGTM";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -47,7 +48,38 @@ const Testimonials = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const autoPlayRef = useRef<NodeJS.Timeout>();
+
+  const { trackSectionView, trackTestimonialView } = useGTM();
+
+  // Track quando a seção de depoimentos fica visível
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            trackSectionView("testimonials");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [trackSectionView]);
+
+  // Track visualização de depoimento específico
+  useEffect(() => {
+    const currentTestimonial = testimonials[currentIndex];
+    if (currentTestimonial) {
+      trackTestimonialView(currentIndex, currentTestimonial.name);
+    }
+  }, [currentIndex, trackTestimonialView]);
 
   // Auto-play functionality
   useEffect(() => {
@@ -168,7 +200,11 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="depoimentos" className="bg-white py-12 md:py-16">
+    <section
+      ref={sectionRef}
+      id="depoimentos"
+      className="bg-white py-12 md:py-16"
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-center text-2xl md:text-3xl font-bold mb-3 text-radial-dark">
           O que dizem nossos{" "}

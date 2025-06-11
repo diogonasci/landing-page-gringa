@@ -1,8 +1,37 @@
+import { useGTM } from "@/hooks/useGTM";
 import { Award, CheckCircle, Shield } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const WhyChooseUs = () => {
+  const { trackSectionView } = useGTM();
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Track quando a seção "Por que escolher" fica visível
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            trackSectionView("why_choose_us");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [trackSectionView]);
+
   return (
-    <section id="por-que-escolher" className="bg-radial-dark py-12 md:py-16">
+    <section
+      ref={sectionRef}
+      id="por-que-escolher"
+      className="bg-radial-dark py-12 md:py-16"
+    >
       <div className="container mx-auto px-4">
         {/* Bloco da imagem e texto introdutório */}
         <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left mb-10 max-w-4xl mx-auto">

@@ -1,9 +1,34 @@
 import { FORM_URL } from "@/constants/urls";
+import { useGTM } from "@/hooks/useGTM";
 import { Check } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const SpecialOffer = () => {
+  const { trackSectionView, trackButtonClick } = useGTM();
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Track quando a seção "Oferta Especial" fica visível
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            trackSectionView("special_offer");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [trackSectionView]);
+
   return (
-    <section className="bg-radial-orange py-8 md:py-12">
+    <section ref={sectionRef} className="bg-radial-orange py-8 md:py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-6 text-white">
           Oferta Especial por Tempo Limitado!
@@ -51,6 +76,9 @@ const SpecialOffer = () => {
             href={FORM_URL}
             className="inline-block text-white py-3 px-8 rounded-md text-lg font-medium hover:brightness-110 transition-all"
             style={{ backgroundColor: "#282131" }}
+            onClick={() =>
+              trackButtonClick("special_offer_cta", "special_offer_section")
+            }
           >
             Quero minha análise gratuita
           </a>

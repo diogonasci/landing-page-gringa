@@ -152,7 +152,7 @@ export default async function handler(req, res) {
         city,
         billValue,
         timestamp: new Date().toISOString(),
-        recipients: ["diogonascii@gmail.com", "sejaradial@gmail.com"],
+        recipients: ["sejaradial@gmail.com"],
       },
     });
   } catch (error) {

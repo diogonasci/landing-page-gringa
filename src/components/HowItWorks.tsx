@@ -1,4 +1,30 @@
+import { useGTM } from "@/hooks/useGTM";
+import { useEffect, useRef } from "react";
+
 const HowItWorks = () => {
+  const { trackSectionView } = useGTM();
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Track quando a seção "Como Funciona" fica visível
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            trackSectionView("how_it_works");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [trackSectionView]);
+
   const steps = [
     {
       number: 1,
@@ -45,7 +71,11 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="como-funciona" className="bg-radial-dark py-20 md:py-32">
+    <section
+      ref={sectionRef}
+      id="como-funciona"
+      className="bg-radial-dark py-20 md:py-32"
+    >
       <div className="container mx-auto px-6">
         {/* Título e Imagem introdutória */}
         <div className="flex flex-col md:flex-row items-center justify-center mb-20 max-w-3xl mx-auto">

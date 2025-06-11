@@ -1,8 +1,36 @@
+import { useGTM } from "@/hooks/useGTM";
 import { Home, PiggyBank, Sun } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const Possibilities = () => {
+  const { trackSectionView } = useGTM();
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Track quando a seção "Possibilidades" fica visível
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            trackSectionView("possibilities");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [trackSectionView]);
+
   return (
-    <section className="bg-gradient-to-r from-[#ff3231] to-[#ff8c4b] py-20 md:py-32">
+    <section
+      ref={sectionRef}
+      className="bg-gradient-to-r from-[#ff3231] to-[#ff8c4b] py-20 md:py-32"
+    >
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
         {/* Ilustração */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-start md:-mr-20">
