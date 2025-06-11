@@ -36,7 +36,18 @@ const ContactForm = () => {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
+      // Verificar se a resposta é JSON válido
+      const contentType = response.headers.get("content-type");
+      let data;
+      
+      if (contentType && contentType.indexOf("application/json") !== -1) {
+        data = await response.json();
+      } else {
+        // Se não for JSON, pegar o texto da resposta para debug
+        const textResponse = await response.text();
+        console.error("Resposta não-JSON da API:", textResponse);
+        throw new Error(`Erro do servidor (${response.status}): ${textResponse.substring(0, 100)}...`);
+      }
 
       if (!response.ok) {
         throw new Error(data.error || `Erro na requisição: ${response.status}`);

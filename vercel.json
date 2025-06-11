@@ -12,10 +12,6 @@
   "devCommand": "npm run dev",
   "regions": ["gru1"],
   "functions": {
-    "api/**/*.js": {
-      "memory": 1024,
-      "maxDuration": 10
-    },
     "api/**/*.ts": {
       "memory": 1024,
       "maxDuration": 10
@@ -30,7 +26,7 @@
           "value": "*"
         },
         {
-          "key": "Access-Control-Allow-Methods",
+          "key": "Access-Control-Allow-Methods", 
           "value": "GET, POST, PUT, DELETE, OPTIONS"
         },
         {

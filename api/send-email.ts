@@ -1,11 +1,23 @@
-// api/send-email.js
+// api/send-email.ts
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function handler(req, res) {
+interface RequestBody {
+  name: string;
+  phone: string;
+  city: string;
+  billValue?: string;
+}
+
+export default async function handler(req: VercelRequest, res: VercelResponse) {
+  console.log('API chamada - Método:', req.method);
+  console.log('API chamada - Body:', req.body);
+  console.log('RESEND_API_KEY existe:', !!process.env.RESEND_API_KEY);
+
   // Configurar CORS
-  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
   res.setHeader(
@@ -28,7 +40,16 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, phone, city, billValue } = req.body;
+    // Verificar se RESEND_API_KEY existe
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY não configurada');
+      return res.status(500).json({
+        success: false,
+        error: 'Configuração do servidor incompleta'
+      });
+    }
+
+    const { name, phone, city, billValue }: RequestBody = req.body;
 
     // Validação básica
     if (!name || !phone || !city) {
@@ -38,10 +59,12 @@ export default async function handler(req, res) {
       });
     }
 
+    console.log('Tentando enviar email para:', 'diogonascii@gmail.com');
+
     // Enviar email usando Resend
     const { data, error } = await resend.emails.send({
-      from: 'Radial Energia <contato@radialenergia.com.br>', // Substitua pelo seu domínio verificado
-      to: ['contato@radialenergia.com.br'], // Email de destino
+      from: 'onboarding@resend.dev', // Use o domínio padrão do Resend para teste
+      to: ['diogonascii@gmail.com'], // Email de destino
       subject: 'Nova solicitação de análise - Site Radial',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -73,9 +96,11 @@ export default async function handler(req, res) {
       console.error('Erro do Resend:', error);
       return res.status(500).json({
         success: false,
-        error: 'Erro ao enviar email'
+        error: 'Erro ao enviar email: ' + JSON.stringify(error)
       });
     }
+
+    console.log('Email enviado com sucesso:', data);
 
     // Resposta de sucesso
     res.status(200).json({ 
@@ -88,7 +113,7 @@ export default async function handler(req, res) {
     console.error('Erro ao processar requisição:', error);
     res.status(500).json({
       success: false,
-      error: 'Erro interno do servidor'
+      error: 'Erro interno do servidor: ' + (error instanceof Error ? error.message : 'Erro desconhecido')
     });
   }
 }
