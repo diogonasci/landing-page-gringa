@@ -1,9 +1,10 @@
+import { FORM_URL } from "@/constants/urls";
 import { useGTM } from "@/hooks/useGTM";
 import { Award, CheckCircle, Shield } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const WhyChooseUs = () => {
-  const { trackSectionView } = useGTM();
+  const { trackSectionView, trackButtonClick } = useGTM();
   const sectionRef = useRef<HTMLElement>(null);
 
   // Track quando a seção "Por que escolher" fica visível
@@ -138,6 +139,23 @@ const WhyChooseUs = () => {
           </p>
           <p className="text-gray-400 text-lg">
             Pedro Nascimento e Remisson Ventura, diretores da Radial.
+          </p>
+        </div>
+
+        {/* CTA após os diferenciais */}
+        <div className="text-center mt-12">
+          <a
+            href={FORM_URL}
+            className="inline-block bg-white text-radial-orange py-4 px-8 rounded-full text-lg font-bold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl"
+            onClick={() =>
+              trackButtonClick("why_choose_us_cta", "why_choose_us_section")
+            }
+          >
+            Quero fazer parte dessa história
+          </a>
+          <p className="text-white mt-4 text-lg">
+            ⚡ Empresa certificada • Equipe especializada • Resultados
+            comprovados
           </p>
         </div>
       </div>

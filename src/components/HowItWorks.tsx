@@ -1,8 +1,9 @@
+import { FORM_URL } from "@/constants/urls";
 import { useGTM } from "@/hooks/useGTM";
 import { useEffect, useRef } from "react";
 
 const HowItWorks = () => {
-  const { trackSectionView } = useGTM();
+  const { trackSectionView, trackButtonClick } = useGTM();
   const sectionRef = useRef<HTMLElement>(null);
 
   // Track quando a seção "Como Funciona" fica visível
@@ -162,6 +163,27 @@ const HowItWorks = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA após os passos */}
+        <div className="text-center mt-12">
+          <a
+            href={FORM_URL}
+            className="inline-block bg-radial-orange text-white py-4 px-8 rounded-full text-lg font-bold hover:brightness-110 transition-all shadow-lg hover:shadow-xl"
+            onClick={() =>
+              trackButtonClick("how_it_works_cta", "how_it_works_section")
+            }
+          >
+            Quero minha análise gratuita
+          </a>
+          <p className="text-radial-dark mt-4 text-lg">
+            ⚡ Análise completa do seu caso • Proposta personalizada • Economia
+            garantida
+          </p>
+          <p className="text-radial-dark mt-2 text-base opacity-80">
+            Nossa equipe especializada vai analisar seu consumo e criar um
+            projeto sob medida para sua necessidade
+          </p>
         </div>
       </div>
     </section>

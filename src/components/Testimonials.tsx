@@ -1,3 +1,4 @@
+import { FORM_URL } from "@/constants/urls";
 import { useGTM } from "@/hooks/useGTM";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -51,7 +52,7 @@ const Testimonials = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const autoPlayRef = useRef<NodeJS.Timeout>();
 
-  const { trackSectionView, trackTestimonialView } = useGTM();
+  const { trackSectionView, trackTestimonialView, trackButtonClick } = useGTM();
 
   // Track quando a seção de depoimentos fica visível
   useEffect(() => {
@@ -297,6 +298,22 @@ const Testimonials = () => {
               />
             ))}
           </div>
+        </div>
+
+        {/* CTA após depoimentos */}
+        <div className="text-center mt-12">
+          <a
+            href={FORM_URL}
+            className="inline-block bg-radial-orange text-white py-4 px-8 rounded-full text-lg font-bold hover:brightness-110 transition-all shadow-lg hover:shadow-xl"
+            onClick={() =>
+              trackButtonClick("testimonials_cta", "testimonials_section")
+            }
+          >
+            Quero economizar como eles
+          </a>
+          <p className="text-radial-dark mt-4 text-lg">
+            ⚡ Análise gratuita • Sem compromisso • Economia garantida
+          </p>
         </div>
       </div>
     </section>

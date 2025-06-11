@@ -3,7 +3,8 @@ import { useGTM } from "@/hooks/useGTM";
 import { useEffect, useRef } from "react";
 
 const Hero = () => {
-  const { trackButtonClick, trackVideoInteraction, trackSectionView } = useGTM();
+  const { trackButtonClick, trackVideoInteraction, trackSectionView } =
+    useGTM();
   const heroRef = useRef<HTMLElement>(null);
 
   // Track quando a seção hero fica visível
@@ -12,7 +13,7 @@ const Hero = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            trackSectionView('hero');
+            trackSectionView("hero");
           }
         });
       },
@@ -58,7 +59,7 @@ const Hero = () => {
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    onLoad={() => trackVideoInteraction('play')}
+                    onLoad={() => trackVideoInteraction("play")}
                   ></iframe>
                 </div>
               </div>
@@ -98,25 +99,25 @@ const Hero = () => {
 
         {/* CTA GIGANTE centralizado */}
         <div className="flex justify-center">
-          <div className="w-full max-w-2xl">
+          <div className="w-full max-w-xl">
             <a
               href={FORM_URL}
-              className="block w-full bg-white text-radial-dark py-6 px-12 rounded-full text-center font-bold text-xl md:text-2xl hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 relative"
+              className="block w-full bg-white text-radial-dark py-4 px-8 rounded-full text-center font-bold text-lg md:text-xl hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 relative"
               style={{
                 boxShadow:
-                  "0 8px 0 #ff7c40, 0 12px 20px rgba(255, 124, 64, 0.3)",
+                  "0 6px 0 #ff7c40, 0 8px 16px rgba(255, 124, 64, 0.3)",
               }}
-              onClick={() => trackButtonClick('main_cta', 'hero_section')}
+              onClick={() => trackButtonClick("main_cta", "hero_section")}
             >
               Quero reduzir minha conta de luz
             </a>
 
             {/* Benefícios abaixo do botão */}
-            <div className="text-center mt-6">
-              <p className="text-white text-lg opacity-90 mb-2">
+            <div className="text-center mt-4">
+              <p className="text-white text-base md:text-lg opacity-90 mb-2">
                 ⚡ Análise 100% gratuita • Sem compromisso • Resultado garantido
               </p>
-              <p className="text-radial-orange text-xl font-bold animate-pulse">
+              <p className="text-radial-orange text-lg font-bold animate-pulse">
                 👆 Clique agora e descubra quanto pode economizar!
               </p>
             </div>

@@ -1,8 +1,9 @@
+import { FORM_URL } from "@/constants/urls";
 import { useGTM } from "@/hooks/useGTM";
 import { useEffect, useRef } from "react";
 
 const Possibilities = () => {
-  const { trackSectionView } = useGTM();
+  const { trackSectionView, trackButtonClick } = useGTM();
   const sectionRef = useRef<HTMLElement>(null);
 
   // Track quando a seção "Possibilidades" fica visível
@@ -135,6 +136,25 @@ const Possibilities = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* CTA no final da seção */}
+      <div className="container mx-auto px-4">
+        <div className="text-center mt-12">
+          <a
+            href={FORM_URL}
+            className="inline-block bg-white text-radial-orange py-4 px-8 rounded-full text-lg font-bold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl"
+            onClick={() =>
+              trackButtonClick("possibilities_cta", "possibilities_section")
+            }
+          >
+            Descubra suas possibilidades
+          </a>
+          <p className="text-white mt-4 text-lg">
+            ⚡ Análise personalizada • Economia garantida • Instalação
+            profissional
+          </p>
         </div>
       </div>
     </section>
