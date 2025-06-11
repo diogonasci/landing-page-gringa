@@ -38,9 +38,9 @@ const Footer = () => {
               <div>
                 <p className="text-gray-400 mb-1">Endereço:</p>
                 <p className="text-white">
-                  Av. das Américas, 1000
+                  Av. João Cabral de Mello Neto, 850. Bloco 3 | Sala 1009
                   <br />
-                  Barra da Tijuca, Rio de Janeiro - RJ
+                  Barra da Tijuca, Rio de Janeiro - RJ, 22775-057
                 </p>
               </div>
 
