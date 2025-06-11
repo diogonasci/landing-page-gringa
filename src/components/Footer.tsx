@@ -9,17 +9,17 @@ import { Instagram } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-slate-900 text-white">
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+      <div className="container mx-auto px-4 py-6 md:py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
           {/* Coluna 1: Logo e Descrição */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-center lg:text-left">
             <img
               src="/logo-fundo-escuro.png"
               alt="Logo Radial"
-              className="w-24 h-auto mb-4"
+              className="w-24 h-auto mx-auto lg:mx-0 mb-4"
             />
 
-            <p className="text-gray-300 text-sm leading-relaxed max-w-xs">
+            <p className="text-gray-300 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0 text-center lg:text-left">
               Transformando a energia do sol em economia para os lares e
               empresas do Rio de Janeiro.
             </p>
@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
 
           {/* Coluna 2: Contato */}
-          <div>
+          <div className="text-center lg:text-left">
             <h3 className="text-lg font-semibold mb-4 text-white">Contato</h3>
 
             <div className="space-y-3 text-sm">
@@ -57,12 +57,12 @@ const Footer = () => {
           </div>
 
           {/* Coluna 3: Redes Sociais e Certificações */}
-          <div>
+          <div className="text-center lg:text-left">
             <h3 className="text-lg font-semibold mb-4 text-white">
               Redes Sociais
             </h3>
 
-            <div className="flex space-x-4 mb-6">
+            <div className="flex space-x-4 mb-6 justify-center lg:justify-start">
               <a
                 href="https://instagram.com/sejaradial"
                 target="_blank"
@@ -102,7 +102,7 @@ const Footer = () => {
             </div>
 
             {/* Certificações/Selos */}
-            <div className="space-y-3">
+            <div className="space-y-3 max-w-xs mx-auto lg:mx-0">
               <div className="bg-white text-gray-900 px-3 py-2 rounded text-xs font-semibold text-center">
                 🔒 SITE 100% SEGURO
               </div>
