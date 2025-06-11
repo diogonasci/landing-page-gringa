@@ -1,5 +1,4 @@
 import { useGTM } from "@/hooks/useGTM";
-import { Home, PiggyBank, Sun } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const Possibilities = () => {
@@ -61,13 +60,15 @@ const Possibilities = () => {
           {/* Pontos da lista */}
           <div className="space-y-12">
             {/* Ponto 1: Compartilhamento de Energia */}
-            <div className="flex items-start">
-              <div className="flex-shrink-0 mr-6">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                  <Home className="w-6 h-6 text-white" />
-                </div>
+            <div className="flex items-start gap-8">
+              <div className="flex-shrink-0">
+                <img
+                  src="/casa-possibilidades.png"
+                  alt="Ícone de casa"
+                  className="w-32 h-32"
+                />
               </div>
-              <div>
+              <div className="flex-1">
                 <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
                   COMPARTILHAMENTO DE ENERGIA
                 </h3>
@@ -80,13 +81,15 @@ const Possibilities = () => {
             </div>
 
             {/* Ponto 2: Créditos Acumulativos */}
-            <div className="flex items-start">
-              <div className="flex-shrink-0 mr-6">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                  <Sun className="w-6 h-6 text-white" />
-                </div>
+            <div className="flex items-start gap-8">
+              <div className="flex-shrink-0">
+                <img
+                  src="/sol-possibilidades.png"
+                  alt="Ícone de sol"
+                  className="w-32 h-32"
+                />
               </div>
-              <div>
+              <div className="flex-1">
                 <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
                   CRÉDITOS ACUMULATIVOS
                 </h3>
@@ -99,13 +102,15 @@ const Possibilities = () => {
             </div>
 
             {/* Ponto 3: Implante seu Sistema à Custo Zero */}
-            <div className="flex items-start">
-              <div className="flex-shrink-0 mr-6">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                  <PiggyBank className="w-6 h-6 text-white" />
-                </div>
+            <div className="flex items-start gap-8">
+              <div className="flex-shrink-0">
+                <img
+                  src="/porquinho-possibilidades.png"
+                  alt="Ícone de porquinho"
+                  className="w-32 h-32"
+                />
               </div>
-              <div>
+              <div className="flex-1">
                 <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
                   IMPLANTE SEU SISTEMA À CUSTO ZERO
                 </h3>
