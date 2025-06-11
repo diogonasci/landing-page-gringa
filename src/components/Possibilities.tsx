@@ -65,14 +65,14 @@ const Possibilities = () => {
                 <img
                   src="/casa-possibilidades.png"
                   alt="Ícone de casa"
-                  className="w-32 h-32"
+                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32"
                 />
               </div>
               <div className="flex-1">
-                <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
+                <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 md:mb-4">
                   COMPARTILHAMENTO DE ENERGIA
                 </h3>
-                <p className="text-white text-lg md:text-xl leading-relaxed">
+                <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed">
                   Você pode dividir sua energia solar com outro endereço, sem
                   pagar nada a mais por isso. Aproveite para ajudar sua família
                   ou amigos a economizar também.
@@ -86,14 +86,14 @@ const Possibilities = () => {
                 <img
                   src="/sol-possibilidades.png"
                   alt="Ícone de sol"
-                  className="w-32 h-32"
+                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32"
                 />
               </div>
               <div className="flex-1">
-                <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
+                <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 md:mb-4">
                   CRÉDITOS ACUMULATIVOS
                 </h3>
-                <p className="text-white text-lg md:text-xl leading-relaxed">
+                <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed">
                   Sua energia solar excedente pode ser acumulada e utilizada em
                   até 5 anos. Isso garante que você aproveite ao máximo sua
                   produção, mesmo em períodos de menor consumo.
@@ -107,14 +107,14 @@ const Possibilities = () => {
                 <img
                   src="/porquinho-possibilidades.png"
                   alt="Ícone de porquinho"
-                  className="w-32 h-32"
+                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32"
                 />
               </div>
               <div className="flex-1">
-                <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
+                <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 md:mb-4">
                   IMPLANTE SEU SISTEMA À CUSTO ZERO
                 </h3>
-                <p className="text-white text-lg md:text-xl leading-relaxed">
+                <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed">
                   Trocamos a sua parcela da conta de luz pela parcela do
                   financiamento, mas ele acaba bem rapidinho. Você economiza
                   desde o primeiro mês e ainda fica com um sistema próprio.
