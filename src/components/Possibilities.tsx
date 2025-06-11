@@ -60,7 +60,7 @@ const Possibilities = () => {
           {/* Pontos da lista */}
           <div className="space-y-12">
             {/* Ponto 1: Compartilhamento de Energia */}
-            <div className="flex items-start gap-8">
+            <div className="flex items-start gap-4">
               <div className="flex-shrink-0">
                 <img
                   src="/casa-possibilidades.png"
@@ -81,7 +81,7 @@ const Possibilities = () => {
             </div>
 
             {/* Ponto 2: Créditos Acumulativos */}
-            <div className="flex items-start gap-8">
+            <div className="flex items-start gap-4">
               <div className="flex-shrink-0">
                 <img
                   src="/sol-possibilidades.png"
@@ -102,7 +102,7 @@ const Possibilities = () => {
             </div>
 
             {/* Ponto 3: Implante seu Sistema à Custo Zero */}
-            <div className="flex items-start gap-8">
+            <div className="flex items-start gap-4">
               <div className="flex-shrink-0">
                 <img
                   src="/porquinho-possibilidades.png"
