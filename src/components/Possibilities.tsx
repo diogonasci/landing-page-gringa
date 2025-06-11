@@ -28,7 +28,7 @@ const Possibilities = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-gradient-to-r from-[#ff3231] to-[#ff8c4b] py-20 md:py-32"
+      className="bg-gradient-to-r from-[#ff3231] to-[#ff8c4b] py-12 md:py-32"
     >
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
         {/* Ilustração */}
