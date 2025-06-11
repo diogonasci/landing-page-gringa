@@ -86,7 +86,7 @@ const HowItWorks = () => {
               <img
                 src="/mulher-como-funciona.png"
                 alt="Mulher pensando"
-                className="w-48"
+                className="w-52"
               />
             </div>
 
