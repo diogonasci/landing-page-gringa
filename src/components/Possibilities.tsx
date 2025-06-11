@@ -39,7 +39,7 @@ const Possibilities = () => {
             className="max-w-md md:max-w-2xl lg:max-w-3xl"
           />
           {/* Título POSSIBILIDADES para mobile (sobrepondo a imagem) */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 transform w-auto md:hidden">
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 -translate-y-1/4 transform w-auto md:hidden">
             <div className="relative">
               <div
                 className="bg-white rounded-3xl px-6 py-4 md:px-10 md:py-6 border-2 border-black relative z-10"
