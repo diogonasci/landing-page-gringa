@@ -149,11 +149,10 @@ const Possibilities = () => {
               trackButtonClick("possibilities_cta", "possibilities_section")
             }
           >
-            Descubra suas possibilidades
+            Simular minha economia
           </a>
           <p className="text-white mt-4 text-lg">
-            ⚡ Análise personalizada • Economia garantida • Instalação
-            profissional
+            ⚡ Simulação gratuita • Economia real • Instalação profissional
           </p>
         </div>
       </div>

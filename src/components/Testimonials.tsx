@@ -312,7 +312,7 @@ const Testimonials = () => {
             Quero economizar como eles
           </a>
           <p className="text-radial-dark mt-4 text-lg">
-            ⚡ Análise gratuita • Sem compromisso • Economia garantida
+            ⚡ Economia real • Depoimentos reais • Resultados comprovados
           </p>
         </div>
       </div>

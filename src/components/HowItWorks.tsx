@@ -174,15 +174,11 @@ const HowItWorks = () => {
               trackButtonClick("how_it_works_cta", "how_it_works_section")
             }
           >
-            Quero minha análise gratuita
+            Começar meu projeto solar
           </a>
-          <p className="text-radial-dark mt-4 text-lg">
-            ⚡ Análise completa do seu caso • Proposta personalizada • Economia
+          <p className="text-white mt-4 text-lg">
+            ⚡ Projeto personalizado • Instalação profissional • Economia
             garantida
-          </p>
-          <p className="text-radial-dark mt-2 text-base opacity-80">
-            Nossa equipe especializada vai analisar seu consumo e criar um
-            projeto sob medida para sua necessidade
           </p>
         </div>
       </div>

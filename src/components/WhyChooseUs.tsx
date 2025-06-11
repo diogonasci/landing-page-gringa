@@ -151,7 +151,7 @@ const WhyChooseUs = () => {
               trackButtonClick("why_choose_us_cta", "why_choose_us_section")
             }
           >
-            Quero fazer parte dessa história
+            Fazer parte dessa história
           </a>
           <p className="text-white mt-4 text-lg">
             ⚡ Empresa certificada • Equipe especializada • Resultados
