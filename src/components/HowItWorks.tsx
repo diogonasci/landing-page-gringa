@@ -82,7 +82,7 @@ const HowItWorks = () => {
           {/* Mobile Layout */}
           <div className="md:hidden flex flex-col items-center w-full">
             {/* Imagem para mobile, com z-index maior */}
-            <div className="relative z-20 translate-x-28">
+            <div className="relative z-20 translate-x-24 translate-y-2">
               <img
                 src="/mulher-como-funciona.png"
                 alt="Mulher pensando"
