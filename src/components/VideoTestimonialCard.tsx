@@ -60,7 +60,7 @@ export const VideoTestimonialCard = ({
       <div className="flex justify-center px-4 -mt-6">
         <div
           className="relative bg-gray-900 rounded-t-3xl overflow-hidden"
-          style={{ aspectRatio: "9/16", width: "70%" }}
+          style={{ aspectRatio: "9/12", width: "70%" }}
         >
           {!isPlaying ? (
             // Thumbnail com botão de play
@@ -74,7 +74,7 @@ export const VideoTestimonialCard = ({
                 alt={`Thumbnail do depoimento de ${testimonial.name}`}
                 className="w-full h-full object-cover"
                 style={{
-                  objectPosition: "center 35%",
+                  objectPosition: "center 80%",
                 }}
               />
 
@@ -90,9 +90,13 @@ export const VideoTestimonialCard = ({
             </div>
           ) : (
             // Iframe do YouTube no mesmo local
-            <div className="w-full h-full">
+            <div className="w-full h-full overflow-hidden">
               <iframe
                 className="w-full h-full rounded-t-3xl"
+                style={{
+                  height: "140%",
+                  marginTop: "-35%",
+                }}
                 src={`https://www.youtube.com/embed/${testimonial.videoId}?autoplay=1&rel=0&modestbranding=1&enablejsapi=1`}
                 title={`Depoimento de ${testimonial.name}`}
                 frameBorder="0"
