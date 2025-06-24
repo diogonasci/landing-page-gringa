@@ -114,7 +114,10 @@ export const VideoTestimonialCard = ({
       <div className="relative -mx-4 -mt-2">
         <div
           className="bg-white rounded-2xl px-6 py-5 shadow-lg mx-auto"
-          style={{ width: "calc(100% + 2rem)" }}
+          style={{
+            width: "calc(100% + 2rem)",
+            minHeight: "140px",
+          }}
         >
           {/* Estrelas laranjas no topo da caixa */}
           <div className="flex space-x-1 mb-3">
@@ -127,7 +130,7 @@ export const VideoTestimonialCard = ({
           </div>
 
           {/* Texto do depoimento */}
-          <p className="text-gray-700 italic text-sm leading-relaxed text-justify">
+          <p className="text-gray-700 italic text-sm leading-relaxed text-justify w-full">
             "{testimonial.text}"
           </p>
         </div>

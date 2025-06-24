@@ -1,4 +1,3 @@
-import { FORM_URL } from "@/constants/urls";
 import { useGTM } from "@/hooks/useGTM";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -10,7 +9,7 @@ const videoTestimonialsData: VideoTestimonial[] = [
     id: 1,
     name: "André Pires",
     location: "Miguel Pereira, Rio de Janeiro - RJ",
-    text: "Chegamos na parcela final. Tudo certinho, conforme o combinado. Parabéns pelo excelente trabalho e profissionalismo. Deu tudo certo! O sistema está gerando muita energia.",
+    text: "Chegamos na parcela final. Tudo certinho, conforme o combinado.<br/>Parabéns pelo excelente trabalho e<br/>profissionalismo. Deu tudo certo! O sistema está gerando<br/>muita energia.",
     videoUrl: "https://img.youtube.com/vi/ZdjvAkivEK4/maxresdefault.jpg",
     videoId: "ZdjvAkivEK4",
   },
@@ -197,7 +196,7 @@ const Testimonials = () => {
     <section
       ref={sectionRef}
       id="depoimentos"
-      className="py-12 md:py-16"
+      className="py-12 md:py-16 pb-px"
       style={{
         background: "linear-gradient(135deg, #ff5d26 0%, #ff8c4b 100%)",
       }}
@@ -213,7 +212,7 @@ const Testimonials = () => {
 
         {/* Desktop - Grid para 3 ou menos, Carousel para mais de 3 */}
         {videoTestimonialsData.length <= 3 ? (
-          <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 !mb-0 mb-0">
             {videoTestimonialsData.map((testimonial) => (
               <VideoTestimonialCard
                 key={testimonial.id}
@@ -223,7 +222,7 @@ const Testimonials = () => {
             ))}
           </div>
         ) : (
-          <div className="hidden lg:block mb-10">
+          <div className="hidden lg:block !mb-0 mb-0">
             <DesktopCarousel
               testimonials={testimonials}
               onVideoPlay={handleVideoPlay}
@@ -232,7 +231,7 @@ const Testimonials = () => {
         )}
 
         {/* Mobile/Tablet Carousel */}
-        <div className="lg:hidden relative">
+        <div className="lg:hidden relative !mb-0 mb-0">
           {/* Navigation Arrows */}
           <button
             onClick={goToPrevious}
@@ -289,7 +288,7 @@ const Testimonials = () => {
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-6 space-x-2">
+          <div className="flex justify-center mt-6 space-x-2 !mb-0 mb-0">
             {testimonials.map((_, index) => (
               <button
                 key={index}
@@ -303,22 +302,6 @@ const Testimonials = () => {
               />
             ))}
           </div>
-        </div>
-
-        {/* CTA após depoimentos */}
-        <div className="text-center mt-12">
-          <a
-            href={FORM_URL}
-            className="inline-block bg-white text-radial-orange py-4 px-8 rounded-full text-lg font-bold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl"
-            onClick={() =>
-              trackButtonClick("testimonials_cta", "testimonials_section")
-            }
-          >
-            Quero economizar como eles
-          </a>
-          <p className="text-white mt-4 text-lg">
-            ⚡ Economia real • Depoimentos reais • Resultados comprovados
-          </p>
         </div>
       </div>
     </section>
