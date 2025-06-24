@@ -75,6 +75,8 @@ export const VideoTestimonialCard = ({
                 className="w-full h-full object-cover"
                 style={{
                   objectPosition: "center 80%",
+                  height: "140%",
+                  marginTop: "-35%",
                 }}
               />
 
