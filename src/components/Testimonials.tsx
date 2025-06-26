@@ -26,9 +26,8 @@ const videoTestimonialsData: VideoTestimonial[] = [
     name: "Clerton Pereira",
     location: "Instalação Residencial - Turiaçu",
     text: "A equipe foi responsável e atenciosa. Me passaram confiança! Fizeram um serviço de primeira e tô satisfeito pra caramba. Fui bem atendido e o trabalho foi bem rápido. Foi a melhor coisa que fiz. Indico com certeza!",
-    videoUrl:
-      "https://images.unsplash.com/photo-1497005367839-6e852de72767?w=400&h=300&fit=crop", // ⚠️ SUBSTITUA pelo thumbnail real
-    instagramUrl: "https://instagram.com/p/SEU_POST_AQUI", // ⚠️ SUBSTITUA pelo link real do Instagram
+    videoUrl: "https://img.youtube.com/vi/ZdjvAkivEK4/maxresdefault.jpg",
+    videoId: "ZdjvAkivEK4",
   },
 ];
 

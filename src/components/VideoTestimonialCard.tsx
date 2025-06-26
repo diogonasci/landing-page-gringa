@@ -57,10 +57,10 @@ export const VideoTestimonialCard = ({
       </div>
 
       {/* Área do vídeo com thumbnail - formato Instagram Reels (9:16) - MENOR e CENTRALIZADO */}
-      <div className="flex justify-center px-4 -mt-6">
+      <div className="flex justify-center -mt-6">
         <div
           className="relative bg-gray-900 rounded-2xl overflow-hidden"
-          style={{ aspectRatio: "4/5", width: "75%" }}
+          style={{ aspectRatio: "4/5", width: "100%" }}
         >
           {!isPlaying ? (
             // Thumbnail com botão de play
@@ -73,6 +73,11 @@ export const VideoTestimonialCard = ({
                 src={testimonial.videoUrl}
                 alt={`Thumbnail do depoimento de ${testimonial.name}`}
                 className="w-full h-full object-cover"
+                style={{
+                  width: "140%",
+                  height: "140%",
+                  transform: "translate(0%, -14%)",
+                }}
               />
 
               {/* Overlay escuro no hover */}
