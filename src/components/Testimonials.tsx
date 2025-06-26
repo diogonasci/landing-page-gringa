@@ -9,18 +9,17 @@ const videoTestimonialsData: VideoTestimonial[] = [
     id: 1,
     name: "André Pires",
     location: "Miguel Pereira, Rio de Janeiro - RJ",
-    text: "Chegamos na parcela final. Tudo certinho, conforme o combinado.<br/>Parabéns pelo excelente trabalho e<br/>profissionalismo. Deu tudo certo! O sistema está gerando<br/>muita energia.",
-    videoUrl: "https://img.youtube.com/vi/ZdjvAkivEK4/maxresdefault.jpg",
-    videoId: "ZdjvAkivEK4",
+    text: "Chegamos na parcela final. Tudo certinho, conforme o combinado. Parabéns pelo excelente trabalho e profissionalismo desenvolvido pela equipe. Deu tudo certo! O sistema está gerando muita energia e superou nossas expectativas.",
+    videoUrl: "https://img.youtube.com/vi/gbaIGMJQx5E/maxresdefault.jpg",
+    videoId: "gbaIGMJQx5E",
   },
   {
     id: 2,
     name: "Célia Condé",
     location: "Instalação Residencial - Taquara",
     text: "Hoje eu tenho uma economia muito grande de energia, e não tenho mais preocupação. A conta de luz era muito cara. Agora eu pago somente o mínimo e já tenho mais de 4.000KwH acumulados na rede.",
-    videoUrl:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop", // ⚠️ SUBSTITUA pelo thumbnail real
-    instagramUrl: "https://instagram.com/p/SEU_POST_AQUI", // ⚠️ SUBSTITUA pelo link real do Instagram
+    videoUrl: "https://img.youtube.com/vi/ZdjvAkivEK4/maxresdefault.jpg",
+    videoId: "ZdjvAkivEK4",
   },
   {
     id: 3,
@@ -198,14 +197,14 @@ const Testimonials = () => {
       id="depoimentos"
       className="py-12 md:py-16 pb-px"
       style={{
-        background: "linear-gradient(135deg, #ff5d26 0%, #ff8c4b 100%)",
+        background: "linear-gradient(to bottom, #ffffff 0%, #ffffff 70%, #ff5001 70%, #ff5001 100%)",
       }}
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-2xl md:text-3xl font-bold mb-3 text-white">
-          O que dizem nossos <span className="text-yellow-300">clientes</span>
+        <h2 className="text-center text-2xl md:text-3xl font-bold mb-3 text-gray-800">
+          O que dizem nossos <span className="text-orange-500">clientes</span>
         </h2>
-        <p className="text-center text-white/90 mb-10 max-w-2xl mx-auto">
+        <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
           Veja como a energia solar está transformando a vida de moradores do
           Rio de Janeiro
         </p>

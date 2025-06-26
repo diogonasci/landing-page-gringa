@@ -49,8 +49,8 @@ export const VideoTestimonialCard = ({
       {/* Banner laranja com nome - sobrepondo a parte SUPERIOR do vídeo */}
       <div className="flex justify-center mb-4 relative z-10">
         <div
-          className="bg-radial-orange text-white px-4 py-2 rounded-full shadow-lg"
-          style={{ width: "56%" }}
+          className="bg-radial-orange text-white px-6 py-3 rounded-full shadow-lg"
+          style={{ width: "60%" }}
         >
           <h3 className="font-bold text-lg text-center">{testimonial.name}</h3>
         </div>
@@ -59,8 +59,8 @@ export const VideoTestimonialCard = ({
       {/* Área do vídeo com thumbnail - formato Instagram Reels (9:16) - MENOR e CENTRALIZADO */}
       <div className="flex justify-center px-4 -mt-6">
         <div
-          className="relative bg-gray-900 rounded-t-3xl overflow-hidden"
-          style={{ aspectRatio: "9/12", width: "70%" }}
+          className="relative bg-gray-900 rounded-2xl overflow-hidden"
+          style={{ aspectRatio: "4/5", width: "75%" }}
         >
           {!isPlaying ? (
             // Thumbnail com botão de play
@@ -73,11 +73,6 @@ export const VideoTestimonialCard = ({
                 src={testimonial.videoUrl}
                 alt={`Thumbnail do depoimento de ${testimonial.name}`}
                 className="w-full h-full object-cover"
-                style={{
-                  objectPosition: "center 80%",
-                  height: "140%",
-                  marginTop: "-35%",
-                }}
               />
 
               {/* Overlay escuro no hover */}
@@ -94,11 +89,7 @@ export const VideoTestimonialCard = ({
             // Iframe do YouTube no mesmo local
             <div className="w-full h-full overflow-hidden">
               <iframe
-                className="w-full h-full rounded-t-3xl"
-                style={{
-                  height: "140%",
-                  marginTop: "-35%",
-                }}
+                className="w-full h-full rounded-2xl"
                 src={`https://www.youtube.com/embed/${testimonial.videoId}?autoplay=1&rel=0&modestbranding=1&enablejsapi=1`}
                 title={`Depoimento de ${testimonial.name}`}
                 frameBorder="0"
@@ -113,10 +104,10 @@ export const VideoTestimonialCard = ({
       {/* Caixa de depoimento - MAIS LARGA que o vídeo com pontas arredondadas */}
       <div className="relative -mx-4 -mt-2">
         <div
-          className="bg-white rounded-2xl px-6 py-5 shadow-lg mx-auto"
+          className="bg-white rounded-3xl px-6 pt-5 pb-7 shadow-lg mx-auto flex flex-col"
           style={{
             width: "calc(100% + 2rem)",
-            minHeight: "140px",
+            height: "140px",
           }}
         >
           {/* Estrelas laranjas no topo da caixa */}
@@ -130,9 +121,11 @@ export const VideoTestimonialCard = ({
           </div>
 
           {/* Texto do depoimento */}
-          <p className="text-gray-700 italic text-sm leading-relaxed text-justify w-full">
-            "{testimonial.text}"
-          </p>
+          <div className="flex-1 pb-2">
+            <p className="text-gray-700 italic text-sm leading-relaxed text-justify w-full">
+              "{testimonial.text}"
+            </p>
+          </div>
         </div>
       </div>
     </div>
