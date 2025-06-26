@@ -60,7 +60,7 @@ export const VideoTestimonialCard = ({
       <div className="relative -mx-4 -mt-6">
         <div
           className="relative bg-gray-900 rounded-2xl overflow-hidden mx-auto"
-          style={{ aspectRatio: "4/5", width: "calc(100% + 2rem)" }}
+          style={{ aspectRatio: "4/5", width: "85%" }}
         >
           {!isPlaying ? (
             // Thumbnail com botão de play
