@@ -95,6 +95,11 @@ export const VideoTestimonialCard = ({
             <div className="w-full h-full overflow-hidden">
               <iframe
                 className="w-full h-full rounded-2xl"
+                style={{
+                  width: "143%",
+                  height: "143%",
+                  transform: "translate(-15%, -14%)",
+                }}
                 src={`https://www.youtube.com/embed/${testimonial.videoId}?autoplay=1&rel=0&modestbranding=1&enablejsapi=1`}
                 title={`Depoimento de ${testimonial.name}`}
                 frameBorder="0"
