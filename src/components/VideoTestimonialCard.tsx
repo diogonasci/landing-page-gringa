@@ -76,7 +76,9 @@ export const VideoTestimonialCard = ({
                 style={{
                   width: "143%",
                   height: "143%",
-                  transform: "translate(0%, -14%)",
+                  transform: testimonial.name === "Célia Condé" 
+                    ? "translate(0%, -24%)" 
+                    : "translate(0%, -14%)",
                 }}
               />
 
@@ -98,7 +100,9 @@ export const VideoTestimonialCard = ({
                 style={{
                   width: "143%",
                   height: "143%",
-                  transform: "translate(-15%, -14%)",
+                  transform: testimonial.name === "Célia Condé" 
+                    ? "translate(-15%, -24%)" 
+                    : "translate(-15%, -14%)",
                 }}
                 src={`https://www.youtube.com/embed/${testimonial.videoId}?autoplay=1&rel=0&modestbranding=1&enablejsapi=1`}
                 title={`Depoimento de ${testimonial.name}`}
