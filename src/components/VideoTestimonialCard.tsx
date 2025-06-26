@@ -74,8 +74,8 @@ export const VideoTestimonialCard = ({
                 alt={`Thumbnail do depoimento de ${testimonial.name}`}
                 className="w-full h-full object-cover"
                 style={{
-                  width: "140%",
-                  height: "140%",
+                  width: "143%",
+                  height: "143%",
                   transform: "translate(0%, -14%)",
                 }}
               />
