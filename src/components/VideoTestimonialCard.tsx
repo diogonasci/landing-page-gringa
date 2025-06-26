@@ -57,10 +57,10 @@ export const VideoTestimonialCard = ({
       </div>
 
       {/* Área do vídeo com thumbnail - formato Instagram Reels (9:16) - MENOR e CENTRALIZADO */}
-      <div className="flex justify-center -mt-6">
+      <div className="relative -mx-4 -mt-6">
         <div
-          className="relative bg-gray-900 rounded-2xl overflow-hidden"
-          style={{ aspectRatio: "4/5", width: "100%" }}
+          className="relative bg-gray-900 rounded-2xl overflow-hidden mx-auto"
+          style={{ aspectRatio: "4/5", width: "calc(100% + 2rem)" }}
         >
           {!isPlaying ? (
             // Thumbnail com botão de play

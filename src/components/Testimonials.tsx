@@ -194,7 +194,7 @@ const Testimonials = () => {
     <section
       ref={sectionRef}
       id="depoimentos"
-      className="py-12 md:py-16 pb-px"
+      className="py-12 md:py-16 pb-4"
       style={{
         background: "linear-gradient(to bottom, #ffffff 0%, #ffffff 70%, #ff5001 70%, #ff5001 100%)",
       }}
@@ -203,7 +203,7 @@ const Testimonials = () => {
         <h2 className="text-center text-2xl md:text-3xl font-bold mb-3 text-gray-800">
           O que dizem nossos <span className="text-orange-500">clientes</span>
         </h2>
-        <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+        <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
           Veja como a energia solar está transformando a vida de moradores do
           Rio de Janeiro
         </p>
