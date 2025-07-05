@@ -6,23 +6,23 @@ import { useEffect, useRef } from "react";
 const successCasesData = [
   {
     id: 1,
-    imageUrl: "/api/placeholder/400/300",
-    savings: "R$ 130.000,00",
+    imageUrl: "/galpao-prime-alimentos.png",
+    savings: "R$ 160.000,00",
   },
   {
     id: 2,
-    imageUrl: "/api/placeholder/400/300",
+    imageUrl: "/pizzaria-exagerados.png",
     savings: "R$ 130.000,00",
   },
   {
     id: 3,
-    imageUrl: "/api/placeholder/400/300",
-    savings: "R$ 130.000,00",
+    imageUrl: "/padaria-nossa-senhora.png",
+    savings: "R$ 70.000,00",
   },
   {
     id: 4,
-    imageUrl: "/api/placeholder/400/300",
-    savings: "R$ 130.000,00",
+    imageUrl: "/galpao-aguas-boas.png",
+    savings: "R$ 70.000,00",
   },
 ];
 
@@ -75,14 +75,15 @@ const SuccessCases = () => {
 
               {/* Label com economia */}
               <div
-                className="text-white px-4 py-2 rounded-full shadow-lg text-center"
+                className="text-white px-4 py-3 rounded-full shadow-lg"
                 style={{ backgroundColor: "#282232" }}
               >
-                <div className="flex items-center justify-center space-x-2">
-                  <Lightbulb className="w-4 h-4 text-white" strokeWidth={1.5} />
-                  <span className="text-sm font-medium">
-                    Economia anual estimada: {caseItem.savings}
-                  </span>
+                <div className="flex items-center space-x-3">
+                  <Lightbulb className="w-6 h-6 text-white flex-shrink-0" strokeWidth={1.5} />
+                  <div className="text-left">
+                    <div className="text-sm font-medium">Economia anual</div>
+                    <div className="text-sm font-medium">estimada: <span className="font-bold">{caseItem.savings}</span></div>
+                  </div>
                 </div>
               </div>
             </div>
