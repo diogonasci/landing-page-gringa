@@ -194,9 +194,9 @@ const Testimonials = () => {
     <section
       ref={sectionRef}
       id="depoimentos"
-      className="py-12 md:py-16 pb-4"
+      className="pt-12 md:pt-16 pb-2"
       style={{
-        background: "linear-gradient(to bottom, #ffffff 0%, #ffffff 70%, #ff5001 70%, #ff5001 100%)",
+        background: "linear-gradient(to bottom, #ffffff 0%, #ffffff 80%, #ff5001 80%, #ff5001 100%)",
       }}
     >
       <div className="container mx-auto px-4">
