@@ -5,6 +5,7 @@ import HowItWorks from "@/components/HowItWorks";
 import Possibilities from "@/components/Possibilities";
 import SpecialOffer from "@/components/SpecialOffer";
 import StickyBanner from "@/components/StickyBanner";
+import SuccessCases from "@/components/SuccessCases";
 import Testimonials from "@/components/Testimonials";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import { CONTACT_WHATSAPP } from "@/constants/urls";
@@ -24,6 +25,7 @@ const HomePage = () => {
       <main className="flex-grow">
         <Hero />
         <Testimonials />
+        <SuccessCases />
         <HowItWorks />
         <Possibilities />
         <WhyChooseUs />
