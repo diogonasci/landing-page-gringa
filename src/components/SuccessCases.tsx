@@ -24,6 +24,16 @@ const successCasesData = [
     imageUrl: "/galpao-aguas-boas.png",
     savings: "R$ 70.000,00",
   },
+  {
+    id: 5,
+    imageUrl: "/condominio-riviera.png",
+    savings: "R$ 40.000,00",
+  },
+  {
+    id: 6,
+    imageUrl: "/condominio-four-seasons.png",
+    savings: "R$ 40.000,00",
+  },
 ];
 
 const SuccessCases = () => {
@@ -61,11 +71,11 @@ const SuccessCases = () => {
         </p>
 
         {/* Grid de cases */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-full mx-auto px-8">
           {successCasesData.map((caseItem) => (
             <div key={caseItem.id} className="relative">
               {/* Imagem */}
-              <div className="aspect-[4/3] bg-gray-200 rounded-lg overflow-hidden mb-4">
+              <div className="aspect-[16/9] bg-gray-200 overflow-hidden mb-6">
                 <img
                   src={caseItem.imageUrl}
                   alt={`Case de sucesso ${caseItem.id}`}
