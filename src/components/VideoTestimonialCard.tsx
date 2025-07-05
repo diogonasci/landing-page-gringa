@@ -49,8 +49,8 @@ export const VideoTestimonialCard = ({
       {/* Banner laranja com nome - sobrepondo a parte SUPERIOR do vídeo */}
       <div className="flex justify-center mb-4 relative z-10">
         <div
-          className="bg-radial-orange text-white px-6 py-3 rounded-full shadow-lg"
-          style={{ width: "60%" }}
+          className="bg-radial-orange text-white px-12 py-2 rounded-full shadow-lg"
+          style={{ width: "85%" }}
         >
           <h3 className="font-bold text-lg text-center">{testimonial.name}</h3>
         </div>
