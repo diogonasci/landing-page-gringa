@@ -1,5 +1,5 @@
 import { useGTM } from "@/hooks/useGTM";
-import { Lightbulb } from "lucide-react";
+import { Lightbulb, MapPin } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 // Dados dos cases de sucesso
@@ -8,31 +8,37 @@ const successCasesData = [
     id: 1,
     imageUrl: "/galpao-prime-alimentos.png",
     savings: "R$ 160.000,00",
+    name: "Galpão Prime Alimentos",
   },
   {
     id: 2,
     imageUrl: "/pizzaria-exagerados.png",
     savings: "R$ 130.000,00",
+    name: "Pizzaria Exagerados",
   },
   {
     id: 3,
     imageUrl: "/padaria-nossa-senhora.png",
     savings: "R$ 70.000,00",
+    name: "Padaria Nossa Senhora",
   },
   {
     id: 4,
     imageUrl: "/galpao-aguas-boas.png",
     savings: "R$ 70.000,00",
+    name: "Galpão Águas Boas",
   },
   {
     id: 5,
     imageUrl: "/condominio-riviera.png",
     savings: "R$ 40.000,00",
+    name: "Condomínio Riviera",
   },
   {
     id: 6,
     imageUrl: "/condominio-four-seasons.png",
     savings: "R$ 40.000,00",
+    name: "Condomínio Four Seasons",
   },
 ];
 
@@ -74,6 +80,17 @@ const SuccessCases = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-full mx-auto px-8">
           {successCasesData.map((caseItem) => (
             <div key={caseItem.id} className="relative">
+              {/* Nome do local e localização */}
+              <div className="flex justify-between items-center mb-3">
+                <h3 className="text-lg font-semibold text-gray-800 uppercase">
+                  {caseItem.name}
+                </h3>
+                <div className="flex items-center space-x-1">
+                  <MapPin className="w-4 h-4 text-orange-500" />
+                  <span className="text-sm text-gray-600">Bangu</span>
+                </div>
+              </div>
+              
               {/* Imagem */}
               <div className="aspect-[16/9] bg-gray-200 overflow-hidden mb-6">
                 <img
