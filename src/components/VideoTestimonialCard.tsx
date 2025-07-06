@@ -1,5 +1,5 @@
 import { Play, Star } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export type VideoTestimonial = {
   id: number;
@@ -15,17 +15,39 @@ interface VideoTestimonialCardProps {
   testimonial: VideoTestimonial;
   onVideoPlay?: (testimonial: VideoTestimonial) => void;
   onVideoStop?: () => void;
+  shouldStop?: boolean;
 }
 
 export const VideoTestimonialCard = ({
   testimonial,
   onVideoPlay,
   onVideoStop,
+  shouldStop = false,
 }: VideoTestimonialCardProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  // Reage quando recebe comando para parar de fora
+  useEffect(() => {
+    console.log(`${testimonial.name}: shouldStop=${shouldStop}, isPlaying=${isPlaying}`);
+    if (shouldStop && isPlaying) {
+      console.log(`Parando vídeo de ${testimonial.name} via shouldStop`);
+      setIsPlaying(false);
+      // Força parar o vídeo recarregando o iframe
+      if (iframeRef.current && testimonial.videoId) {
+        console.log(`Recarregando iframe para ${testimonial.name}`);
+        iframeRef.current.src = `https://www.youtube.com/embed/${testimonial.videoId}?rel=0&modestbranding=1&enablejsapi=1`;
+      }
+    }
+  }, [shouldStop, isPlaying, testimonial.name, testimonial.videoId]);
 
   const handleStopClick = () => {
     setIsPlaying(false);
+    // Força parar o vídeo recarregando o iframe
+    if (iframeRef.current && testimonial.videoId) {
+      console.log(`Parando vídeo de ${testimonial.name} via botão stop`);
+      iframeRef.current.src = `https://www.youtube.com/embed/${testimonial.videoId}?rel=0&modestbranding=1&enablejsapi=1`;
+    }
     onVideoStop?.();
   };
 
@@ -103,6 +125,7 @@ export const VideoTestimonialCard = ({
             // Iframe do YouTube no mesmo local
             <div className="w-full h-full overflow-hidden relative">
               <iframe
+                ref={iframeRef}
                 className="w-full h-full rounded-2xl"
                 style={{
                   width: "143%",

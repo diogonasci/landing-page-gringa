@@ -39,6 +39,8 @@ const Testimonials = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isDragging, setIsDragging] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [playingVideoId, setPlayingVideoId] = useState<number | null>(null);
+  const [forceStopAll, setForceStopAll] = useState(false);
   const [startX, setStartX] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -109,6 +111,9 @@ const Testimonials = () => {
     const threshold = 50;
 
     if (Math.abs(diff) > threshold) {
+      // Para qualquer vídeo antes de navegar
+      stopAllVideos();
+      
       if (diff > 0) {
         setCurrentIndex((prev) => (prev + 1) % testimonials.length);
       } else {
@@ -164,8 +169,22 @@ const Testimonials = () => {
     }
   };
 
+  // Função para parar todos os vídeos
+  const stopAllVideos = () => {
+    if (isVideoPlaying) {
+      console.log("Parando todos os vídeos...");
+      setForceStopAll(true);
+      setIsVideoPlaying(false);
+      setPlayingVideoId(null);
+      // Reset o trigger após um momento
+      setTimeout(() => setForceStopAll(false), 100);
+    }
+  };
+
   // Navigation functions
   const goToPrevious = () => {
+    console.log("goToPrevious chamado, isVideoPlaying:", isVideoPlaying);
+    stopAllVideos();
     setCurrentIndex(
       (prev) => (prev - 1 + testimonials.length) % testimonials.length
     );
@@ -174,12 +193,16 @@ const Testimonials = () => {
   };
 
   const goToNext = () => {
+    console.log("goToNext chamado, isVideoPlaying:", isVideoPlaying);
+    stopAllVideos();
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
   const goToSlide = (index: number) => {
+    console.log("goToSlide chamado, isVideoPlaying:", isVideoPlaying);
+    stopAllVideos();
     setCurrentIndex(index);
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 3000);
@@ -189,6 +212,7 @@ const Testimonials = () => {
   const handleVideoPlay = (testimonial: VideoTestimonial) => {
     console.log("Reproduzindo vídeo de:", testimonial.name);
     setIsVideoPlaying(true);
+    setPlayingVideoId(testimonial.id);
     setIsAutoPlaying(false);
     // Aqui você pode adicionar tracking específico para vídeos
   };
@@ -196,6 +220,7 @@ const Testimonials = () => {
   // Handler para quando um vídeo para
   const handleVideoStop = () => {
     setIsVideoPlaying(false);
+    setPlayingVideoId(null);
     // Retoma o autoplay após 3 segundos
     setTimeout(() => setIsAutoPlaying(true), 3000);
   };
@@ -226,6 +251,7 @@ const Testimonials = () => {
               testimonial={testimonial}
               onVideoPlay={handleVideoPlay}
               onVideoStop={handleVideoStop}
+              shouldStop={forceStopAll}
             />
           ))}
         </div>
@@ -282,6 +308,7 @@ const Testimonials = () => {
                     testimonial={testimonial}
                     onVideoPlay={handleVideoPlay}
                     onVideoStop={handleVideoStop}
+                    shouldStop={forceStopAll}
                   />
                 </div>
               ))}
