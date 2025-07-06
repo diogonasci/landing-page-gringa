@@ -290,7 +290,7 @@ const Resultados = () => {
               </div>
 
               {/* Dots Indicator */}
-              <div className="flex justify-center mt-6 space-x-2">
+              <div className="flex justify-center mt-6 mb-6 space-x-2">
                 {videoTestimonialsData.map((_, index) => (
                   <button
                     key={index}
@@ -505,7 +505,7 @@ const Resultados = () => {
               </div>
 
               {/* Dots Indicator */}
-              <div className="flex justify-center mt-6 space-x-2">
+              <div className="flex justify-center mt-6 mb-6 space-x-2">
                 {successCasesData.map((_, index) => (
                   <button
                     key={index}
@@ -526,11 +526,10 @@ const Resultados = () => {
       </div>
       
       {/* CTA Button - Positioned absolutely in orange area */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
         <button
           onClick={() => window.open('https://wa.me/5521996746061', '_blank')}
-          className="text-white font-semibold px-8 py-3 rounded-full transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform whitespace-nowrap"
-          style={{ backgroundColor: '#ff5d26' }}
+          className="bg-white text-gray-800 font-semibold px-8 py-3 rounded-full transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform whitespace-nowrap hover:bg-gray-50"
         >
           Quero economizar também!
         </button>
