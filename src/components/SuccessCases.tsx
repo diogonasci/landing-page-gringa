@@ -78,25 +78,24 @@ const SuccessCases = () => {
     return () => observer.disconnect();
   }, [trackSectionView]);
 
-  // Auto-play functionality
-  useEffect(() => {
-    if (isAutoPlaying && !isDragging) {
-      autoPlayRef.current = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % successCasesData.length);
-      }, 4000);
-    }
+  // Auto-play desabilitado para os cases
+  // useEffect(() => {
+  //   if (isAutoPlaying && !isDragging) {
+  //     autoPlayRef.current = setInterval(() => {
+  //       setCurrentIndex((prev) => (prev + 1) % successCasesData.length);
+  //     }, 4000);
+  //   }
 
-    return () => {
-      if (autoPlayRef.current) {
-        clearInterval(autoPlayRef.current);
-      }
-    };
-  }, [isAutoPlaying, isDragging]);
+  //   return () => {
+  //     if (autoPlayRef.current) {
+  //       clearInterval(autoPlayRef.current);
+  //     }
+  //   };
+  // }, [isAutoPlaying, isDragging]);
 
   // Touch and mouse events for smooth dragging
   const handleStart = (clientX: number) => {
     setIsDragging(true);
-    setIsAutoPlaying(false);
     setStartX(clientX);
   };
 
@@ -118,7 +117,7 @@ const SuccessCases = () => {
       }
     }
 
-    setTimeout(() => setIsAutoPlaying(true), 3000);
+    // Auto-play removido
   };
 
   // Navigation functions
@@ -126,20 +125,14 @@ const SuccessCases = () => {
     setCurrentIndex(
       (prev) => (prev - 1 + successCasesData.length) % successCasesData.length
     );
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
   const goToNext = () => {
     setCurrentIndex((prev) => (prev + 1) % successCasesData.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
   return (

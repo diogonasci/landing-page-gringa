@@ -7,14 +7,6 @@ import { VideoTestimonial, VideoTestimonialCard } from "./VideoTestimonialCard";
 const videoTestimonialsData: VideoTestimonial[] = [
   {
     id: 1,
-    name: "André Pires",
-    location: "Miguel Pereira, Rio de Janeiro - RJ",
-    text: "Chegamos na parcela final. Tudo certinho, conforme o combinado. Parabéns pelo excelente trabalho e profissionalismo desenvolvido pela equipe. Deu tudo certo! O sistema está gerando muita energia e superou nossas expectativas.",
-    videoUrl: "https://img.youtube.com/vi/gbaIGMJQx5E/maxresdefault.jpg",
-    videoId: "gbaIGMJQx5E",
-  },
-  {
-    id: 2,
     name: "Célia Condé",
     location: "Instalação Residencial - Taquara",
     text: "Hoje eu tenho uma economia muito grande de energia, e não tenho mais preocupação. A conta de luz era muito cara. Agora eu pago somente o mínimo e já tenho mais de 4.000KwH acumulados na rede.",
@@ -22,12 +14,20 @@ const videoTestimonialsData: VideoTestimonial[] = [
     videoId: "ZdjvAkivEK4",
   },
   {
-    id: 3,
+    id: 2,
     name: "Clerton Pereira",
     location: "Instalação Residencial - Turiaçu",
     text: "A equipe foi responsável e atenciosa. Me passaram confiança! Fizeram um serviço de primeira e tô satisfeito pra caramba. Fui bem atendido e o trabalho foi bem rápido. Foi a melhor coisa que fiz. Indico com certeza!",
     videoUrl: "https://img.youtube.com/vi/ZdjvAkivEK4/maxresdefault.jpg",
     videoId: "ZdjvAkivEK4",
+  },
+  {
+    id: 3,
+    name: "André Pires",
+    location: "Miguel Pereira, Rio de Janeiro - RJ",
+    text: "Chegamos na parcela final. Tudo certinho, conforme o combinado. Parabéns pelo excelente trabalho e profissionalismo desenvolvido pela equipe. Deu tudo certo! O sistema está gerando muita energia e superou nossas expectativas.",
+    videoUrl: "https://img.youtube.com/vi/gbaIGMJQx5E/maxresdefault.jpg",
+    videoId: "gbaIGMJQx5E",
   },
 ];
 
@@ -76,25 +76,24 @@ const Testimonials = () => {
     }
   }, [currentIndex, trackTestimonialView]);
 
-  // Auto-play functionality
-  useEffect(() => {
-    if (isAutoPlaying && !isDragging && !isVideoPlaying) {
-      autoPlayRef.current = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-      }, 5000);
-    }
+  // Auto-play desabilitado para os vídeos
+  // useEffect(() => {
+  //   if (isAutoPlaying && !isDragging && !isVideoPlaying) {
+  //     autoPlayRef.current = setInterval(() => {
+  //       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  //     }, 5000);
+  //   }
 
-    return () => {
-      if (autoPlayRef.current) {
-        clearInterval(autoPlayRef.current);
-      }
-    };
-  }, [isAutoPlaying, isDragging, isVideoPlaying]);
+  //   return () => {
+  //     if (autoPlayRef.current) {
+  //       clearInterval(autoPlayRef.current);
+  //     }
+  //   };
+  // }, [isAutoPlaying, isDragging, isVideoPlaying]);
 
   // Touch and mouse events for smooth dragging
   const handleStart = (clientX: number) => {
     setIsDragging(true);
-    setIsAutoPlaying(false);
     setStartX(clientX);
   };
 
@@ -123,7 +122,7 @@ const Testimonials = () => {
       }
     }
 
-    setTimeout(() => setIsAutoPlaying(true), 3000);
+    // Auto-play removido
   };
 
   // Mouse events
@@ -188,24 +187,18 @@ const Testimonials = () => {
     setCurrentIndex(
       (prev) => (prev - 1 + testimonials.length) % testimonials.length
     );
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
   const goToNext = () => {
     console.log("goToNext chamado, isVideoPlaying:", isVideoPlaying);
     stopAllVideos();
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
   const goToSlide = (index: number) => {
     console.log("goToSlide chamado, isVideoPlaying:", isVideoPlaying);
     stopAllVideos();
     setCurrentIndex(index);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
   // Handler para quando um vídeo é reproduzido
@@ -213,7 +206,6 @@ const Testimonials = () => {
     console.log("Reproduzindo vídeo de:", testimonial.name);
     setIsVideoPlaying(true);
     setPlayingVideoId(testimonial.id);
-    setIsAutoPlaying(false);
     // Aqui você pode adicionar tracking específico para vídeos
   };
 
@@ -221,8 +213,6 @@ const Testimonials = () => {
   const handleVideoStop = () => {
     setIsVideoPlaying(false);
     setPlayingVideoId(null);
-    // Retoma o autoplay após 3 segundos
-    setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
   return (
