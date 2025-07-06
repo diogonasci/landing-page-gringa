@@ -78,7 +78,7 @@ const successCasesData = [
 ];
 
 const Resultados = () => {
-  const { trackSectionView, trackTestimonialView, trackButtonClick } = useGTM();
+  const { trackSectionView, trackTestimonialView, trackButtonClick, trackWhatsAppClick } = useGTM();
   const sectionRef = useRef<HTMLElement>(null);
   
   // Estados para tabs
@@ -528,7 +528,12 @@ const Resultados = () => {
       {/* CTA Button - Positioned absolutely in orange area */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
         <button
-          onClick={() => window.open('https://wa.me/5521996746061', '_blank')}
+          onClick={() => {
+            // Track both button click and WhatsApp interaction
+            trackButtonClick("quero_economizar_tambem", "resultados_section");
+            trackWhatsAppClick("cta_resultados_section", "economia_interesse");
+            window.open('https://wa.me/5521996746061', '_blank');
+          }}
           className="bg-white text-gray-800 font-semibold px-8 py-3 rounded-full transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform whitespace-nowrap hover:bg-gray-50"
         >
           Quero economizar também!
