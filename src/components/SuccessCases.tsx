@@ -98,17 +98,17 @@ const SuccessCases = () => {
               </div>
               
               {/* Imagem */}
-              <div className="aspect-[16/9] bg-gray-200 overflow-hidden mb-6">
+              <div className="aspect-[16/9] bg-gray-200 overflow-hidden mb-6 relative">
                 <img
                   src={caseItem.imageUrl}
                   alt={`Case de sucesso ${caseItem.id}`}
                   className="w-full h-full object-cover"
                 />
               </div>
-
-              {/* Label com economia */}
+              
+              {/* Label com economia metade sobreposto */}
               <div
-                className="text-white px-4 py-3 rounded-full shadow-lg"
+                className="relative -mt-10 mx-4 text-white px-4 py-3 rounded-full shadow-lg z-10"
                 style={{ backgroundColor: "#282232" }}
               >
                 <div className="flex items-center space-x-3">
