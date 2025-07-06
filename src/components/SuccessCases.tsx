@@ -88,12 +88,12 @@ const SuccessCases = () => {
             <div key={caseItem.id} className="relative">
               {/* Nome do local e localização */}
               <div className="flex justify-between items-center mb-3">
-                <h3 className="text-sm font-semibold text-gray-800 uppercase leading-tight flex-1 mr-3 truncate">
+                <h3 className="text-base md:text-sm font-semibold text-gray-800 uppercase leading-tight flex-1 mr-3 truncate">
                   {caseItem.name}
                 </h3>
                 <div className="flex items-center space-x-1 flex-shrink-0">
-                  <MapPin className="w-4 h-4 text-radial-orange" style={{ fill: 'none', stroke: 'currentColor', strokeWidth: 2 }} />
-                  <span className="text-sm text-gray-800 whitespace-nowrap">{caseItem.location}</span>
+                  <MapPin className="w-5 h-5 text-radial-orange" style={{ fill: 'none', stroke: 'currentColor', strokeWidth: 2 }} />
+                  <span className="text-sm md:text-sm text-gray-800 whitespace-nowrap">{caseItem.location}</span>
                 </div>
               </div>
               

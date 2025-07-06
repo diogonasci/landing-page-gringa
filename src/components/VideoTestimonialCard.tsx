@@ -14,13 +14,20 @@ export type VideoTestimonial = {
 interface VideoTestimonialCardProps {
   testimonial: VideoTestimonial;
   onVideoPlay?: (testimonial: VideoTestimonial) => void;
+  onVideoStop?: () => void;
 }
 
 export const VideoTestimonialCard = ({
   testimonial,
   onVideoPlay,
+  onVideoStop,
 }: VideoTestimonialCardProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
+
+  const handleStopClick = () => {
+    setIsPlaying(false);
+    onVideoStop?.();
+  };
 
   const handlePlayClick = () => {
     // Se tem Instagram URL, abre em nova aba
@@ -49,7 +56,7 @@ export const VideoTestimonialCard = ({
       {/* Banner laranja com nome - sobrepondo a parte SUPERIOR do vídeo */}
       <div className="flex justify-center mb-4 relative z-10">
         <div
-          className="bg-radial-orange text-white px-12 py-2 rounded-full shadow-lg"
+          className="bg-radial-orange text-white px-4 md:px-12 py-2 rounded-full shadow-lg"
           style={{ width: "85%" }}
         >
           <h3 className="font-bold text-lg text-center">{testimonial.name}</h3>
@@ -94,7 +101,7 @@ export const VideoTestimonialCard = ({
             </div>
           ) : (
             // Iframe do YouTube no mesmo local
-            <div className="w-full h-full overflow-hidden">
+            <div className="w-full h-full overflow-hidden relative">
               <iframe
                 className="w-full h-full rounded-2xl"
                 style={{
@@ -110,6 +117,17 @@ export const VideoTestimonialCard = ({
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
+              
+              {/* Botão para parar o vídeo */}
+              <button
+                onClick={handleStopClick}
+                className="absolute top-4 right-4 bg-black/70 hover:bg-black/90 text-white rounded-full p-2 transition-all z-10"
+                aria-label="Parar vídeo"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
             </div>
           )}
         </div>

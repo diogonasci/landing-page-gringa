@@ -31,13 +31,14 @@ const videoTestimonialsData: VideoTestimonial[] = [
   },
 ];
 
-// Duplicar os depoimentos para teste de carousel
-const testimonials = [...videoTestimonialsData, ...videoTestimonialsData];
+// Usar apenas os depoimentos originais
+const testimonials = videoTestimonialsData;
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isDragging, setIsDragging] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [startX, setStartX] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -75,7 +76,7 @@ const Testimonials = () => {
 
   // Auto-play functionality
   useEffect(() => {
-    if (isAutoPlaying && !isDragging) {
+    if (isAutoPlaying && !isDragging && !isVideoPlaying) {
       autoPlayRef.current = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % testimonials.length);
       }, 5000);
@@ -86,7 +87,7 @@ const Testimonials = () => {
         clearInterval(autoPlayRef.current);
       }
     };
-  }, [isAutoPlaying, isDragging]);
+  }, [isAutoPlaying, isDragging, isVideoPlaying]);
 
   // Touch and mouse events for smooth dragging
   const handleStart = (clientX: number) => {
@@ -187,7 +188,16 @@ const Testimonials = () => {
   // Handler para quando um vídeo é reproduzido
   const handleVideoPlay = (testimonial: VideoTestimonial) => {
     console.log("Reproduzindo vídeo de:", testimonial.name);
+    setIsVideoPlaying(true);
+    setIsAutoPlaying(false);
     // Aqui você pode adicionar tracking específico para vídeos
+  };
+
+  // Handler para quando um vídeo para
+  const handleVideoStop = () => {
+    setIsVideoPlaying(false);
+    // Retoma o autoplay após 3 segundos
+    setTimeout(() => setIsAutoPlaying(true), 3000);
   };
 
   return (
@@ -208,25 +218,17 @@ const Testimonials = () => {
           Rio de Janeiro
         </p>
 
-        {/* Desktop - Grid para 3 ou menos, Carousel para mais de 3 */}
-        {videoTestimonialsData.length <= 3 ? (
-          <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 !mb-0 mb-0">
-            {videoTestimonialsData.map((testimonial) => (
-              <VideoTestimonialCard
-                key={testimonial.id}
-                testimonial={testimonial}
-                onVideoPlay={handleVideoPlay}
-              />
-            ))}
-          </div>
-        ) : (
-          <div className="hidden lg:block !mb-0 mb-0">
-            <DesktopCarousel
-              testimonials={testimonials}
+        {/* Desktop - Grid com 3 depoimentos */}
+        <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 !mb-0 mb-0">
+          {videoTestimonialsData.map((testimonial) => (
+            <VideoTestimonialCard
+              key={testimonial.id}
+              testimonial={testimonial}
               onVideoPlay={handleVideoPlay}
+              onVideoStop={handleVideoStop}
             />
-          </div>
-        )}
+          ))}
+        </div>
 
         {/* Mobile/Tablet Carousel */}
         <div className="lg:hidden relative !mb-0 mb-0">
@@ -279,6 +281,7 @@ const Testimonials = () => {
                   <VideoTestimonialCard
                     testimonial={testimonial}
                     onVideoPlay={handleVideoPlay}
+                    onVideoStop={handleVideoStop}
                   />
                 </div>
               ))}
@@ -286,18 +289,22 @@ const Testimonials = () => {
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-6 space-x-2 !mb-0 mb-0">
+          <div className="flex justify-center mt-6 space-x-3 !mb-0 mb-0">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2 h-2 rounded-full transition-colors ${
+                className={`w-11 h-11 rounded-full transition-colors flex items-center justify-center ${
                   index === currentIndex
                     ? "bg-yellow-300"
                     : "bg-white/50 hover:bg-white/70"
                 }`}
                 aria-label={`Ir para depoimento ${index + 1}`}
-              />
+              >
+                <div className={`w-2 h-2 rounded-full ${
+                  index === currentIndex ? "bg-radial-dark" : "bg-white"
+                }`} />
+              </button>
             ))}
           </div>
         </div>
@@ -306,128 +313,5 @@ const Testimonials = () => {
   );
 };
 
-// Componente do carrossel para desktop
-const DesktopCarousel = ({
-  testimonials,
-  onVideoPlay,
-}: {
-  testimonials: VideoTestimonial[];
-  onVideoPlay: (testimonial: VideoTestimonial) => void;
-}) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const autoPlayRef = useRef<NodeJS.Timeout>();
-
-  const slidesPerView = 3;
-  const maxIndex = Math.max(0, testimonials.length - slidesPerView);
-
-  useEffect(() => {
-    if (isAutoPlaying) {
-      autoPlayRef.current = setInterval(() => {
-        setCurrentIndex((prev) => {
-          const nextIndex = prev + 1;
-          return nextIndex > maxIndex ? 0 : nextIndex;
-        });
-      }, 6000);
-    }
-
-    return () => {
-      if (autoPlayRef.current) {
-        clearInterval(autoPlayRef.current);
-      }
-    };
-  }, [isAutoPlaying, maxIndex]);
-
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 5000);
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 5000);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(Math.min(index, maxIndex));
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 5000);
-  };
-
-  return (
-    <div className="relative">
-      {/* Navigation Arrows */}
-      <button
-        onClick={goToPrevious}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-all hover:scale-110"
-        aria-label="Depoimentos anteriores"
-      >
-        <ChevronLeft className="w-6 h-6 text-radial-dark" />
-      </button>
-
-      <button
-        onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-all hover:scale-110"
-        aria-label="Próximos depoimentos"
-      >
-        <ChevronRight className="w-6 h-6 text-radial-dark" />
-      </button>
-
-      {/* Carousel Container */}
-      <div className="overflow-hidden mx-12">
-        <div
-          className="flex transition-transform duration-700 ease-out"
-          style={{
-            transform: `translateX(-${currentIndex * (100 / slidesPerView)}%)`,
-          }}
-        >
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={`${testimonial.id}-${index}`}
-              className="flex-none w-1/3 px-3"
-            >
-              <VideoTestimonialCard
-                testimonial={testimonial}
-                onVideoPlay={onVideoPlay}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Dots Indicator */}
-      <div className="flex justify-center mt-8 space-x-3">
-        {Array.from({ length: maxIndex + 1 }, (_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentIndex
-                ? "bg-yellow-300 scale-125"
-                : "bg-white/50 hover:bg-white/70 hover:scale-110"
-            }`}
-            aria-label={`Ver depoimentos ${
-              index * slidesPerView + 1
-            }-${Math.min((index + 1) * slidesPerView, testimonials.length)}`}
-          />
-        ))}
-      </div>
-
-      {/* Progress Bar */}
-      <div className="mt-4 mx-12">
-        <div className="w-full bg-white/20 rounded-full h-1">
-          <div
-            className="bg-yellow-300 h-1 rounded-full transition-all duration-700 ease-out"
-            style={{
-              width: `${((currentIndex + 1) / (maxIndex + 1)) * 100}%`,
-            }}
-          />
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export default Testimonials;

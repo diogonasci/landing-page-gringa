@@ -28,11 +28,11 @@ const Hero = () => {
   }, [trackSectionView]);
 
   return (
-    <section ref={heroRef} className="bg-radial-dark py-16 md:py-20">
+    <section ref={heroRef} className="bg-radial-dark py-12 md:py-20">
       <div className="container mx-auto px-4">
         {/* Título principal centralizado */}
         <div className="text-center mb-12">
-          <h1 className="text-white text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+          <h1 className="text-white text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
             Pare de gastar com
             <br />
             <span className="text-radial-orange">contas de luz!</span>
