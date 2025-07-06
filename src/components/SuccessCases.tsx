@@ -8,7 +8,7 @@ const successCasesData = [
     id: 1,
     imageUrl: "/galpao-prime-alimentos.png",
     savings: "R$ 160.000,00",
-    name: "Galpão Prime Alimentos",
+    name: "Prime Alimentos",
     location: "Jardim América",
   },
   {
@@ -22,7 +22,7 @@ const successCasesData = [
     id: 3,
     imageUrl: "/padaria-nossa-senhora.png",
     savings: "R$ 70.000,00",
-    name: "Padaria Nossa Senhora",
+    name: "Padaria N. Senhora",
     location: "Bangu",
   },
   {
@@ -43,7 +43,7 @@ const successCasesData = [
     id: 6,
     imageUrl: "/condominio-four-seasons.png",
     savings: "R$ 40.000,00",
-    name: "Condomínio Four Seasons",
+    name: "Cond. Four Seasons",
     location: "Freguesia",
   },
 ];
@@ -75,30 +75,30 @@ const SuccessCases = () => {
   return (
     <section ref={sectionRef} className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-2xl md:text-3xl font-bold mb-3 text-gray-800">
-          Cases de <span className="text-orange-500">sucesso</span>
+        <h2 className="text-center text-2xl md:text-3xl font-bold mb-4 text-gray-800">
+          Cases de <span className="text-radial-orange">sucesso</span>
         </h2>
-        <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+        <p className="text-center text-base mb-8 max-w-2xl mx-auto text-gray-600">
           Confira alguns dos nossos projetos criados pela nossa empresa
         </p>
 
         {/* Grid de cases */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-full mx-auto px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
           {successCasesData.map((caseItem) => (
             <div key={caseItem.id} className="relative">
               {/* Nome do local e localização */}
               <div className="flex justify-between items-center mb-3">
-                <h3 className="text-lg font-semibold text-gray-800 uppercase">
+                <h3 className="text-sm font-semibold text-gray-800 uppercase leading-tight flex-1 mr-3 truncate">
                   {caseItem.name}
                 </h3>
-                <div className="flex items-center space-x-1">
-                  <MapPin className="w-5 h-5 text-orange-500" style={{ fill: 'none', stroke: 'currentColor', strokeWidth: 2 }} />
-                  <span className="text-base text-gray-800">{caseItem.location}</span>
+                <div className="flex items-center space-x-1 flex-shrink-0">
+                  <MapPin className="w-4 h-4 text-radial-orange" style={{ fill: 'none', stroke: 'currentColor', strokeWidth: 2 }} />
+                  <span className="text-sm text-gray-800 whitespace-nowrap">{caseItem.location}</span>
                 </div>
               </div>
               
               {/* Imagem com offset shadow */}
-              <div className="aspect-[16/9] mb-6 relative">
+              <div className="aspect-[16/9] mb-4 relative">
                 {/* Sombra laranja apenas no canto inferior direito */}
                 <div 
                   className="absolute bottom-0 right-0 w-2 h-2 bg-radial-orange"
@@ -133,7 +133,7 @@ const SuccessCases = () => {
               
               {/* Label com economia metade sobreposto */}
               <div
-                className="relative -mt-10 mx-4 text-white px-4 py-3 rounded-full shadow-lg z-10"
+                className="relative -mt-8 mx-4 text-white px-4 py-3 rounded-full shadow-lg z-10"
                 style={{ backgroundColor: "#282232" }}
               >
                 <div className="flex items-center space-x-3">

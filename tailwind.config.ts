@@ -5,6 +5,23 @@ const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontSize: {
+        // Hierarquia tipográfica padronizada (sistema modular 1.250)
+        'display': ['48px', { lineHeight: '1.1', fontWeight: '800' }],  // H1 páginas principais
+        'h1': ['36px', { lineHeight: '1.2', fontWeight: '700' }],        // H1 seções
+        'h2': ['32px', { lineHeight: '1.2', fontWeight: '700' }],        // H2 seções
+        'h3': ['24px', { lineHeight: '1.3', fontWeight: '600' }],        // H3 componentes
+        'h4': ['18px', { lineHeight: '1.4', fontWeight: '600' }],        // H4 cards
+        'body': ['16px', { lineHeight: '1.5', fontWeight: '400' }],      // Texto corpo
+        'small': ['14px', { lineHeight: '1.4', fontWeight: '400' }],     // Texto pequeno
+      },
+      spacing: {
+        // Sistema 8pt grid para espaçamento consistente
+        '18': '4.5rem',   // 72px
+        '22': '5.5rem',   // 88px
+        '26': '6.5rem',   // 104px
+        '30': '7.5rem',   // 120px
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -39,14 +56,26 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Cores exatas da Radial conforme PDF
+        // Sistema de cores unificado da Radial
         radial: {
-          dark: "#282031", // Fundo escuro
-          darker: "#20232a", // Fundo mais escuro para contraste
-          orange: "#ff5d26", // Laranja principal
-          white: "#ffffff", // Branco
-          grayDark: "#333333", // Cinza escuro para textos secundários
-          grayLight: "#cccccc", // Cinza claro para bordas
+          // Cores primárias
+          orange: "#ff5d26",    // Laranja principal (unificado)
+          dark: "#282031",      // Fundo escuro principal
+          darker: "#20232a",    // Fundo escuro secundário
+          
+          // Escala de cinzas padronizada
+          gray: {
+            50: "#f9fafb",
+            100: "#f3f4f6", 
+            200: "#e5e7eb",
+            300: "#d1d5db",
+            400: "#9ca3af",
+            500: "#6b7280",
+            600: "#4b5563",
+            700: "#374151",
+            800: "#1f2937",
+            900: "#111827",
+          }
         },
       },
       borderRadius: {

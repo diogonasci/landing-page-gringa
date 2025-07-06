@@ -75,7 +75,7 @@ const HowItWorks = () => {
     <section
       ref={sectionRef}
       id="como-funciona"
-      className="bg-radial-dark py-20 md:py-32"
+      className="bg-radial-dark py-12 md:py-16"
     >
       <div className="container mx-auto px-6">
         {/* Título e Imagem introdutória */}
@@ -97,7 +97,7 @@ const HowItWorks = () => {
                 className="bg-white rounded-3xl px-10 py-4 border-2 border-black"
                 style={{ boxShadow: "12px 5px 0 0 black" }}
               >
-                <h2 className="text-radial-orange text-4xl font-bold text-left tracking-wide">
+                <h2 className="text-radial-orange text-3xl font-bold text-left tracking-wide">
                   <span className="block mb-4">COMO</span>
                   FUNCIONA?
                 </h2>
@@ -123,7 +123,7 @@ const HowItWorks = () => {
                 className="bg-white rounded-3xl px-10 py-4 md:px-16 md:py-6 border-2 border-black relative z-10"
                 style={{ boxShadow: "12px 5px 0 0 black" }}
               >
-                <h2 className="text-radial-orange text-4xl md:text-5xl font-bold text-left tracking-wide">
+                <h2 className="text-radial-orange text-3xl md:text-4xl font-bold text-left tracking-wide">
                   <span className="block mb-4">COMO</span>
                   FUNCIONA?
                 </h2>
@@ -154,10 +154,10 @@ const HowItWorks = () => {
 
               {/* Conteúdo */}
               <div className="flex-1 pt-4 md:pt-5">
-                <h3 className="text-white text-2xl md:text-3xl font-bold mb-5 uppercase tracking-wide leading-tight">
+                <h3 className="text-white text-xl md:text-2xl font-bold mb-5 uppercase tracking-wide leading-tight">
                   {step.title}
                 </h3>
-                <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -176,7 +176,7 @@ const HowItWorks = () => {
           >
             Começar meu projeto solar
           </a>
-          <p className="text-white mt-4 text-lg">
+          <p className="text-white mt-4 text-base">
             ⚡ Projeto personalizado • Instalação profissional • Economia
             garantida
           </p>

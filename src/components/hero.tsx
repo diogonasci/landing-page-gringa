@@ -28,17 +28,17 @@ const Hero = () => {
   }, [trackSectionView]);
 
   return (
-    <section ref={heroRef} className="bg-radial-dark py-16 md:py-24">
+    <section ref={heroRef} className="bg-radial-dark py-16 md:py-20">
       <div className="container mx-auto px-4">
         {/* Título principal centralizado */}
         <div className="text-center mb-12">
-          <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+          <h1 className="text-white text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
             Pare de gastar com
             <br />
             <span className="text-radial-orange">contas de luz!</span>
           </h1>
 
-          <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-8">
+          <h2 className="text-white text-2xl md:text-3xl font-bold mb-8">
             Aprenda agora a como guardar esse dinheiro no seu bolso
           </h2>
         </div>
@@ -91,7 +91,7 @@ const Hero = () => {
 
         {/* Texto descritivo centralizado */}
         <div className="text-center mb-12">
-          <p className="text-white text-xl md:text-2xl lg:text-3xl font-medium max-w-4xl mx-auto leading-relaxed">
+          <p className="text-white text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed">
             Moradores do RJ já estão economizando centenas por mês com a Radial
             Energia Solar.
           </p>
@@ -105,7 +105,7 @@ const Hero = () => {
               className="block w-full bg-white text-radial-dark py-4 px-8 rounded-full text-center font-bold text-lg md:text-xl hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 relative"
               style={{
                 boxShadow:
-                  "0 6px 0 #ff7c40, 0 8px 16px rgba(255, 124, 64, 0.3)",
+                  "0 6px 0 #ff5d26, 0 8px 16px rgba(255, 93, 38, 0.3)",
               }}
               onClick={() => trackButtonClick("main_cta", "hero_section")}
             >

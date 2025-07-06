@@ -200,10 +200,10 @@ const Testimonials = () => {
       }}
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-2xl md:text-3xl font-bold mb-3 text-gray-800">
-          O que dizem nossos <span className="text-orange-500">clientes</span>
+        <h2 className="text-center text-2xl md:text-3xl font-bold mb-4 text-gray-800">
+          O que dizem nossos <span className="text-radial-orange">clientes</span>
         </h2>
-        <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+        <p className="text-center text-base mb-8 max-w-2xl mx-auto text-gray-600">
           Veja como a energia solar está transformando a vida de moradores do
           Rio de Janeiro
         </p>

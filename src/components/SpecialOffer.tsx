@@ -28,9 +28,9 @@ const SpecialOffer = () => {
   }, [trackSectionView]);
 
   return (
-    <section ref={sectionRef} className="bg-radial-orange py-8 md:py-12">
+    <section ref={sectionRef} className="bg-radial-orange py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-4xl md:text-5xl font-bold mb-6 text-white">
+        <h2 className="text-center text-2xl md:text-3xl font-bold mb-6 text-white">
           Oferta Especial por Tempo Limitado!
         </h2>
 
@@ -44,28 +44,28 @@ const SpecialOffer = () => {
             Análise Gratuita + Projeto Personalizado
           </h3>
 
-          <p className="text-center text-gray-700 text-lg mb-6 mt-8">
+          <p className="text-center text-gray-700 text-base mb-6 mt-8">
             Aproveite esta oportunidade e garanta economia imediata!
           </p>
 
           <div className="space-y-4 mb-8 max-w-md mx-auto">
             <div className="flex items-start">
               <Check className="w-6 h-6 text-black flex-shrink-0 mr-3 mt-0.5" />
-              <p className="text-gray-700 text-lg md:text-xl">
+              <p className="text-gray-700 text-base md:text-lg">
                 Estudo completo de viabilidade técnica
               </p>
             </div>
 
             <div className="flex items-start">
               <Check className="w-6 h-6 text-black flex-shrink-0 mr-3 mt-0.5" />
-              <p className="text-gray-700 text-lg md:text-xl">
+              <p className="text-gray-700 text-base md:text-lg">
                 Simulação detalhada da economia
               </p>
             </div>
 
             <div className="flex items-start">
               <Check className="w-6 h-6 text-black flex-shrink-0 mr-3 mt-0.5" />
-              <p className="text-gray-700 text-lg md:text-xl">
+              <p className="text-gray-700 text-base md:text-lg">
                 Projeto técnico personalizado
               </p>
             </div>
@@ -74,7 +74,7 @@ const SpecialOffer = () => {
         <div className="text-center mb-12 pt-8">
           <a
             href={FORM_URL}
-            className="inline-block text-white py-3 px-8 rounded-md text-lg font-medium hover:brightness-110 transition-all"
+            className="inline-block text-white py-4 px-8 rounded-md text-lg font-medium hover:brightness-110 transition-all"
             style={{ backgroundColor: "#282131" }}
             onClick={() =>
               trackButtonClick("special_offer_cta", "special_offer_section")
