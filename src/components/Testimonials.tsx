@@ -316,22 +316,18 @@ const Testimonials = () => {
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-6 space-x-3 !mb-0 mb-0">
+          <div className="flex justify-center mt-6 space-x-2 !mb-0 mb-0">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-11 h-11 rounded-full transition-colors flex items-center justify-center ${
+                className={`w-3 h-3 rounded-full transition-colors ${
                   index === currentIndex
-                    ? "bg-yellow-300"
-                    : "bg-white/50 hover:bg-white/70"
+                    ? "bg-radial-orange"
+                    : "bg-white/40 hover:bg-white/60"
                 }`}
                 aria-label={`Ir para depoimento ${index + 1}`}
-              >
-                <div className={`w-2 h-2 rounded-full ${
-                  index === currentIndex ? "bg-radial-dark" : "bg-white"
-                }`} />
-              </button>
+              />
             ))}
           </div>
         </div>
