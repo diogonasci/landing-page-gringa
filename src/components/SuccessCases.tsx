@@ -97,13 +97,22 @@ const SuccessCases = () => {
                 </div>
               </div>
               
-              {/* Imagem */}
-              <div className="aspect-[16/9] bg-gray-200 overflow-hidden mb-6 relative">
-                <img
-                  src={caseItem.imageUrl}
-                  alt={`Case de sucesso ${caseItem.id}`}
-                  className="w-full h-full object-cover"
-                />
+              {/* Imagem com offset shadow */}
+              <div className="aspect-[16/9] mb-6 relative">
+                {/* Sombra laranja deslocada */}
+                <div 
+                  className="absolute top-2 left-2 w-full h-full bg-orange-500"
+                  style={{ aspectRatio: "16/9" }}
+                ></div>
+                
+                {/* Imagem principal sobreposta */}
+                <div className="absolute top-0 left-0 w-full h-full bg-gray-200 overflow-hidden">
+                  <img
+                    src={caseItem.imageUrl}
+                    alt={`Case de sucesso ${caseItem.id}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               
               {/* Label com economia metade sobreposto */}
