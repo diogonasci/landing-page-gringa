@@ -99,14 +99,30 @@ const SuccessCases = () => {
               
               {/* Imagem com offset shadow */}
               <div className="aspect-[16/9] mb-6 relative">
-                {/* Sombra laranja deslocada */}
+                {/* Sombra laranja apenas no canto inferior direito */}
                 <div 
-                  className="absolute top-2 left-2 w-full h-full bg-orange-500"
-                  style={{ aspectRatio: "16/9" }}
+                  className="absolute bottom-0 right-0 w-2 h-2 bg-radial-orange"
+                  style={{ 
+                    borderRadius: "0 0 0 0",
+                    transform: "translate(8px, 8px)",
+                    width: "60%",
+                    height: "8px"
+                  }}
                 ></div>
                 
-                {/* Imagem principal sobreposta */}
-                <div className="absolute top-0 left-0 w-full h-full bg-gray-200 overflow-hidden">
+                {/* Sombra laranja na lateral direita */}
+                <div 
+                  className="absolute right-0 w-2 bg-radial-orange"
+                  style={{ 
+                    transform: "translateX(8px)",
+                    width: "8px",
+                    top: "16px",
+                    height: "calc(100% - 16px)"
+                  }}
+                ></div>
+                
+                {/* Imagem principal */}
+                <div className="w-full h-full bg-gray-200 overflow-hidden">
                   <img
                     src={caseItem.imageUrl}
                     alt={`Case de sucesso ${caseItem.id}`}
