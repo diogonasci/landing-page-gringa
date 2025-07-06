@@ -1,10 +1,12 @@
 import { FORM_URL } from "@/constants/urls";
 import { useGTM } from "@/hooks/useGTM";
-import { useEffect, useRef } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const HowItWorks = () => {
   const { trackSectionView, trackButtonClick } = useGTM();
   const sectionRef = useRef<HTMLElement>(null);
+  const [expandedStep, setExpandedStep] = useState<number | null>(null);
 
   // Track quando a seção "Como Funciona" fica visível
   useEffect(() => {
@@ -26,159 +28,150 @@ const HowItWorks = () => {
     return () => observer.disconnect();
   }, [trackSectionView]);
 
+  // Passos simplificados e condensados
   const steps = [
     {
       number: 1,
-      title: "GERAÇÃO DE PROPOSTA EXCLUSIVA",
-      description:
-        "Proposta 100% personalizada, adequada à sua necessidade e propriedade.",
+      title: "ANÁLISE E PROPOSTA",
+      description: "Análise gratuita de viabilidade e proposta personalizada para sua propriedade",
+      details: [
+        "Avaliação técnica e financeira completa",
+        "Proposta 100% personalizada",
+        "Simulação de economia detalhada",
+        "Análise do consumo energético atual"
+      ]
     },
     {
       number: 2,
-      title: "AVALIAÇÃO GRATUITA",
-      description:
-        "Faremos a análise de viabilidade técnica e financeira do sistema solar.",
+      title: "PROJETO E APROVAÇÃO",
+      description: "Desenvolvimento do projeto técnico e homologação junto à concessionária",
+      details: [
+        "Projeto técnico completo conforme normas",
+        "Documentação técnica detalhada",
+        "Aprovação junto à concessionária",
+        "Todas as licenças necessárias"
+      ]
     },
     {
       number: 3,
-      title: "PROJETO TÉCNICO",
-      description:
-        "Seu projeto técnico será desenvolvido pelo nosso time e atenderá todas as exigências normativas.",
+      title: "INSTALAÇÃO PROFISSIONAL",
+      description: "Instalação completa com nossa equipe especializada e equipamentos de qualidade",
+      details: [
+        "Entrega dos equipamentos em até 20 dias",
+        "Instalação com equipe própria certificada",
+        "Equipamentos de alta qualidade",
+        "Testes completos do sistema"
+      ]
     },
     {
       number: 4,
-      title: "HOMOLOGAÇÃO",
-      description:
-        "Cuidaremos de toda papelada da homologação do seu sistema junto à concessionária.",
-    },
-    {
-      number: 5,
-      title: "LOGÍSTICA",
-      description:
-        "Os equipamentos serão entregues no local de instalação em até 20 dias úteis após o pagamento do sistema, de acordo com os termos do contrato.",
-    },
-    {
-      number: 6,
-      title: "INSTALAÇÃO",
-      description:
-        "Fazemos a instalação completa com equipe própria de técnicos capacitados e especializados em sistemas fotovoltaicos.",
-    },
-    {
-      number: 7,
-      title: "MONITORAMENTO",
-      description:
-        "Você poderá acompanhar a geração de energia do seu sistema, para se certificar de que ele estará operando em pleno funcionamento e identificar períodos em que necessite de manutenção (como limpeza dos painéis).",
+      title: "MONITORAMENTO E SUPORTE",
+      description: "Acompanhamento contínuo do desempenho e suporte técnico completo",
+      details: [
+        "Monitoramento em tempo real",
+        "Suporte técnico contínuo",
+        "Manutenção quando necessária",
+        "Garantia de 25 anos"
+      ]
     },
   ];
+
+  const toggleStep = (stepNumber: number) => {
+    setExpandedStep(expandedStep === stepNumber ? null : stepNumber);
+    trackButtonClick(`step_${stepNumber}_toggle`, "how_it_works_section");
+  };
 
   return (
     <section
       ref={sectionRef}
       id="como-funciona"
-      className="bg-radial-dark py-12 md:py-16"
+      className="bg-gradient-to-br from-gray-50 to-gray-100 py-12 md:py-16"
     >
-      <div className="container mx-auto px-6">
-        {/* Título e Imagem introdutória */}
-        <div className="flex flex-col md:flex-row items-center justify-center mb-20 max-w-3xl mx-auto">
-          {/* Mobile Layout */}
-          <div className="md:hidden flex flex-col items-center w-full">
-            {/* Imagem para mobile, com z-index maior */}
-            <div className="relative z-20 translate-x-24 translate-y-2">
-              <img
-                src="/mulher-como-funciona.png"
-                alt="Mulher pensando"
-                className="w-52"
-              />
-            </div>
-
-            {/* Título para mobile, com z-index menor e margem negativa para sobrepor */}
-            <div className="relative z-10 -mt-16">
-              <div
-                className="bg-white rounded-3xl px-10 py-4 border-2 border-black"
-                style={{ boxShadow: "12px 5px 0 0 black" }}
-              >
-                <h2 className="text-radial-orange text-3xl font-bold text-left tracking-wide">
-                  <span className="block mb-4">COMO</span>
-                  FUNCIONA?
-                </h2>
-              </div>
-            </div>
+      <div className="container mx-auto px-4">
+        {/* Header da seção */}
+        <div className="text-center mb-12">
+          <div className="flex justify-center mb-6">
+            <img
+              src="/mulher-como-funciona.png"
+              alt="Mulher pensando"
+              className="w-32 md:w-40"
+            />
           </div>
-
-          {/* Desktop Layout - Existing structure, hidden on mobile */}
-          <div className="hidden md:flex w-full items-center justify-center">
-            {/* Imagem */}
-            <div className="flex-shrink-0 mb-8 md:mb-0 md:mr-10">
-              <img
-                src="/mulher-como-funciona.png"
-                alt="Mulher pensando"
-                className="w-48 md:w-64 lg:w-80"
-              />
-            </div>
-
-            {/* Título COMO FUNCIONA? */}
-            <div className="relative md:-ml-24">
-              {/* Fundo branco com borda fina preta */}
-              <div
-                className="bg-white rounded-3xl px-10 py-4 md:px-16 md:py-6 border-2 border-black relative z-10"
-                style={{ boxShadow: "12px 5px 0 0 black" }}
-              >
-                <h2 className="text-radial-orange text-3xl md:text-4xl font-bold text-left tracking-wide">
-                  <span className="block mb-4">COMO</span>
-                  FUNCIONA?
-                </h2>
-              </div>
-            </div>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+            Como <span className="text-radial-orange">funciona</span>?
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Um processo simples e transparente do primeiro contato até você estar economizando
+          </p>
         </div>
 
-        <div className="max-w-5xl mx-auto relative">
-          {/* Linha vertical contínua de fundo */}
-          <div className="absolute left-10 md:left-12 top-12 bottom-0 w-0.5 bg-gradient-to-b from-radial-orange/60 via-radial-orange/40 to-transparent"></div>
-
-          {steps.map((step, index) => (
+        {/* Accordion de passos */}
+        <div className="max-w-4xl mx-auto space-y-4 mb-12">
+          {steps.map((step) => (
             <div
               key={step.number}
-              className={`flex items-start ${
-                index !== steps.length - 1 ? "mb-20" : ""
-              } relative`}
+              className="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden"
             >
-              {/* Círculo com número */}
-              <div className="flex-shrink-0 mr-10 relative z-10">
-                <div className="w-20 h-20 md:w-24 md:h-24 bg-radial-orange rounded-full flex items-center justify-center shadow-lg border-4 border-radial-dark">
-                  <span className="text-white font-bold text-3xl md:text-4xl">
+              {/* Header do step - sempre visível */}
+              <button
+                onClick={() => toggleStep(step.number)}
+                className="w-full p-6 text-left hover:bg-gray-50 transition-colors flex items-center justify-between"
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-radial-orange text-white rounded-full flex items-center justify-center font-bold text-lg">
                     {step.number}
-                  </span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-800 mb-1">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
+                <div className="text-gray-400">
+                  {expandedStep === step.number ? (
+                    <ChevronUp className="w-6 h-6" />
+                  ) : (
+                    <ChevronDown className="w-6 h-6" />
+                  )}
+                </div>
+              </button>
 
-              {/* Conteúdo */}
-              <div className="flex-1 pt-4 md:pt-5">
-                <h3 className="text-white text-xl md:text-2xl font-bold mb-5 uppercase tracking-wide leading-tight">
-                  {step.title}
-                </h3>
-                <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
+              {/* Detalhes expansíveis */}
+              {expandedStep === step.number && (
+                <div className="px-6 pb-6 border-t border-gray-100">
+                  <div className="pt-4">
+                    <h4 className="font-semibold text-gray-800 mb-3">O que inclui:</h4>
+                    <ul className="space-y-2">
+                      {step.details.map((detail, index) => (
+                        <li key={index} className="flex items-start space-x-2">
+                          <div className="w-2 h-2 bg-radial-orange rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-700">{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>
 
-        {/* CTA após os passos */}
-        <div className="text-center mt-12">
+        {/* CTA final */}
+        <div className="text-center">
           <a
             href={FORM_URL}
-            className="inline-block bg-radial-orange text-white py-4 px-8 rounded-full text-lg font-bold hover:brightness-110 transition-all shadow-lg hover:shadow-xl"
+            className="inline-block bg-radial-orange text-white py-4 px-8 rounded-full text-lg font-bold hover:bg-orange-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             onClick={() =>
               trackButtonClick("how_it_works_cta", "how_it_works_section")
             }
           >
             Começar meu projeto solar
           </a>
-          <p className="text-white mt-4 text-base">
-            ⚡ Projeto personalizado • Instalação profissional • Economia
-            garantida
+          <p className="text-gray-600 mt-4 text-lg">
+            ⚡ Processo simples • Equipe especializada • Resultado garantido
           </p>
         </div>
       </div>

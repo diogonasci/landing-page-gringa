@@ -1,13 +1,10 @@
 import ContactForm from "@/components/ContactForm";
+import Diferenciais from "@/components/Diferenciais";
 import Footer from "@/components/Footer";
 import Hero from "@/components/hero";
 import HowItWorks from "@/components/HowItWorks";
-import Possibilities from "@/components/Possibilities";
-import SpecialOffer from "@/components/SpecialOffer";
+import Resultados from "@/components/Resultados";
 import StickyBanner from "@/components/StickyBanner";
-import SuccessCases from "@/components/SuccessCases";
-import Testimonials from "@/components/Testimonials";
-import WhyChooseUs from "@/components/WhyChooseUs";
 import { CONTACT_WHATSAPP } from "@/constants/urls";
 import { useGTM } from "@/hooks/useGTM";
 import { usePageTracking } from "@/hooks/usePageTracking";
@@ -24,12 +21,9 @@ const HomePage = () => {
       <StickyBanner />
       <main className="flex-grow">
         <Hero />
-        <Testimonials />
-        <SuccessCases />
+        <Resultados />
         <HowItWorks />
-        <Possibilities />
-        <WhyChooseUs />
-        <SpecialOffer />
+        <Diferenciais />
         <ContactForm />
       </main>
       <Footer />

@@ -97,9 +97,17 @@ const Hero = () => {
           </p>
         </div>
 
-        {/* CTA GIGANTE centralizado */}
-        <div className="flex justify-center">
-          <div className="w-full max-w-xl">
+        {/* OFERTA ESPECIAL INTEGRADA */}
+        <div className="flex justify-center mb-8">
+          <div className="w-full max-w-2xl">
+            {/* Badge de Oferta Especial */}
+            <div className="text-center mb-4">
+              <div className="bg-yellow-400 text-radial-dark px-6 py-2 rounded-full text-sm font-bold inline-block shadow-lg animate-pulse">
+                🔥 OFERTA ESPECIAL: 10% de desconto para os 15 primeiros!
+              </div>
+            </div>
+
+            {/* CTA Principal */}
             <a
               href={FORM_URL}
               className="block w-full bg-white text-radial-dark py-4 px-8 rounded-full text-center font-bold text-lg md:text-xl hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 relative"
@@ -107,18 +115,20 @@ const Hero = () => {
                 boxShadow:
                   "0 6px 0 #ff5d26, 0 8px 16px rgba(255, 93, 38, 0.3)",
               }}
-              onClick={() => trackButtonClick("main_cta", "hero_section")}
+              onClick={() => trackButtonClick("main_cta_with_offer", "hero_section")}
             >
-              Quero reduzir minha conta de luz
+              Quero minha análise gratuita + desconto
             </a>
 
-            {/* Benefícios abaixo do botão */}
+            {/* Benefícios aprimorados */}
             <div className="text-center mt-4">
-              <p className="text-white text-base md:text-lg opacity-90 mb-2">
-                ⚡ Análise 100% gratuita • Sem compromisso • Resultado garantido
-              </p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 mb-4">
+                <p className="text-white text-sm md:text-base font-medium mb-2">
+                  ✅ Estudo de viabilidade completo • ✅ Simulação de economia • ✅ Projeto personalizado
+                </p>
+              </div>
               <p className="text-radial-orange text-lg font-bold animate-pulse">
-                👆 Clique agora e descubra quanto pode economizar!
+                👆 Aproveite! Oferta por tempo limitado!
               </p>
             </div>
           </div>
