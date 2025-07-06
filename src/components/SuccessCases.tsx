@@ -9,36 +9,42 @@ const successCasesData = [
     imageUrl: "/galpao-prime-alimentos.png",
     savings: "R$ 160.000,00",
     name: "Galpão Prime Alimentos",
+    location: "Jardim América",
   },
   {
     id: 2,
     imageUrl: "/pizzaria-exagerados.png",
     savings: "R$ 130.000,00",
     name: "Pizzaria Exagerados",
+    location: "Bangu",
   },
   {
     id: 3,
     imageUrl: "/padaria-nossa-senhora.png",
     savings: "R$ 70.000,00",
     name: "Padaria Nossa Senhora",
+    location: "Bangu",
   },
   {
     id: 4,
     imageUrl: "/galpao-aguas-boas.png",
     savings: "R$ 70.000,00",
     name: "Galpão Águas Boas",
+    location: "Pechincha",
   },
   {
     id: 5,
     imageUrl: "/condominio-riviera.png",
     savings: "R$ 40.000,00",
     name: "Condomínio Riviera",
+    location: "Santa Cruz",
   },
   {
     id: 6,
     imageUrl: "/condominio-four-seasons.png",
     savings: "R$ 40.000,00",
     name: "Condomínio Four Seasons",
+    location: "Freguesia",
   },
 ];
 
@@ -86,8 +92,8 @@ const SuccessCases = () => {
                   {caseItem.name}
                 </h3>
                 <div className="flex items-center space-x-1">
-                  <MapPin className="w-4 h-4 text-orange-500" />
-                  <span className="text-sm text-gray-600">Bangu</span>
+                  <MapPin className="w-5 h-5 text-orange-500" style={{ fill: 'none', stroke: 'currentColor', strokeWidth: 2 }} />
+                  <span className="text-base text-gray-800">{caseItem.location}</span>
                 </div>
               </div>
               
