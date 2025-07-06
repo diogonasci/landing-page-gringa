@@ -156,17 +156,11 @@ export const VideoTestimonialCard = ({
         </div>
       </div>
 
-      {/* Caixa de depoimento - MAIS LARGA que o vídeo com pontas arredondadas */}
-      <div className="relative -mx-4 -mt-2">
-        <div
-          className="bg-white rounded-3xl px-6 pt-5 pb-10 shadow-lg mx-auto flex flex-col"
-          style={{
-            width: "calc(100% + 2rem)",
-            height: "160px",
-          }}
-        >
+      {/* Caixa de depoimento - responsiva e bem estruturada */}
+      <div className="relative -mx-2 -mt-2">
+        <div className="bg-white rounded-3xl px-4 py-5 shadow-lg mx-auto max-w-full">
           {/* Estrelas laranjas no topo da caixa */}
-          <div className="flex space-x-1 mb-3">
+          <div className="flex space-x-1 mb-4">
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
@@ -176,10 +170,8 @@ export const VideoTestimonialCard = ({
           </div>
 
           {/* Texto do depoimento */}
-          <div className="flex-1 pb-8">
-            <p className="text-gray-700 italic text-sm leading-relaxed text-justify w-full">
-              "{testimonial.text}"
-            </p>
+          <div className="text-gray-700 italic text-sm leading-6 text-left">
+            <p className="mb-0">"{testimonial.text}"</p>
           </div>
         </div>
       </div>
