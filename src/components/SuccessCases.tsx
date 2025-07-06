@@ -133,12 +133,12 @@ const SuccessCases = () => {
               
               {/* Label com economia metade sobreposto */}
               <div
-                className="relative -mt-8 mx-4 text-white px-4 py-3 rounded-full shadow-lg z-10"
+                className="relative -mt-8 mx-4 text-white px-4 py-2 rounded-full shadow-lg z-10"
                 style={{ backgroundColor: "#282232" }}
               >
                 <div className="flex items-center space-x-3">
                   <Lightbulb className="w-6 h-6 text-white flex-shrink-0" strokeWidth={1.5} />
-                  <div className="text-left">
+                  <div className="text-left leading-tight">
                     <div className="text-sm font-medium">Economia anual</div>
                     <div className="text-sm font-medium">estimada: <span className="font-bold">{caseItem.savings}</span></div>
                   </div>
