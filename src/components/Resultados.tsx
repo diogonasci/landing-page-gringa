@@ -362,7 +362,7 @@ const Resultados = () => {
                   
                   {/* Label com economia metade sobreposto */}
                   <div
-                    className="relative -mt-8 mx-4 text-white px-4 py-2 rounded-full shadow-lg z-10"
+                    className="relative -mt-8 mx-4 text-white px-4 py-2 rounded-full shadow-lg z-10 mb-4"
                     style={{ backgroundColor: "#282232" }}
                   >
                     <div className="flex items-center space-x-3">
@@ -370,6 +370,21 @@ const Resultados = () => {
                       <div className="text-left leading-tight">
                         <div className="text-sm font-medium">Economia anual</div>
                         <div className="text-sm font-medium">estimada: <span className="font-bold">{caseItem.savings}</span></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Descrição adicional para equilibrar altura */}
+                  <div className="bg-white rounded-3xl px-4 py-5 shadow-lg">
+                    <div className="text-center">
+                      <div className="text-gray-700 text-sm leading-relaxed">
+                        <p className="mb-2">
+                          <strong>Projeto instalado com sucesso!</strong>
+                        </p>
+                        <p className="text-gray-600">
+                          Sistema de energia solar instalado com qualidade e eficiência comprovada. 
+                          Resultado: economia significativa na conta de luz e sustentabilidade garantida.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -457,7 +472,7 @@ const Resultados = () => {
                         
                         {/* Label com economia metade sobreposto */}
                         <div
-                          className="relative -mt-8 mx-4 text-white px-4 py-2 rounded-full shadow-lg z-10"
+                          className="relative -mt-8 mx-4 text-white px-4 py-2 rounded-full shadow-lg z-10 mb-4"
                           style={{ backgroundColor: "#282232" }}
                         >
                           <div className="flex items-center space-x-3">
@@ -465,6 +480,21 @@ const Resultados = () => {
                             <div className="text-left leading-tight">
                               <div className="text-sm font-medium">Economia anual</div>
                               <div className="text-sm font-medium">estimada: <span className="font-bold">{caseItem.savings}</span></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Descrição adicional para equilibrar altura */}
+                        <div className="bg-white rounded-3xl px-4 py-5 shadow-lg">
+                          <div className="text-center">
+                            <div className="text-gray-700 text-sm leading-relaxed">
+                              <p className="mb-2">
+                                <strong>Projeto instalado com sucesso!</strong>
+                              </p>
+                              <p className="text-gray-600">
+                                Sistema de energia solar instalado com qualidade e eficiência comprovada. 
+                                Resultado: economia significativa na conta de luz e sustentabilidade garantida.
+                              </p>
                             </div>
                           </div>
                         </div>
