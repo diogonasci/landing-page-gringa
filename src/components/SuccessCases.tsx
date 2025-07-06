@@ -211,6 +211,17 @@ const SuccessCases = () => {
           ))}
         </div>
 
+        {/* CTA Button - Desktop */}
+        <div className="hidden md:flex justify-center mt-12">
+          <button
+            onClick={() => window.open('https://wa.me/5521996746061', '_blank')}
+            className="text-white font-semibold px-8 py-3 rounded-full transition-colors shadow-lg hover:shadow-xl"
+            style={{ backgroundColor: '#ff5d26' }}
+          >
+            Quero economizar também!
+          </button>
+        </div>
+
         {/* Mobile - Carousel */}
         <div className="md:hidden relative">
           {/* Navigation Arrows */}
@@ -333,6 +344,17 @@ const SuccessCases = () => {
                 aria-label={`Ir para case ${index + 1}`}
               />
             ))}
+          </div>
+
+          {/* CTA Button - Mobile */}
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => window.open('https://wa.me/5521996746061', '_blank')}
+              className="text-white font-semibold px-8 py-3 rounded-full transition-colors shadow-lg hover:shadow-xl"
+              style={{ backgroundColor: '#ff5d26' }}
+            >
+              Quero economizar também!
+            </button>
           </div>
         </div>
       </div>

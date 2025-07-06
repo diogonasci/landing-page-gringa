@@ -188,7 +188,7 @@ const Resultados = () => {
     <section
       ref={sectionRef}
       id="resultados"
-      className="py-12 md:py-16"
+      className="py-12 md:py-16 relative"
       style={{
         background: "linear-gradient(to bottom, #ffffff 0%, #ffffff 85%, #ff5001 85%, #ff5001 100%)",
       }}
@@ -522,6 +522,18 @@ const Resultados = () => {
             </div>
           </div>
         )}
+        
+      </div>
+      
+      {/* CTA Button - Positioned absolutely in orange area */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+        <button
+          onClick={() => window.open('https://wa.me/5521996746061', '_blank')}
+          className="text-white font-semibold px-8 py-3 rounded-full transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform whitespace-nowrap"
+          style={{ backgroundColor: '#ff5d26' }}
+        >
+          Quero economizar também!
+        </button>
       </div>
     </section>
   );
