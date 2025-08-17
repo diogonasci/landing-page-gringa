@@ -23,7 +23,7 @@ const videoTestimonialsData: VideoTestimonial[] = [
   },
   {
     id: 3,
-    name: "André Pires",
+    name: "André Varella",
     location: "Miguel Pereira, Rio de Janeiro - RJ",
     text: "Chegamos na parcela final. Tudo certinho, conforme o combinado. Parabéns pelo excelente trabalho e profissionalismo desenvolvido pela equipe. Deu tudo certo! O sistema está gerando muita energia e superou nossas expectativas.",
     videoUrl: "https://img.youtube.com/vi/gbaIGMJQx5E/maxresdefault.jpg",
