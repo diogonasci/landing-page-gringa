@@ -9,6 +9,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run lint` - Run ESLint with TypeScript support
 - `npm run preview` - Preview production build locally
 
+## Testing & Quality Assurance
+
+- Always run `npm run lint` before committing changes
+- No testing framework is currently configured - manual testing required
+- Build validation: Run `npm run build` to ensure production compatibility
+
 ## Architecture Overview
 
 ### Tech Stack

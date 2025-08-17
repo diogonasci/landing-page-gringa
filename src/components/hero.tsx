@@ -54,7 +54,7 @@ const Hero = () => {
                 <div className="bg-black rounded-xl overflow-hidden aspect-video shadow-lg">
                   <iframe
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/ekxYqw220rA?start=1&rel=0&modestbranding=1&enablejsapi=1"
+                    src="https://www.youtube.com/embed/rDh468WsKPM?start=1&rel=0&modestbranding=1&enablejsapi=1"
                     title="Como funciona energia solar?"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

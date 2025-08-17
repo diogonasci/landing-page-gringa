@@ -39,6 +39,7 @@ const successCasesData = [
     savings: "R$ 160.000,00",
     name: "Prime Alimentos",
     location: "Jardim América",
+    description: "Antes, o alto consumo para refrigerar alimentos e bebidas pesava no caixa. Hoje, opera com custos reduzidos e mais eficiência no uso de energia."
   },
   {
     id: 2,
@@ -46,6 +47,7 @@ const successCasesData = [
     savings: "R$ 130.000,00",
     name: "Pizzaria Exagerados",
     location: "Bangu",
+    description: "Forno e cozinha operando o dia todo antes elevavam gastos. Agora, mantém produção intensa, ambiente climatizado e despesas controladas."
   },
   {
     id: 3,
@@ -53,6 +55,7 @@ const successCasesData = [
     savings: "R$ 70.000,00",
     name: "Padaria N. Senhora",
     location: "Bangu",
+    description: "Forno quente e refrigeração constante eram vilões na conta. Hoje, une tradição, sabor e economia sem comprometer a qualidade."
   },
   {
     id: 4,
@@ -60,6 +63,7 @@ const successCasesData = [
     savings: "R$ 70.000,00",
     name: "Galpão Águas Boas",
     location: "Pechincha",
+    description: "Iluminação e equipamentos funcionando 24h exigiam alto consumo. Agora, a operação é contínua, com custo menor e produtividade garantida."
   },
   {
     id: 5,
@@ -67,6 +71,7 @@ const successCasesData = [
     savings: "R$ 40.000,00",
     name: "Condomínio Riviera",
     location: "Santa Cruz",
+    description: "Piscina, portaria e iluminação divididos entre moradores resultam em custo tão baixo que quase não se nota no orçamento mensal."
   },
   {
     id: 6,
@@ -74,6 +79,7 @@ const successCasesData = [
     savings: "R$ 40.000,00",
     name: "Cond. Four Seasons",
     location: "Freguesia",
+    description: "Piscina, lazer e áreas comuns mantêm conforto e eficiência, reduzindo despesas e aumentando a valorização do condomínio."
   },
 ];
 
@@ -374,16 +380,12 @@ const Resultados = () => {
                     </div>
                   </div>
 
-                  {/* Descrição adicional para equilibrar altura */}
+                  {/* Descrição específica do case */}
                   <div className="bg-white rounded-3xl px-4 py-5 shadow-lg">
                     <div className="text-center">
                       <div className="text-gray-700 text-sm leading-relaxed">
-                        <p className="mb-2">
-                          <strong>Projeto instalado com sucesso!</strong>
-                        </p>
                         <p className="text-gray-600">
-                          Sistema de energia solar instalado com qualidade e eficiência comprovada. 
-                          Resultado: economia significativa na conta de luz e sustentabilidade garantida.
+                          {caseItem.description}
                         </p>
                       </div>
                     </div>
@@ -484,16 +486,12 @@ const Resultados = () => {
                           </div>
                         </div>
 
-                        {/* Descrição adicional para equilibrar altura */}
+                        {/* Descrição específica do case */}
                         <div className="bg-white rounded-3xl px-4 py-5 shadow-lg">
                           <div className="text-center">
                             <div className="text-gray-700 text-sm leading-relaxed">
-                              <p className="mb-2">
-                                <strong>Projeto instalado com sucesso!</strong>
-                              </p>
                               <p className="text-gray-600">
-                                Sistema de energia solar instalado com qualidade e eficiência comprovada. 
-                                Resultado: economia significativa na conta de luz e sustentabilidade garantida.
+                                {caseItem.description}
                               </p>
                             </div>
                           </div>
