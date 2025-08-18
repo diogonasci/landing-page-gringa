@@ -15,11 +15,11 @@ const videoTestimonialsData: VideoTestimonial[] = [
   },
   {
     id: 2,
-    name: "Clerton Pereira",
-    location: "Instalação Residencial - Turiaçu",
+    name: "Stefano Silvestro",
+    location: "Instalação Residencial - Rio de Janeiro",
     text: "A equipe foi responsável e atenciosa. Me passaram confiança! Fizeram um serviço de primeira e tô satisfeito pra caramba. Fui bem atendido e o trabalho foi bem rápido. Foi a melhor coisa que fiz. Indico com certeza!",
-    videoUrl: "https://img.youtube.com/vi/ZdjvAkivEK4/maxresdefault.jpg",
-    videoId: "ZdjvAkivEK4",
+    videoUrl: "https://img.youtube.com/vi/V3-IigKzB6w/maxresdefault.jpg",
+    videoId: "V3-IigKzB6w",
   },
   {
     id: 3,

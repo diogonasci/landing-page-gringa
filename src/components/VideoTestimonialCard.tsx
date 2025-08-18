@@ -103,10 +103,12 @@ export const VideoTestimonialCard = ({
                 alt={`Thumbnail do depoimento de ${testimonial.name}`}
                 className="w-full h-full object-cover"
                 style={{
-                  width: "143%",
-                  height: "143%",
+                  width: testimonial.name === "Stefano Silvestro" ? "139%" : "143%",
+                  height: testimonial.name === "Stefano Silvestro" ? "139%" : "143%",
                   transform: testimonial.name === "Célia Condé" 
                     ? "translate(0%, -24%)" 
+                    : testimonial.name === "Stefano Silvestro"
+                    ? "translate(-14%, -20%)"
                     : "translate(0%, -14%)",
                 }}
               />
@@ -128,10 +130,12 @@ export const VideoTestimonialCard = ({
                 ref={iframeRef}
                 className="w-full h-full rounded-2xl"
                 style={{
-                  width: "143%",
-                  height: "143%",
+                  width: testimonial.name === "Stefano Silvestro" ? "139%" : "143%",
+                  height: testimonial.name === "Stefano Silvestro" ? "139%" : "143%",
                   transform: testimonial.name === "Célia Condé" 
                     ? "translate(-15%, -24%)" 
+                    : testimonial.name === "Stefano Silvestro"
+                    ? "translate(-14%, -20%)"
                     : "translate(-15%, -14%)",
                 }}
                 src={`https://www.youtube.com/embed/${testimonial.videoId}?autoplay=1&rel=0&modestbranding=1&enablejsapi=1`}

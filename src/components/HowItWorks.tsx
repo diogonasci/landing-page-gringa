@@ -71,7 +71,7 @@ const HowItWorks = () => {
         "Monitoramento em tempo real",
         "Suporte técnico contínuo",
         "Manutenção quando necessária",
-        "Garantia de 25 anos"
+        "Garantia de 30 anos"
       ]
     },
   ];

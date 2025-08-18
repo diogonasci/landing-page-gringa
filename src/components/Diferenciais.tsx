@@ -1,6 +1,6 @@
 import { FORM_URL } from "@/constants/urls";
 import { useGTM } from "@/hooks/useGTM";
-import { Award, CheckCircle, Home, Shield, Sun, PiggyBank } from "lucide-react";
+import { Award, CheckCircle, Home, PiggyBank, Shield, Sun } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const Diferenciais = () => {
@@ -56,7 +56,7 @@ const Diferenciais = () => {
                   <CheckCircle className="w-12 h-12 text-radial-orange" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-radial-dark">
-                  Mais de 200 instalações
+                  Mais de 300 instalações
                 </h3>
                 <p className="text-gray-700 text-sm">
                   Experiência comprovada em todo o Rio de Janeiro
@@ -73,7 +73,7 @@ const Diferenciais = () => {
                   <Shield className="w-12 h-12 text-radial-orange" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-radial-dark">
-                  Garantia de 25 anos
+                  Garantia de 30 anos
                 </h3>
                 <p className="text-gray-700 text-sm">
                   Equipamentos com garantia estendida e suporte contínuo
