@@ -530,7 +530,7 @@ const Resultados = () => {
             // Track both button click and WhatsApp interaction
             trackButtonClick("quero_economizar_tambem", "resultados_section");
             trackWhatsAppClick("cta_resultados_section", "economia_interesse");
-            window.open('https://wa.me/5521996746061', '_blank');
+            window.open('https://wa.me/5521983617914', '_blank');
           }}
           className="bg-white text-gray-800 font-semibold px-8 py-3 rounded-full transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform whitespace-nowrap hover:bg-gray-50"
         >

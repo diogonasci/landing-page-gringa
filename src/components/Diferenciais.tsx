@@ -1,4 +1,4 @@
-import { FORM_URL } from "@/constants/urls";
+import { CONTACT_WHATSAPP } from "@/constants/urls";
 import { useGTM } from "@/hooks/useGTM";
 import { Award, CheckCircle, Home, PiggyBank, Shield, Sun } from "lucide-react";
 import { useEffect, useRef } from "react";
@@ -167,7 +167,7 @@ const Diferenciais = () => {
         {/* CTA final */}
         <div className="text-center">
           <a
-            href={FORM_URL}
+            href={CONTACT_WHATSAPP}
             className="inline-block bg-radial-orange text-white py-4 px-8 rounded-full text-lg font-bold hover:bg-orange-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             onClick={() =>
               trackButtonClick("diferenciais_cta", "diferenciais_section")

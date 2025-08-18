@@ -1,4 +1,4 @@
-import { FORM_URL } from "@/constants/urls";
+import { CONTACT_WHATSAPP } from "@/constants/urls";
 import { useGTM } from "@/hooks/useGTM";
 import { useEffect, useRef, useState } from "react";
 
@@ -139,7 +139,7 @@ const Hero = () => {
           <div className="w-full max-w-xl">
             {/* CTA Principal - Estilo anterior sem quebra de linha */}
             <a
-              href={FORM_URL}
+              href={CONTACT_WHATSAPP}
               className="block w-full bg-white text-radial-dark py-4 px-8 rounded-full text-center font-bold text-lg md:text-xl hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 relative mb-6"
               style={{
                 boxShadow:

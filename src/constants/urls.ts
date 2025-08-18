@@ -1,10 +1,10 @@
 // URLs importantes
-export const CONTACT_WHATSAPP = "https://wa.me/5521981558217";
+export const CONTACT_WHATSAPP = "https://wa.me/5521983617914";
 export const INSTAGRAM_URL = "https://instagram.com/sejaradial";
 
 // Informações de contato
 export const CONTACT_EMAIL = "contato@radialenergia.com.br";
-export const CONTACT_PHONE = "(21) 98155-8217";
+export const CONTACT_PHONE = "(21) 98361-7914";
 export const CONTACT_ADDRESS = "Rio de Janeiro - RJ";
 
 // Valores para calculadora
