@@ -1,11 +1,12 @@
 import { FORM_URL } from "@/constants/urls";
 import { useGTM } from "@/hooks/useGTM";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Hero = () => {
   const { trackButtonClick, trackVideoInteraction, trackSectionView } =
     useGTM();
   const heroRef = useRef<HTMLElement>(null);
+  const [showVideo, setShowVideo] = useState(false);
 
   // Track quando a seção hero fica visível
   useEffect(() => {
@@ -26,6 +27,11 @@ const Hero = () => {
 
     return () => observer.disconnect();
   }, [trackSectionView]);
+
+  const handlePlayVideo = () => {
+    setShowVideo(true);
+    trackVideoInteraction("play");
+  };
 
   return (
     <section ref={heroRef} className="bg-radial-dark py-12 md:py-20">
@@ -51,16 +57,47 @@ const Hero = () => {
               {/* Moldura interna sutil */}
               <div className="bg-gradient-to-b from-slate-100 to-slate-200 rounded-2xl p-2 shadow-inner">
                 {/* VÍDEO GIGANTE */}
-                <div className="bg-black rounded-xl overflow-hidden aspect-video shadow-lg">
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/rDh468WsKPM?start=1&rel=0&modestbranding=1&enablejsapi=1"
-                    title="Como funciona energia solar?"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    onLoad={() => trackVideoInteraction("play")}
-                  ></iframe>
+                <div className="bg-black rounded-xl overflow-hidden aspect-video shadow-lg relative">
+                  {!showVideo ? (
+                    // Capa customizada com frame do segundo 6
+                    <div 
+                      className="relative w-full h-full cursor-pointer group"
+                      onClick={handlePlayVideo}
+                    >
+                      {/* Thumbnail customizado do segundo 6 */}
+                      <img 
+                        src="/thumbnail-video-hero.png"
+                        alt="Como funciona energia solar?"
+                        className="w-full h-full object-cover"
+                      />
+                      
+                      {/* Overlay escuro sutil */}
+                      <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all duration-300"></div>
+                      
+                      {/* Botão de play discreto */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="bg-white/80 hover:bg-white/90 rounded-full p-4 group-hover:scale-105 transition-all duration-300 shadow-lg backdrop-blur-sm">
+                          <svg 
+                            className="w-8 h-8 text-gray-800 ml-0.5" 
+                            fill="currentColor" 
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M8 5v14l11-7z"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    // Iframe do YouTube que aparece após o clique
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/rg1ZPyEXSrY?autoplay=1"
+                      title="Como funciona energia solar?"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  )}
                 </div>
               </div>
 
