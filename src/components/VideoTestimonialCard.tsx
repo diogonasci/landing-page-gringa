@@ -108,7 +108,7 @@ export const VideoTestimonialCard = ({
                   transform: testimonial.name === "Célia Condé" 
                     ? "translate(0%, -24%)" 
                     : testimonial.name === "Stefano Silvestro"
-                    ? "translate(-14.7%, -20%)"
+                    ? "translate(0%, -20%)"
                     : "translate(0%, -14%)",
                 }}
               />
