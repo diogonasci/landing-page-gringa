@@ -53,8 +53,8 @@ export default async function handler(req, res) {
 
     // Enviar email usando Resend
     const { data, error } = await resend.emails.send({
-      from: "onboarding@resend.dev", // Domínio padrão do Resend
-      to: ["sejaradial@sejaradial.com.br"], // Seus emails
+      from: "sejaradial@gmail.com",
+      to: ["sejaradial@gmail.com"], // Seus emails
       subject: "Nova solicitação de análise - Site Radial",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
@@ -142,7 +142,7 @@ export default async function handler(req, res) {
         city,
         billValue,
         timestamp: new Date().toISOString(),
-        recipients: ["sejaradial@sejaradial.com.br"],
+        recipients: ["sejaradial@gmail.com"],
       },
     });
   } catch (error) {
