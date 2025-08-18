@@ -51,20 +51,10 @@ export default async function handler(req, res) {
       });
     }
 
-    console.log("Dados recebidos:");
-    console.log("Nome:", name);
-    console.log("Phone:", phone);
-    console.log("Cidade:", city);
-    console.log("Valor conta:", billValue);
-
-    console.log(
-      "Enviando email para: diogonascii@gmail.com e sejaradial@gmail.com"
-    );
-
     // Enviar email usando Resend
     const { data, error } = await resend.emails.send({
       from: "onboarding@resend.dev", // Domínio padrão do Resend
-      to: ["diogonascii@gmail.com", "sejaradial@gmail.com"], // Seus emails
+      to: ["sejaradial@sejaradial.com.br"], // Seus emails
       subject: "Nova solicitação de análise - Site Radial",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
@@ -152,7 +142,7 @@ export default async function handler(req, res) {
         city,
         billValue,
         timestamp: new Date().toISOString(),
-        recipients: ["sejaradial@gmail.com"],
+        recipients: ["sejaradial@sejaradial.com.br"],
       },
     });
   } catch (error) {

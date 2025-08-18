@@ -59,7 +59,7 @@ The app has comprehensive GTM integration via `useGTM` hook with tracking for:
 #### Contact System
 - Contact form with name, phone, city, and optional bill value
 - Serverless API endpoint `/api/send-email.js` using Resend
-- Emails sent to `diogonascii@gmail.com` and `sejaradial@gmail.com`
+- Emails sent to `sejaradial@gmail.com`
 - WhatsApp integration with floating button and tracking
 
 ### Configuration Files
