@@ -36,7 +36,7 @@ export const VideoTestimonialCard = ({
       // Força parar o vídeo recarregando o iframe
       if (iframeRef.current && testimonial.videoId) {
         console.log(`Recarregando iframe para ${testimonial.name}`);
-        iframeRef.current.src = `https://www.youtube.com/embed/${testimonial.videoId}?rel=0&modestbranding=1&enablejsapi=1`;
+        iframeRef.current.src = `https://www.youtube.com/embed/${testimonial.videoId}?rel=0&modestbranding=1&enablejsapi=1&vq=hd720p&hd=1`;
       }
     }
   }, [shouldStop, isPlaying, testimonial.name, testimonial.videoId]);
@@ -46,7 +46,7 @@ export const VideoTestimonialCard = ({
     // Força parar o vídeo recarregando o iframe
     if (iframeRef.current && testimonial.videoId) {
       console.log(`Parando vídeo de ${testimonial.name} via botão stop`);
-      iframeRef.current.src = `https://www.youtube.com/embed/${testimonial.videoId}?rel=0&modestbranding=1&enablejsapi=1`;
+      iframeRef.current.src = `https://www.youtube.com/embed/${testimonial.videoId}?rel=0&modestbranding=1&enablejsapi=1&vq=hd720p&hd=1`;
     }
     onVideoStop?.();
   };
@@ -138,7 +138,7 @@ export const VideoTestimonialCard = ({
                     ? "translate(-14.7%, -20%)"
                     : "translate(-15%, -14%)",
                 }}
-                src={`https://www.youtube.com/embed/${testimonial.videoId}?autoplay=1&rel=0&modestbranding=1&enablejsapi=1`}
+                src={`https://www.youtube.com/embed/${testimonial.videoId}?autoplay=1&rel=0&modestbranding=1&enablejsapi=1&vq=hd720p&hd=1`}
                 title={`Depoimento de ${testimonial.name}`}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

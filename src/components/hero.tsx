@@ -91,7 +91,7 @@ const Hero = () => {
                     // Iframe do YouTube que aparece após o clique
                     <iframe
                       className="w-full h-full"
-                      src="https://www.youtube.com/embed/rg1ZPyEXSrY?autoplay=1"
+                      src="https://www.youtube.com/embed/rg1ZPyEXSrY?autoplay=1&vq=hd720p&hd=1"
                       title="Como funciona energia solar?"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
