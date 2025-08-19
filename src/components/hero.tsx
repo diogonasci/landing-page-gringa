@@ -161,7 +161,8 @@ const Hero = () => {
             <div className="text-center">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                 <p className="text-white text-sm md:text-base font-medium">
-                  ✅ Estudo de viabilidade completo • ✅ Simulação de economia • ✅ Projeto personalizado
+                  <span className="md:hidden">✅ Estudo de viabilidade completo • ✅ Simulação de economia • ✅ Projeto personalizado</span>
+                  <span className="hidden md:inline">✅ Estudo de viabilidade completo • ✅ Simulação de economia<br />✅ Projeto personalizado</span>
                 </p>
               </div>
             </div>
