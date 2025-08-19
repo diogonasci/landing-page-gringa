@@ -171,19 +171,12 @@ const HowItWorks = () => {
           >
             <span className="relative z-10">Quero economizar agora</span>
             <div
-              className="absolute inset-0 opacity-25"
+              className="absolute inset-0 opacity-25 animate-shimmer"
               style={{
                 background: "linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.6) 50%, transparent 70%)",
-                animation: "shimmer 3s infinite",
                 transform: "translateX(-100%)"
               }}
             ></div>
-            <style jsx>{`
-              @keyframes shimmer {
-                0% { transform: translateX(-100%); }
-                100% { transform: translateX(100%); }
-              }
-            `}</style>
           </a>
           <p className="text-gray-600 mt-4 text-lg">
             ⚡ Processo simples • Equipe especializada • Resultado garantido

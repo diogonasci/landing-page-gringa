@@ -93,7 +93,6 @@ const Resultados = () => {
   // Estados para carousel de depoimentos
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-  const [playingVideoId, setPlayingVideoId] = useState<number | null>(null);
   const [forceStopAll, setForceStopAll] = useState(false);
   
   // Estados para carousel de cases
@@ -134,7 +133,6 @@ const Resultados = () => {
     if (isVideoPlaying) {
       setForceStopAll(true);
       setIsVideoPlaying(false);
-      setPlayingVideoId(null);
       setTimeout(() => setForceStopAll(false), 100);
     }
   };
@@ -173,14 +171,12 @@ const Resultados = () => {
   };
 
   // Handlers para vídeos
-  const handleVideoPlay = (testimonial: VideoTestimonial) => {
+  const handleVideoPlay = () => {
     setIsVideoPlaying(true);
-    setPlayingVideoId(testimonial.id);
   };
 
   const handleVideoStop = () => {
     setIsVideoPlaying(false);
-    setPlayingVideoId(null);
   };
 
   // Handler para mudança de tab
@@ -536,19 +532,12 @@ const Resultados = () => {
         >
           <span className="relative z-10">Quero economizar também!</span>
           <div
-            className="absolute inset-0 opacity-20"
+            className="absolute inset-0 opacity-20 animate-shimmer"
             style={{
               background: "linear-gradient(45deg, transparent 30%, rgba(255, 147, 38, 0.4) 50%, transparent 70%)",
-              animation: "shimmer 3s infinite",
               transform: "translateX(-100%)"
             }}
           ></div>
-          <style jsx>{`
-            @keyframes shimmer {
-              0% { transform: translateX(-100%); }
-              100% { transform: translateX(100%); }
-            }
-          `}</style>
         </button>
       </div>
     </section>

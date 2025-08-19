@@ -149,19 +149,12 @@ const Hero = () => {
             >
               <span className="relative z-10">Quero minha análise gratuita</span>
               <div
-                className="absolute inset-0 opacity-20"
+                className="absolute inset-0 opacity-20 animate-shimmer"
                 style={{
                   background: "linear-gradient(45deg, transparent 30%, rgba(255, 147, 38, 0.4) 50%, transparent 70%)",
-                  animation: "shimmer 3s infinite",
                   transform: "translateX(-100%)"
                 }}
               ></div>
-              <style jsx>{`
-                @keyframes shimmer {
-                  0% { transform: translateX(-100%); }
-                  100% { transform: translateX(100%); }
-                }
-              `}</style>
             </a>
 
             {/* Benefícios mantidos - Design mais clean */}
