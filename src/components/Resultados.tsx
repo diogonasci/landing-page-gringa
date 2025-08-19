@@ -17,7 +17,7 @@ const videoTestimonialsData: VideoTestimonial[] = [
     id: 2,
     name: "Stefano Silvestro",
     location: "Instalação Residencial - Rio de Janeiro",
-    text: "A equipe foi responsável e atenciosa. Me passaram confiança! Fizeram um serviço de primeira e tô satisfeito pra caramba. Fui bem atendido e o trabalho foi bem rápido. Foi a melhor coisa que fiz. Indico com certeza!",
+    text: "Com certeza recomendo a Radial. Pesquisei outras empresas, mas ela passou mais segurança. O pós-venda é um diferencial: atenção constante e sempre prontos para atender.",
     videoUrl: "https://img.youtube.com/vi/V3-IigKzB6w/maxresdefault.jpg",
     videoId: "V3-IigKzB6w",
   },
@@ -536,9 +536,9 @@ const Resultados = () => {
         >
           <span className="relative z-10">Quero economizar também!</span>
           <div
-            className="absolute inset-0 opacity-30"
+            className="absolute inset-0 opacity-20"
             style={{
-              background: "linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.8) 50%, transparent 70%)",
+              background: "linear-gradient(45deg, transparent 30%, rgba(255, 147, 38, 0.4) 50%, transparent 70%)",
               animation: "shimmer 3s infinite",
               transform: "translateX(-100%)"
             }}

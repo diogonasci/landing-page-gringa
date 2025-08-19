@@ -149,9 +149,9 @@ const Hero = () => {
             >
               <span className="relative z-10">Quero minha análise gratuita</span>
               <div
-                className="absolute inset-0 opacity-30"
+                className="absolute inset-0 opacity-20"
                 style={{
-                  background: "linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.8) 50%, transparent 70%)",
+                  background: "linear-gradient(45deg, transparent 30%, rgba(255, 147, 38, 0.4) 50%, transparent 70%)",
                   animation: "shimmer 3s infinite",
                   transform: "translateX(-100%)"
                 }}
