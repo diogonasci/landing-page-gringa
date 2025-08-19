@@ -140,14 +140,28 @@ const Hero = () => {
             {/* CTA Principal - Estilo anterior sem quebra de linha */}
             <a
               href={CONTACT_WHATSAPP}
-              className="block w-full bg-white text-radial-dark py-4 px-8 rounded-full text-center font-bold text-lg md:text-xl hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 relative mb-6"
+              className="block w-full bg-white text-radial-dark py-4 px-8 rounded-full text-center font-bold text-lg md:text-xl transform hover:scale-105 transition-all duration-300 relative mb-6 overflow-hidden"
               style={{
-                boxShadow:
-                  "0 6px 0 #ff5d26, 0 8px 16px rgba(255, 93, 38, 0.3)",
+                boxShadow: "0 6px 0 #ff5d26, 0 8px 16px rgba(255, 93, 38, 0.3)",
+                position: "relative"
               }}
               onClick={() => trackButtonClick("main_cta", "hero_section")}
             >
-              Quero minha análise gratuita
+              <span className="relative z-10">Quero minha análise gratuita</span>
+              <div
+                className="absolute inset-0 opacity-30"
+                style={{
+                  background: "linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.8) 50%, transparent 70%)",
+                  animation: "shimmer 3s infinite",
+                  transform: "translateX(-100%)"
+                }}
+              ></div>
+              <style jsx>{`
+                @keyframes shimmer {
+                  0% { transform: translateX(-100%); }
+                  100% { transform: translateX(100%); }
+                }
+              `}</style>
             </a>
 
             {/* Benefícios mantidos - Design mais clean */}

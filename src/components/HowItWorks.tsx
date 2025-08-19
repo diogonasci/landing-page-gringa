@@ -163,12 +163,26 @@ const HowItWorks = () => {
         <div className="text-center">
           <a
             href={CONTACT_WHATSAPP}
-            className="inline-block bg-radial-orange text-white py-4 px-8 rounded-full text-lg font-bold hover:bg-orange-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+            className="inline-block bg-radial-orange text-white py-4 px-8 rounded-full text-lg font-bold hover:bg-orange-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 relative overflow-hidden"
             onClick={() =>
               trackButtonClick("how_it_works_cta", "how_it_works_section")
             }
           >
-            Começar meu projeto solar
+            <span className="relative z-10">Quero economizar agora</span>
+            <div
+              className="absolute inset-0 opacity-25"
+              style={{
+                background: "linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.6) 50%, transparent 70%)",
+                animation: "shimmer 3s infinite",
+                transform: "translateX(-100%)"
+              }}
+            ></div>
+            <style jsx>{`
+              @keyframes shimmer {
+                0% { transform: translateX(-100%); }
+                100% { transform: translateX(100%); }
+              }
+            `}</style>
           </a>
           <p className="text-gray-600 mt-4 text-lg">
             ⚡ Processo simples • Equipe especializada • Resultado garantido

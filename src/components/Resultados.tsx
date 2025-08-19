@@ -532,9 +532,23 @@ const Resultados = () => {
             trackWhatsAppClick("cta_resultados_section", "economia_interesse");
             window.open('https://wa.me/5521983617914', '_blank');
           }}
-          className="bg-white text-gray-800 font-semibold px-8 py-3 rounded-full transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform whitespace-nowrap hover:bg-gray-50"
+          className="bg-white text-gray-800 font-semibold px-8 py-3 rounded-full transition-colors shadow-lg hover:shadow-xl hover:scale-105 transform whitespace-nowrap hover:bg-gray-50 relative overflow-hidden"
         >
-          Quero economizar também!
+          <span className="relative z-10">Quero economizar também!</span>
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              background: "linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.8) 50%, transparent 70%)",
+              animation: "shimmer 3s infinite",
+              transform: "translateX(-100%)"
+            }}
+          ></div>
+          <style jsx>{`
+            @keyframes shimmer {
+              0% { transform: translateX(-100%); }
+              100% { transform: translateX(100%); }
+            }
+          `}</style>
         </button>
       </div>
     </section>

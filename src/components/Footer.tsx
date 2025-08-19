@@ -25,7 +25,7 @@ const Footer = () => {
             </p>
 
             <div className="text-xs text-gray-400 space-y-1">
-              <p>CNPJ: 12.345.678/0001-90</p>
+              <p>CNPJ: 43.920.527/0001-47</p>
               <p>Empresa 100% Brasileira</p>
             </div>
           </div>
