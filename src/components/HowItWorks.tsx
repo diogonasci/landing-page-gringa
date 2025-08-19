@@ -101,7 +101,8 @@ const HowItWorks = () => {
             Como <span className="text-radial-orange">funciona</span>?
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Um processo simples e transparente do primeiro contato até você estar economizando
+            <span className="md:hidden">Um processo simples e transparente do primeiro contato até você estar economizando</span>
+            <span className="hidden md:inline">Um processo simples e transparente do primeiro contato<br />até você estar economizando</span>
           </p>
         </div>
 

@@ -40,7 +40,8 @@ const Diferenciais = () => {
             Por que escolher a <span className="text-radial-orange">Radial</span>?
           </h2>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-            Combinamos experiência comprovada com as melhores possibilidades do mercado solar
+            <span className="md:hidden">Combinamos experiência comprovada com as melhores possibilidades do mercado solar</span>
+            <span className="hidden md:inline">Combinamos experiência comprovada com as<br />melhores possibilidades do mercado solar</span>
           </p>
         </div>
 
